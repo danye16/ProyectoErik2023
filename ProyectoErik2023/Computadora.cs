@@ -13,7 +13,7 @@ namespace ProyectoErik2023
         public string tarjetaVideo { get; set; }
         public string rgb { get; set; }
 
-        Computadora[] computadoras;
+      public  Computadora[] computadoras {  get; set; }
       
 
      

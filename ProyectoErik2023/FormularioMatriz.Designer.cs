@@ -128,7 +128,7 @@
             this.memoriaRam.Name = "memoriaRam";
             this.memoriaRam.Size = new System.Drawing.Size(136, 20);
             this.memoriaRam.TabIndex = 13;
-            this.memoriaRam.TextChanged += new System.EventHandler(this.prueba1_TextChanged);
+            this.memoriaRam.TextChanged += new System.EventHandler(this.memoriaRam_TextChanged);
             // 
             // txtTarjetaVideo
             // 
