@@ -103,11 +103,12 @@ namespace ProyectoErik2023
         {
             for (int i = 0; i < computadora.Length; i++)
             {
-                computadora[i] = new Computadora(); 
+                computadora[i] = null; 
             }
+            MessageBox.Show("Se a limpiado todo jefe");
         }
 
-
+        
 
     }
 }
