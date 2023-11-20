@@ -23,7 +23,7 @@ namespace ProyectoErik2023
         public Computadora[] computadora;
         public void AgregarPc(Computadora[] matriz)
         {
-            if (indiceActual < matriz.Length) // Verifica si aún hay espacio en el arreglo
+            if (indiceActual < matriz.Length) 
             {
                 Computadora compu = new Computadora();
                 compu.memoriaRam = memoriaRam.Text;
@@ -32,7 +32,7 @@ namespace ProyectoErik2023
                 compu.rgb = txtRGB.Text;
 
                 matriz[indiceActual] = compu;
-                indiceActual++; // Incrementa el índice para la próxima entrada
+                indiceActual++; 
             }
             else
             {
@@ -42,28 +42,7 @@ namespace ProyectoErik2023
         public  void agregar_elementoM_Click(object sender, EventArgs e)
         {
             AgregarPc(computadora);
-          //Computadora  computadoras = new Computadora
-          //  {
-          //      memoriaRam = memoriaRam.Text,
-          //  SSD = txtSSD.Text,
-          //  tarjetaVideo = txtTarjetaVideo.Text,
-          //  rgb = txtRGB.Text
-          //  };
-
-
-            //for (int i= 0; i< computadoras.Length;i++ )
-            //    {
-            //    //string entradaComputadora = memoriaRam.Text;
-            //    //string entradaComputadora = memoriaRam.Text;
-            //    //string entradaComputadora = memoriaRam.Text;
-            //    //string entradaComputadora = memoriaRam.Text;
-
-            //    //computadoras[i] = new Computadora { memoriaRam = entradaComputadora };
-            //    //computadoras[i] = new Computadora { tarjetaVideo = entradaComputadora };
-            //    //computadoras[i] = new Computadora { SSD = entradaComputadora };
-            //    //computadoras[i] = new Computadora { rgb = entradaComputadora };
-
-            //}
+          
 
         }
 
