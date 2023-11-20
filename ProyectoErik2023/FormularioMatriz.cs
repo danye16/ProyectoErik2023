@@ -30,6 +30,7 @@ namespace ProyectoErik2023
                 compu.rgb = txtRGB.Text;
                 matriz[i] = compu;
             }
+            MessageBox.Show("Se guardaron los datos exitosamente");
         }
             public void agregar_elementoM_Click(object sender, EventArgs e)
         {
