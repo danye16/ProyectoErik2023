@@ -57,6 +57,7 @@
             this.btn_ascendente_lista.TabIndex = 1;
             this.btn_ascendente_lista.Text = "Ordenar Ascendente";
             this.btn_ascendente_lista.UseVisualStyleBackColor = false;
+            this.btn_ascendente_lista.Click += new System.EventHandler(this.btn_ascendente_lista_Click);
             // 
             // btn_imprimir_lista
             // 

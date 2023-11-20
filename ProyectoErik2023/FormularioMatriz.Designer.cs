@@ -100,6 +100,7 @@
             this.btn_ascendente_listaM.TabIndex = 7;
             this.btn_ascendente_listaM.Text = "Ordenar Ascendente";
             this.btn_ascendente_listaM.UseVisualStyleBackColor = false;
+            this.btn_ascendente_listaM.Click += new System.EventHandler(this.btn_ascendente_listaM_Click);
             // 
             // agregar_elementoM
             // 

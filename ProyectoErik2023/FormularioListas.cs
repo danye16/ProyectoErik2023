@@ -16,5 +16,10 @@ namespace ProyectoErik2023
         {
             InitializeComponent();
         }
+
+        private void btn_ascendente_lista_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

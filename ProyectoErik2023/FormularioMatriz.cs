@@ -31,9 +31,10 @@ namespace ProyectoErik2023
                 matriz[i] = compu;
             }
         }
-            private void agregar_elementoM_Click(object sender, EventArgs e)
+            public void agregar_elementoM_Click(object sender, EventArgs e)
         {
             AgregarPc(computadora);
+          
           //Computadora  computadoras = new Computadora
           //  {
           //      memoriaRam = memoriaRam.Text,
@@ -78,6 +79,22 @@ namespace ProyectoErik2023
             }
         }
 
+        public void MetodoBurbuja(Computadora[] matriz)
+        {
+            string aux;
+            for (int i = 0; i < 2 - 1; i++)
+            {
+                for (int j = 0; j < 2 - 1; j++)
+                {
+                    if (string.Compare(matriz[j].tarjetaVideo, matriz[j + 1].tarjetaVideo)>0)
+                    {
+                        aux = matriz[j].tarjetaVideo;
+                        matriz[j].tarjetaVideo = matriz[j+1].tarjetaVideo;
+                        matriz[j+1].tarjetaVideo = aux;
+                    }
+                }
+            }
+        }
         private void panel1_Paint(object sender, PaintEventArgs e)
         {
 
@@ -100,6 +117,11 @@ namespace ProyectoErik2023
         private void label2_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void btn_ascendente_listaM_Click(object sender, EventArgs e)
+        {
+            MetodoBurbuja(computadora);
         }
     }
 }
