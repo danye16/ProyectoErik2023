@@ -43,35 +43,42 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
+            this.printRam = new System.Windows.Forms.TextBox();
+            this.printVideo = new System.Windows.Forms.TextBox();
+            this.printSSD = new System.Windows.Forms.TextBox();
+            this.printRGB = new System.Windows.Forms.TextBox();
+            this.textBuscar = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // btn_descendente_listaM
             // 
             this.btn_descendente_listaM.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.btn_descendente_listaM.Font = new System.Drawing.Font("SimSun", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_descendente_listaM.Location = new System.Drawing.Point(606, 211);
+            this.btn_descendente_listaM.Location = new System.Drawing.Point(329, 30);
             this.btn_descendente_listaM.Name = "btn_descendente_listaM";
             this.btn_descendente_listaM.Size = new System.Drawing.Size(163, 69);
             this.btn_descendente_listaM.TabIndex = 11;
             this.btn_descendente_listaM.Text = "Ordenar Descendente";
             this.btn_descendente_listaM.UseVisualStyleBackColor = false;
+            this.btn_descendente_listaM.Click += new System.EventHandler(this.btn_descendente_listaM_Click);
             // 
             // btn_buscar_listaM
             // 
             this.btn_buscar_listaM.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.btn_buscar_listaM.Font = new System.Drawing.Font("SimSun", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_buscar_listaM.Location = new System.Drawing.Point(319, 369);
+            this.btn_buscar_listaM.Location = new System.Drawing.Point(329, 336);
             this.btn_buscar_listaM.Name = "btn_buscar_listaM";
             this.btn_buscar_listaM.Size = new System.Drawing.Size(163, 69);
             this.btn_buscar_listaM.TabIndex = 10;
             this.btn_buscar_listaM.Text = "Buscar Elemento";
             this.btn_buscar_listaM.UseVisualStyleBackColor = false;
+            this.btn_buscar_listaM.Click += new System.EventHandler(this.btn_buscar_listaM_Click);
             // 
             // limpia_listaM
             // 
             this.limpia_listaM.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.limpia_listaM.Font = new System.Drawing.Font("SimSun", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.limpia_listaM.Location = new System.Drawing.Point(319, 114);
+            this.limpia_listaM.Location = new System.Drawing.Point(329, 125);
             this.limpia_listaM.Name = "limpia_listaM";
             this.limpia_listaM.Size = new System.Drawing.Size(163, 69);
             this.limpia_listaM.TabIndex = 9;
@@ -82,7 +89,7 @@
             // 
             this.btn_imprimir_listaM.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.btn_imprimir_listaM.Font = new System.Drawing.Font("SimSun", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_imprimir_listaM.Location = new System.Drawing.Point(606, 54);
+            this.btn_imprimir_listaM.Location = new System.Drawing.Point(534, 54);
             this.btn_imprimir_listaM.Name = "btn_imprimir_listaM";
             this.btn_imprimir_listaM.Size = new System.Drawing.Size(163, 69);
             this.btn_imprimir_listaM.TabIndex = 8;
@@ -94,7 +101,7 @@
             // 
             this.btn_ascendente_listaM.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.btn_ascendente_listaM.Font = new System.Drawing.Font("SimSun", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_ascendente_listaM.Location = new System.Drawing.Point(319, 229);
+            this.btn_ascendente_listaM.Location = new System.Drawing.Point(329, 235);
             this.btn_ascendente_listaM.Name = "btn_ascendente_listaM";
             this.btn_ascendente_listaM.Size = new System.Drawing.Size(163, 69);
             this.btn_ascendente_listaM.TabIndex = 7;
@@ -190,11 +197,56 @@
             this.label5.TabIndex = 20;
             this.label5.Text = "Luces gaming RGB";
             // 
+            // printRam
+            // 
+            this.printRam.AccessibleName = "";
+            this.printRam.Location = new System.Drawing.Point(549, 202);
+            this.printRam.Name = "printRam";
+            this.printRam.Size = new System.Drawing.Size(136, 20);
+            this.printRam.TabIndex = 21;
+            // 
+            // printVideo
+            // 
+            this.printVideo.AccessibleName = "";
+            this.printVideo.Location = new System.Drawing.Point(549, 260);
+            this.printVideo.Name = "printVideo";
+            this.printVideo.Size = new System.Drawing.Size(136, 20);
+            this.printVideo.TabIndex = 22;
+            // 
+            // printSSD
+            // 
+            this.printSSD.AccessibleName = "";
+            this.printSSD.Location = new System.Drawing.Point(549, 309);
+            this.printSSD.Name = "printSSD";
+            this.printSSD.Size = new System.Drawing.Size(136, 20);
+            this.printSSD.TabIndex = 23;
+            // 
+            // printRGB
+            // 
+            this.printRGB.AccessibleName = "";
+            this.printRGB.Location = new System.Drawing.Point(549, 360);
+            this.printRGB.Name = "printRGB";
+            this.printRGB.Size = new System.Drawing.Size(136, 20);
+            this.printRGB.TabIndex = 24;
+            // 
+            // textBuscar
+            // 
+            this.textBuscar.AccessibleName = "";
+            this.textBuscar.Location = new System.Drawing.Point(341, 424);
+            this.textBuscar.Name = "textBuscar";
+            this.textBuscar.Size = new System.Drawing.Size(136, 20);
+            this.textBuscar.TabIndex = 25;
+            // 
             // FormularioMatriz
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(800, 489);
+            this.Controls.Add(this.textBuscar);
+            this.Controls.Add(this.printRGB);
+            this.Controls.Add(this.printSSD);
+            this.Controls.Add(this.printVideo);
+            this.Controls.Add(this.printRam);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
@@ -234,6 +286,11 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
+        public System.Windows.Forms.TextBox printRam;
+        public System.Windows.Forms.TextBox printVideo;
+        public System.Windows.Forms.TextBox printSSD;
+        public System.Windows.Forms.TextBox printRGB;
+        public System.Windows.Forms.TextBox textBuscar;
     }
 }
 
