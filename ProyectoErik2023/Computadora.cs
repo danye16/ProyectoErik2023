@@ -14,8 +14,15 @@ namespace ProyectoErik2023
         public string rgb { get; set; }
 
       public  Computadora[] computadoras {  get; set; }
-      
 
-     
+        public Computadora()
+        {
+            memoriaRam = "";
+            SSD = "";
+            tarjetaVideo = "";
+            rgb = "";
+        }
+
+
     }
 }

@@ -13,25 +13,33 @@ namespace ProyectoErik2023
 {
     public partial class FormularioMatriz : Form
     {
+        public int indiceActual = 0; // Variable para controlar el índice actual del arreglo
+        
         public FormularioMatriz()
         {
             InitializeComponent();
-            computadora = new Computadora[2];
+            computadora = new Computadora[100];
         }
         public Computadora[] computadora;
         public void AgregarPc(Computadora[] matriz)
         {
-            for (int i = 0; i < 2; i++)
+            if (indiceActual < matriz.Length) // Verifica si aún hay espacio en el arreglo
             {
                 Computadora compu = new Computadora();
                 compu.memoriaRam = memoriaRam.Text;
                 compu.SSD = txtSSD.Text;
                 compu.tarjetaVideo = txtTarjetaVideo.Text;
                 compu.rgb = txtRGB.Text;
-                matriz[i] = compu;
+
+                matriz[indiceActual] = compu;
+                indiceActual++; // Incrementa el índice para la próxima entrada
+            }
+            else
+            {
+                MessageBox.Show("El arreglo está lleno. No se pueden agregar más elementos.");
             }
         }
-            private void agregar_elementoM_Click(object sender, EventArgs e)
+        public  void agregar_elementoM_Click(object sender, EventArgs e)
         {
             AgregarPc(computadora);
           //Computadora  computadoras = new Computadora
@@ -68,13 +76,17 @@ namespace ProyectoErik2023
         }
         public void ImprimirPc(Computadora[] matriz)
         {
-            for(int i = 0;i < 2;i++)
-            { 
-            MessageBox.Show($"Pc {i}\n"+
-                $"Su tarjeta de video es: {matriz[i].tarjetaVideo}\n" +
-               $"La memoria ram es: {matriz[i].memoriaRam}\n" +
-               $"El SSD es: {matriz[i].SSD}\n" +
-               $"El RGB es: {matriz[i].rgb}");
+            for (int i = 0; i < matriz.Length; i++)
+            {
+                if (matriz[i] != null)
+                {
+                    MessageBox.Show($"Pc {i}\n" +
+                                    $"Su tarjeta de video es: {matriz[i].tarjetaVideo}\n" +
+                                    $"La memoria ram es: {matriz[i].memoriaRam}\n" +
+                                    $"El SSD es: {matriz[i].SSD}\n" +
+                                    $"El RGB es: {matriz[i].rgb}");
+                }
+               
             }
         }
 
@@ -101,5 +113,22 @@ namespace ProyectoErik2023
         {
 
         }
+
+        private void limpia_listaM_Click(object sender, EventArgs e)
+        {
+
+            limpiar();
+
+        }
+        public void limpiar()
+        {
+            for (int i = 0; i < computadora.Length; i++)
+            {
+                computadora[i] = new Computadora(); 
+            }
+        }
+
+
+
     }
 }
