@@ -33,7 +33,6 @@ namespace ProyectoErik2023
                 matriz[indice] = compu;
                 indice++;
                 MessageBox.Show("Se guardaron los datos exitosamente");
-
             }
             else
             {
