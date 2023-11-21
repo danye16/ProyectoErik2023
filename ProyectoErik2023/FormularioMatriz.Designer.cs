@@ -85,6 +85,7 @@
             this.limpia_listaM.TabIndex = 9;
             this.limpia_listaM.Text = "Limpiar Lista";
             this.limpia_listaM.UseVisualStyleBackColor = false;
+            this.limpia_listaM.Click += new System.EventHandler(this.limpia_listaM_Click);
             // 
             // btn_imprimir_listaM
             // 

@@ -172,6 +172,14 @@ namespace ProyectoErik2023
 
            
         }
+        public void Limpiar()
+        {
+            for (int i=0; i<computadora.Length; i++)
+            {
+                computadora[i] = null;
+            }
+            MessageBox.Show("Se a limpiado todo jefe");
+        }
         private void panel1_Paint(object sender, PaintEventArgs e)
         {
 
@@ -216,6 +224,11 @@ namespace ProyectoErik2023
         private void btnInsertarfinal_Click(object sender, EventArgs e)
         {
             AgregarPcFinal(computadora);
+        }
+
+        private void limpia_listaM_Click(object sender, EventArgs e)
+        {
+            Limpiar();
         }
     }
 }
