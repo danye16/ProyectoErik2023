@@ -33,9 +33,10 @@ namespace ProyectoErik2023
         }
 
         private void agregar_elemento_Click(object sender, EventArgs e)
-        {
-            Computadora computadora= new Computadora();
-            lista.AgregarLista(computadora);
+
+        { }
+            //Computadora computadora= new Computadora(memoriaRamList.Text,txtTarjetaVideoList.Text,txtSSDList.Text,txtRGBList.Text);
+            //lista.AgregarLista(computadora);
         }
     }
 }
