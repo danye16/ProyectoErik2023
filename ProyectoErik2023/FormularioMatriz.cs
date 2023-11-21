@@ -212,5 +212,10 @@ namespace ProyectoErik2023
         {
             Buscar();
         }
+
+        private void btnInsertarfinal_Click(object sender, EventArgs e)
+        {
+            AgregarPcFinal(computadora);
+        }
     }
 }

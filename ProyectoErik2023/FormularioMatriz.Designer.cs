@@ -48,6 +48,7 @@
             this.printSSD = new System.Windows.Forms.TextBox();
             this.printRGB = new System.Windows.Forms.TextBox();
             this.textBuscar = new System.Windows.Forms.TextBox();
+            this.btnInsertarfinal = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btn_descendente_listaM
@@ -237,11 +238,24 @@
             this.textBuscar.Size = new System.Drawing.Size(136, 20);
             this.textBuscar.TabIndex = 25;
             // 
+            // btnInsertarfinal
+            // 
+            this.btnInsertarfinal.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.btnInsertarfinal.Font = new System.Drawing.Font("SimSun", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnInsertarfinal.Location = new System.Drawing.Point(31, 411);
+            this.btnInsertarfinal.Name = "btnInsertarfinal";
+            this.btnInsertarfinal.Size = new System.Drawing.Size(163, 69);
+            this.btnInsertarfinal.TabIndex = 26;
+            this.btnInsertarfinal.Text = "Agregar al Final";
+            this.btnInsertarfinal.UseVisualStyleBackColor = false;
+            this.btnInsertarfinal.Click += new System.EventHandler(this.btnInsertarfinal_Click);
+            // 
             // FormularioMatriz
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 489);
+            this.Controls.Add(this.btnInsertarfinal);
             this.Controls.Add(this.textBuscar);
             this.Controls.Add(this.printRGB);
             this.Controls.Add(this.printSSD);
@@ -291,6 +305,7 @@
         public System.Windows.Forms.TextBox printSSD;
         public System.Windows.Forms.TextBox printRGB;
         public System.Windows.Forms.TextBox textBuscar;
+        private System.Windows.Forms.Button btnInsertarfinal;
     }
 }
 
