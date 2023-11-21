@@ -34,24 +34,35 @@
             this.limpia_lista = new System.Windows.Forms.Button();
             this.btn_buscar_lista = new System.Windows.Forms.Button();
             this.btn_descendente_lista = new System.Windows.Forms.Button();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.txtRGBList = new System.Windows.Forms.TextBox();
+            this.txtSSDList = new System.Windows.Forms.TextBox();
+            this.txtTarjetaVideoList = new System.Windows.Forms.TextBox();
+            this.memoriaRamList = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.txtBuscarList = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // agregar_elemento
             // 
             this.agregar_elemento.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.agregar_elemento.Font = new System.Drawing.Font("SimSun", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.agregar_elemento.Location = new System.Drawing.Point(30, 30);
+            this.agregar_elemento.Location = new System.Drawing.Point(43, 12);
             this.agregar_elemento.Name = "agregar_elemento";
             this.agregar_elemento.Size = new System.Drawing.Size(163, 69);
             this.agregar_elemento.TabIndex = 0;
             this.agregar_elemento.Text = "Agregar Elemento";
             this.agregar_elemento.UseVisualStyleBackColor = false;
+            this.agregar_elemento.Click += new System.EventHandler(this.agregar_elemento_Click);
             // 
             // btn_ascendente_lista
             // 
             this.btn_ascendente_lista.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.btn_ascendente_lista.Font = new System.Drawing.Font("SimSun", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_ascendente_lista.Location = new System.Drawing.Point(318, 236);
+            this.btn_ascendente_lista.Location = new System.Drawing.Point(399, 289);
             this.btn_ascendente_lista.Name = "btn_ascendente_lista";
             this.btn_ascendente_lista.Size = new System.Drawing.Size(163, 69);
             this.btn_ascendente_lista.TabIndex = 1;
@@ -69,12 +80,13 @@
             this.btn_imprimir_lista.TabIndex = 2;
             this.btn_imprimir_lista.Text = "Imprimir Lista";
             this.btn_imprimir_lista.UseVisualStyleBackColor = false;
+            this.btn_imprimir_lista.Click += new System.EventHandler(this.btn_imprimir_lista_Click);
             // 
             // limpia_lista
             // 
             this.limpia_lista.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.limpia_lista.Font = new System.Drawing.Font("SimSun", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.limpia_lista.Location = new System.Drawing.Point(318, 90);
+            this.limpia_lista.Location = new System.Drawing.Point(574, 159);
             this.limpia_lista.Name = "limpia_lista";
             this.limpia_lista.Size = new System.Drawing.Size(163, 69);
             this.limpia_lista.TabIndex = 3;
@@ -85,7 +97,7 @@
             // 
             this.btn_buscar_lista.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.btn_buscar_lista.Font = new System.Drawing.Font("SimSun", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_buscar_lista.Location = new System.Drawing.Point(30, 303);
+            this.btn_buscar_lista.Location = new System.Drawing.Point(307, 134);
             this.btn_buscar_lista.Name = "btn_buscar_lista";
             this.btn_buscar_lista.Size = new System.Drawing.Size(163, 69);
             this.btn_buscar_lista.TabIndex = 4;
@@ -103,11 +115,101 @@
             this.btn_descendente_lista.Text = "Ordenar Descendente";
             this.btn_descendente_lista.UseVisualStyleBackColor = false;
             // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(78, 293);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(99, 13);
+            this.label5.TabIndex = 29;
+            this.label5.Text = "Luces gaming RGB";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(78, 221);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(29, 13);
+            this.label4.TabIndex = 28;
+            this.label4.Text = "SSD";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(75, 162);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(84, 13);
+            this.label3.TabIndex = 27;
+            this.label3.Text = "Tarjeta de video";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(72, 102);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(72, 13);
+            this.label2.TabIndex = 26;
+            this.label2.Text = "Memoria Ram";
+            // 
+            // txtRGBList
+            // 
+            this.txtRGBList.Location = new System.Drawing.Point(57, 318);
+            this.txtRGBList.Name = "txtRGBList";
+            this.txtRGBList.Size = new System.Drawing.Size(136, 20);
+            this.txtRGBList.TabIndex = 25;
+            // 
+            // txtSSDList
+            // 
+            this.txtSSDList.Location = new System.Drawing.Point(57, 242);
+            this.txtSSDList.Name = "txtSSDList";
+            this.txtSSDList.Size = new System.Drawing.Size(136, 20);
+            this.txtSSDList.TabIndex = 24;
+            // 
+            // txtTarjetaVideoList
+            // 
+            this.txtTarjetaVideoList.Location = new System.Drawing.Point(57, 193);
+            this.txtTarjetaVideoList.Name = "txtTarjetaVideoList";
+            this.txtTarjetaVideoList.Size = new System.Drawing.Size(136, 20);
+            this.txtTarjetaVideoList.TabIndex = 23;
+            // 
+            // memoriaRamList
+            // 
+            this.memoriaRamList.AccessibleName = "";
+            this.memoriaRamList.Location = new System.Drawing.Point(57, 135);
+            this.memoriaRamList.Name = "memoriaRamList";
+            this.memoriaRamList.Size = new System.Drawing.Size(136, 20);
+            this.memoriaRamList.TabIndex = 22;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(113, 103);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(0, 13);
+            this.label1.TabIndex = 21;
+            // 
+            // txtBuscarList
+            // 
+            this.txtBuscarList.Location = new System.Drawing.Point(321, 232);
+            this.txtBuscarList.Name = "txtBuscarList";
+            this.txtBuscarList.Size = new System.Drawing.Size(136, 20);
+            this.txtBuscarList.TabIndex = 30;
+            // 
             // FormularioListas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.txtBuscarList);
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.txtRGBList);
+            this.Controls.Add(this.txtSSDList);
+            this.Controls.Add(this.txtTarjetaVideoList);
+            this.Controls.Add(this.memoriaRamList);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.btn_descendente_lista);
             this.Controls.Add(this.btn_buscar_lista);
             this.Controls.Add(this.limpia_lista);
@@ -117,6 +219,7 @@
             this.Name = "FormularioListas";
             this.Text = "FormularioListas";
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -128,5 +231,15 @@
         private System.Windows.Forms.Button limpia_lista;
         private System.Windows.Forms.Button btn_buscar_lista;
         private System.Windows.Forms.Button btn_descendente_lista;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label2;
+        public System.Windows.Forms.TextBox txtRGBList;
+        public System.Windows.Forms.TextBox txtSSDList;
+        public System.Windows.Forms.TextBox txtTarjetaVideoList;
+        public System.Windows.Forms.TextBox memoriaRamList;
+        private System.Windows.Forms.Label label1;
+        public System.Windows.Forms.TextBox txtBuscarList;
     }
 }

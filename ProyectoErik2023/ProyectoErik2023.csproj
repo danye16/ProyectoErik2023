@@ -46,7 +46,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Modelo\Computadora.cs" />
+    <Compile Include="Datos\Listas\Lista.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Datos\Nose\Nodo.cs" />
+    <Compile Include="Lis\Computadora.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -117,5 +121,6 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
