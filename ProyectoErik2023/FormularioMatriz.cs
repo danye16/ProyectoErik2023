@@ -22,6 +22,7 @@ namespace ProyectoErik2023
         public Computadora[] computadora;
         public void AgregarPc(Computadora[] matriz)
         {
+            
             if (indice < matriz.Length)
             {
                 Computadora compu = new Computadora();
@@ -174,11 +175,20 @@ namespace ProyectoErik2023
         }
         public void Limpiar()
         {
+            Computadora compu = new Computadora();
+           memoriaRam.Clear();
+            txtSSD.Clear(); 
+             txtTarjetaVideo.Clear();
+             txtRGB.Clear();
+            indice = 0;
+
             for (int i=0; i<computadora.Length; i++)
             {
                 computadora[i] = null;
             }
-            MessageBox.Show("Se a limpiado todo jefe");
+
+            
+                MessageBox.Show("Se a limpiado todo jefe");
         }
         private void panel1_Paint(object sender, PaintEventArgs e)
         {
