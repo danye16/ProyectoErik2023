@@ -50,9 +50,10 @@
             // 
             this.agregar_elemento.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.agregar_elemento.Font = new System.Drawing.Font("SimSun", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.agregar_elemento.Location = new System.Drawing.Point(43, 12);
+            this.agregar_elemento.Location = new System.Drawing.Point(57, 15);
+            this.agregar_elemento.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.agregar_elemento.Name = "agregar_elemento";
-            this.agregar_elemento.Size = new System.Drawing.Size(163, 69);
+            this.agregar_elemento.Size = new System.Drawing.Size(217, 85);
             this.agregar_elemento.TabIndex = 0;
             this.agregar_elemento.Text = "Agregar Elemento";
             this.agregar_elemento.UseVisualStyleBackColor = false;
@@ -62,9 +63,10 @@
             // 
             this.btn_ascendente_lista.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.btn_ascendente_lista.Font = new System.Drawing.Font("SimSun", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_ascendente_lista.Location = new System.Drawing.Point(399, 289);
+            this.btn_ascendente_lista.Location = new System.Drawing.Point(532, 356);
+            this.btn_ascendente_lista.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btn_ascendente_lista.Name = "btn_ascendente_lista";
-            this.btn_ascendente_lista.Size = new System.Drawing.Size(163, 69);
+            this.btn_ascendente_lista.Size = new System.Drawing.Size(217, 85);
             this.btn_ascendente_lista.TabIndex = 1;
             this.btn_ascendente_lista.Text = "Ordenar Ascendente";
             this.btn_ascendente_lista.UseVisualStyleBackColor = false;
@@ -74,9 +76,10 @@
             // 
             this.btn_imprimir_lista.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.btn_imprimir_lista.Font = new System.Drawing.Font("SimSun", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_imprimir_lista.Location = new System.Drawing.Point(605, 30);
+            this.btn_imprimir_lista.Location = new System.Drawing.Point(807, 37);
+            this.btn_imprimir_lista.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btn_imprimir_lista.Name = "btn_imprimir_lista";
-            this.btn_imprimir_lista.Size = new System.Drawing.Size(163, 69);
+            this.btn_imprimir_lista.Size = new System.Drawing.Size(217, 85);
             this.btn_imprimir_lista.TabIndex = 2;
             this.btn_imprimir_lista.Text = "Imprimir Lista";
             this.btn_imprimir_lista.UseVisualStyleBackColor = false;
@@ -86,20 +89,23 @@
             // 
             this.limpia_lista.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.limpia_lista.Font = new System.Drawing.Font("SimSun", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.limpia_lista.Location = new System.Drawing.Point(574, 159);
+            this.limpia_lista.Location = new System.Drawing.Point(765, 196);
+            this.limpia_lista.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.limpia_lista.Name = "limpia_lista";
-            this.limpia_lista.Size = new System.Drawing.Size(163, 69);
+            this.limpia_lista.Size = new System.Drawing.Size(217, 85);
             this.limpia_lista.TabIndex = 3;
             this.limpia_lista.Text = "Limpiar Lista";
             this.limpia_lista.UseVisualStyleBackColor = false;
+            this.limpia_lista.Click += new System.EventHandler(this.limpia_lista_Click);
             // 
             // btn_buscar_lista
             // 
             this.btn_buscar_lista.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.btn_buscar_lista.Font = new System.Drawing.Font("SimSun", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_buscar_lista.Location = new System.Drawing.Point(307, 134);
+            this.btn_buscar_lista.Location = new System.Drawing.Point(409, 165);
+            this.btn_buscar_lista.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btn_buscar_lista.Name = "btn_buscar_lista";
-            this.btn_buscar_lista.Size = new System.Drawing.Size(163, 69);
+            this.btn_buscar_lista.Size = new System.Drawing.Size(217, 85);
             this.btn_buscar_lista.TabIndex = 4;
             this.btn_buscar_lista.Text = "Buscar Elemento";
             this.btn_buscar_lista.UseVisualStyleBackColor = false;
@@ -108,9 +114,10 @@
             // 
             this.btn_descendente_lista.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.btn_descendente_lista.Font = new System.Drawing.Font("SimSun", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_descendente_lista.Location = new System.Drawing.Point(605, 289);
+            this.btn_descendente_lista.Location = new System.Drawing.Point(807, 356);
+            this.btn_descendente_lista.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btn_descendente_lista.Name = "btn_descendente_lista";
-            this.btn_descendente_lista.Size = new System.Drawing.Size(163, 69);
+            this.btn_descendente_lista.Size = new System.Drawing.Size(217, 85);
             this.btn_descendente_lista.TabIndex = 5;
             this.btn_descendente_lista.Text = "Ordenar Descendente";
             this.btn_descendente_lista.UseVisualStyleBackColor = false;
@@ -118,88 +125,98 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(78, 293);
+            this.label5.Location = new System.Drawing.Point(104, 361);
+            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(99, 13);
+            this.label5.Size = new System.Drawing.Size(123, 16);
             this.label5.TabIndex = 29;
             this.label5.Text = "Luces gaming RGB";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(78, 221);
+            this.label4.Location = new System.Drawing.Point(104, 272);
+            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(29, 13);
+            this.label4.Size = new System.Drawing.Size(35, 16);
             this.label4.TabIndex = 28;
             this.label4.Text = "SSD";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(75, 162);
+            this.label3.Location = new System.Drawing.Point(100, 199);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(84, 13);
+            this.label3.Size = new System.Drawing.Size(106, 16);
             this.label3.TabIndex = 27;
             this.label3.Text = "Tarjeta de video";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(72, 102);
+            this.label2.Location = new System.Drawing.Point(96, 126);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(72, 13);
+            this.label2.Size = new System.Drawing.Size(92, 16);
             this.label2.TabIndex = 26;
             this.label2.Text = "Memoria Ram";
             // 
             // txtRGBList
             // 
-            this.txtRGBList.Location = new System.Drawing.Point(57, 318);
+            this.txtRGBList.Location = new System.Drawing.Point(76, 391);
+            this.txtRGBList.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtRGBList.Name = "txtRGBList";
-            this.txtRGBList.Size = new System.Drawing.Size(136, 20);
+            this.txtRGBList.Size = new System.Drawing.Size(180, 22);
             this.txtRGBList.TabIndex = 25;
             // 
             // txtSSDList
             // 
-            this.txtSSDList.Location = new System.Drawing.Point(57, 242);
+            this.txtSSDList.Location = new System.Drawing.Point(76, 298);
+            this.txtSSDList.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtSSDList.Name = "txtSSDList";
-            this.txtSSDList.Size = new System.Drawing.Size(136, 20);
+            this.txtSSDList.Size = new System.Drawing.Size(180, 22);
             this.txtSSDList.TabIndex = 24;
             // 
             // txtTarjetaVideoList
             // 
-            this.txtTarjetaVideoList.Location = new System.Drawing.Point(57, 193);
+            this.txtTarjetaVideoList.Location = new System.Drawing.Point(76, 238);
+            this.txtTarjetaVideoList.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtTarjetaVideoList.Name = "txtTarjetaVideoList";
-            this.txtTarjetaVideoList.Size = new System.Drawing.Size(136, 20);
+            this.txtTarjetaVideoList.Size = new System.Drawing.Size(180, 22);
             this.txtTarjetaVideoList.TabIndex = 23;
             // 
             // memoriaRamList
             // 
             this.memoriaRamList.AccessibleName = "";
-            this.memoriaRamList.Location = new System.Drawing.Point(57, 135);
+            this.memoriaRamList.Location = new System.Drawing.Point(76, 166);
+            this.memoriaRamList.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.memoriaRamList.Name = "memoriaRamList";
-            this.memoriaRamList.Size = new System.Drawing.Size(136, 20);
+            this.memoriaRamList.Size = new System.Drawing.Size(180, 22);
             this.memoriaRamList.TabIndex = 22;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(113, 103);
+            this.label1.Location = new System.Drawing.Point(151, 127);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(0, 13);
+            this.label1.Size = new System.Drawing.Size(0, 16);
             this.label1.TabIndex = 21;
             // 
             // txtBuscarList
             // 
-            this.txtBuscarList.Location = new System.Drawing.Point(321, 232);
+            this.txtBuscarList.Location = new System.Drawing.Point(428, 286);
+            this.txtBuscarList.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtBuscarList.Name = "txtBuscarList";
-            this.txtBuscarList.Size = new System.Drawing.Size(136, 20);
+            this.txtBuscarList.Size = new System.Drawing.Size(180, 22);
             this.txtBuscarList.TabIndex = 30;
             // 
             // FormularioListas
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(1067, 554);
             this.Controls.Add(this.txtBuscarList);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
@@ -216,6 +233,7 @@
             this.Controls.Add(this.btn_imprimir_lista);
             this.Controls.Add(this.btn_ascendente_lista);
             this.Controls.Add(this.agregar_elemento);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "FormularioListas";
             this.Text = "FormularioListas";
             this.ResumeLayout(false);

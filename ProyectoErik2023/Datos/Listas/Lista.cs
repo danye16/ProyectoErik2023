@@ -8,19 +8,28 @@ using System.Windows.Forms;
 
 namespace ProyectoErik2023.Datos.Listas
 {
-    public class Lista : FormularioListas
+    public class Lista 
     {
-
+        FormularioListas formularioListas;
+        
         private Nodo _primero;
         private Nodo _ultimo;
-        public Lista()
+        public Lista(FormularioListas formularioListas)
         {
+            this.formularioListas = formularioListas;
+
             //crear constructor
             _primero = _ultimo = null;
         }
         public bool ListaVacia()
         {
-            return _primero != null ? false : true;
+            if (_primero == null)
+            {
+                return true;
+            }
+            
+            return false;
+            
         }
 
         public int LongitudLista()
@@ -43,22 +52,31 @@ namespace ProyectoErik2023.Datos.Listas
         }
         public void ImprimirLista()
         {
+
             if (ListaVacia())
                 MessageBox.Show("La Lista esta vacia señor humano");
             Nodo actual = _primero;
             while (actual != null)
             {
-                MessageBox.Show(actual.computadora.memoriaRam + actual.computadora.tarjetaVideo
-                    + actual.computadora.SSD + actual.computadora.rgb
-                     );
+                if (actual.computadora != null)
+                {
+                    MessageBox.Show(actual.computadora.memoriaRam + " " +
+                                    actual.computadora.tarjetaVideo + " " +
+                                    actual.computadora.SSD + " " +
+                                    actual.computadora.rgb);
+                }
                 actual = actual.siguiente;
+                //MessageBox.Show(actual.computadora.memoriaRam + actual.computadora.tarjetaVideo
+                //    + actual.computadora.SSD + actual.computadora.rgb
+                //     );
+                //actual = actual.siguiente;
             }
 
         }
         public void BuscarElemento()
         {
 
-            string objetivo = txtBuscarList.Text;
+            string objetivo = formularioListas.txtBuscarList.Text;
             bool encontrado = false;
             if (ListaVacia())
                 MessageBox.Show("El modelo con esa tarjeta de video no esta disponible");
@@ -88,13 +106,30 @@ namespace ProyectoErik2023.Datos.Listas
             }
         }
 
-        public void AgregarLista (Computadora computadora)
-
+        public void AgregarLista()
         {
-            if (ListaVacia())
+            Computadora compu = new Computadora()
             {
-                _primero=new Nodo(computadora);
+                memoriaRam = formularioListas.memoriaRamList.Text,
+                tarjetaVideo = formularioListas.txtTarjetaVideoList.Text,
+                SSD = formularioListas.txtSSDList.Text,
+                rgb = formularioListas.txtRGBList.Text
+            };
+
+            Nodo nuevoNodo = new Nodo(compu);
+
+            if (_primero == null)
+            {
+                _primero = nuevoNodo;
+                _ultimo = nuevoNodo; // Si la lista está vacía, el nuevo nodo es el primero y el último
             }
+            else
+            {
+                _ultimo.siguiente = nuevoNodo;
+                _ultimo = nuevoNodo; // Actualiza _ultimo al agregar un nuevo nodo al final
+            }
+
+
         }
     }
 }

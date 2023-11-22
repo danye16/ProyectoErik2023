@@ -16,10 +16,16 @@ namespace ProyectoErik2023
     {
         Lista lista;
 
+
         public FormularioListas()
         {
             InitializeComponent();
+            lista = new Lista(this);
         }
+
+
+
+
 
         private void btn_ascendente_lista_Click(object sender, EventArgs e)
         {
@@ -33,10 +39,24 @@ namespace ProyectoErik2023
         }
 
         private void agregar_elemento_Click(object sender, EventArgs e)
+        {
+            Computadora compu = new Computadora()
+            {
+                memoriaRam = memoriaRamList.Text,
+                tarjetaVideo = txtTarjetaVideoList.Text,
+                SSD = txtSSDList.Text,
+                rgb = txtRGBList.Text
+            };
+            lista.AgregarLista();
+            MessageBox.Show(compu.tarjetaVideo);
+        }
+        private void limpia_lista_Click(object sender, EventArgs e)
+        {
 
-        { }
-            //Computadora computadora= new Computadora(memoriaRamList.Text,txtTarjetaVideoList.Text,txtSSDList.Text,txtRGBList.Text);
-            //lista.AgregarLista(computadora);
         }
     }
+
+    
+    //Computadora computadora= new Computadora(memoriaRamList.Text,txtTarjetaVideoList.Text,txtSSDList.Text,txtRGBList.Text);
+    //lista.AgregarLista(computadora);
 }

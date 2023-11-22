@@ -46,9 +46,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Datos\Listas\Lista.cs">
-      <SubType>Form</SubType>
-    </Compile>
+    <Compile Include="Datos\Listas\Lista.cs" />
     <Compile Include="Datos\Nose\Nodo.cs" />
     <Compile Include="Lis\Computadora.cs" />
     <Compile Include="Form1.cs">
