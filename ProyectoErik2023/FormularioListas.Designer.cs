@@ -44,6 +44,7 @@
             this.memoriaRamList = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.txtBuscarList = new System.Windows.Forms.TextBox();
+            this.InsertarMedioList = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // agregar_elemento
@@ -103,6 +104,7 @@
             this.btn_buscar_lista.TabIndex = 4;
             this.btn_buscar_lista.Text = "Buscar Elemento";
             this.btn_buscar_lista.UseVisualStyleBackColor = false;
+            this.btn_buscar_lista.Click += new System.EventHandler(this.btn_buscar_lista_Click);
             // 
             // btn_descendente_lista
             // 
@@ -195,11 +197,24 @@
             this.txtBuscarList.Size = new System.Drawing.Size(136, 20);
             this.txtBuscarList.TabIndex = 30;
             // 
+            // InsertarMedioList
+            // 
+            this.InsertarMedioList.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.InsertarMedioList.Font = new System.Drawing.Font("SimSun", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.InsertarMedioList.Location = new System.Drawing.Point(43, 354);
+            this.InsertarMedioList.Name = "InsertarMedioList";
+            this.InsertarMedioList.Size = new System.Drawing.Size(163, 69);
+            this.InsertarMedioList.TabIndex = 31;
+            this.InsertarMedioList.Text = "Insertar Medio";
+            this.InsertarMedioList.UseVisualStyleBackColor = false;
+            this.InsertarMedioList.Click += new System.EventHandler(this.InsertarMedioList_Click);
+            // 
             // FormularioListas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.InsertarMedioList);
             this.Controls.Add(this.txtBuscarList);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
@@ -241,5 +256,6 @@
         public System.Windows.Forms.TextBox memoriaRamList;
         private System.Windows.Forms.Label label1;
         public System.Windows.Forms.TextBox txtBuscarList;
+        private System.Windows.Forms.Button InsertarMedioList;
     }
 }

@@ -12,15 +12,15 @@ namespace ProyectoErik2023.Listas.Nose
         private Nodo _siguiente { get; set; }
         public Nodo(Computadora computadora) 
         {
-            _computadora= computadora;
-            _siguiente = null;
+            this._computadora= computadora;
+            this._siguiente = null;
         }
-        public Nodo(Computadora computadora, Nodo siguiente)
+        public Nodo(Computadora computadora, Nodo siguientenodo)
         {
-            _computadora= computadora;
-            _siguiente= siguiente;
+            this._computadora= computadora;
+            this._siguiente= siguientenodo;
         }
-        public Computadora computadora { get; set; }
-        public Nodo siguiente { get; set; }
+        public Computadora computadora { get { return this._computadora; }  set{ this._computadora = value; } }
+        public Nodo siguiente { get { return this._siguiente; } set { this._siguiente = value; } }
     }
 }

@@ -14,8 +14,9 @@ namespace ProyectoErik2023
 {
     public partial class FormularioListas : Form
     {
-        Lista lista;
-
+        Lista lista=new Lista();
+        
+       
         public FormularioListas()
         {
             InitializeComponent();
@@ -34,9 +35,41 @@ namespace ProyectoErik2023
 
         private void agregar_elemento_Click(object sender, EventArgs e)
 
-        { }
-            //Computadora computadora= new Computadora(memoriaRamList.Text,txtTarjetaVideoList.Text,txtSSDList.Text,txtRGBList.Text);
-            //lista.AgregarLista(computadora);
+        {
+            Computadora computadora = new Computadora
+            {
+                memoriaRam = memoriaRamList.Text,
+                tarjetaVideo = txtTarjetaVideoList.Text,
+                SSD = txtSSDList.Text,
+                rgb = txtRGBList.Text
+
+            };
+
+
+            lista.AgregarLista(computadora);
+        
         }
+
+        private void btn_buscar_lista_Click(object sender, EventArgs e)
+        {
+            string palabra = txtTarjetaVideoList.Text;
+            lista.BuscarElemento(palabra);
+        }
+
+        private void InsertarMedioList_Click(object sender, EventArgs e)
+        {
+            Computadora computadora = new Computadora
+            {
+                memoriaRam = memoriaRamList.Text,
+                tarjetaVideo = txtTarjetaVideoList.Text,
+                SSD = txtSSDList.Text,
+                rgb = txtRGBList.Text
+
+            };
+            lista.InsertarMedioLista(computadora);
+        }
+        //Computadora computadora= new Computadora(memoriaRamList.Text,txtTarjetaVideoList.Text,txtSSDList.Text,txtRGBList.Text);
+        //lista.AgregarLista(computadora);
+
     }
 }

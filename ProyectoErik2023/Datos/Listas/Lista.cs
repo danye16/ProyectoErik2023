@@ -8,8 +8,9 @@ using System.Windows.Forms;
 
 namespace ProyectoErik2023.Datos.Listas
 {
-    public class Lista : FormularioListas
+    public class Lista 
     {
+        FormularioListas formularioListas;
 
         private Nodo _primero;
         private Nodo _ultimo;
@@ -46,19 +47,21 @@ namespace ProyectoErik2023.Datos.Listas
             if (ListaVacia())
                 MessageBox.Show("La Lista esta vacia señor humano");
             Nodo actual = _primero;
+            //MessageBox.Show(_primero.computadora.SSD);
+
             while (actual != null)
             {
-                MessageBox.Show(actual.computadora.memoriaRam + actual.computadora.tarjetaVideo
-                    + actual.computadora.SSD + actual.computadora.rgb
-                     );
+                MessageBox.Show($"Su tarjeton grafico es {actual.computadora.tarjetaVideo}\n"
+                    +$"La memoria Ram es de {actual.computadora.memoriaRam}\n"
+                    +$"La SSD que eligio es {actual.computadora.SSD}\n"
+                    +$"Sus luces gaming son {actual.computadora.rgb}");
                 actual = actual.siguiente;
             }
 
         }
-        public void BuscarElemento()
+        public void BuscarElemento(string palabra)
         {
-
-            string objetivo = txtBuscarList.Text;
+            //string palabra = formularioListas.txtTarjetaVideoList.Text;
             bool encontrado = false;
             if (ListaVacia())
                 MessageBox.Show("El modelo con esa tarjeta de video no esta disponible");
@@ -68,7 +71,9 @@ namespace ProyectoErik2023.Datos.Listas
                 Nodo actual = _primero;
                 while (actual != null)
                 {
-                    if (actual.computadora.tarjetaVideo == objetivo)
+                    if (string.Compare(palabra, actual.computadora.tarjetaVideo) == 1)
+                    /*(actual.computadora.tarjetaVideo == formularioListas.txtTarjetaVideoList.Text)*/
+
                     {
                         encontrado = true;
                         MessageBox.Show("si se encuentra el elemento encontrado");
@@ -91,10 +96,36 @@ namespace ProyectoErik2023.Datos.Listas
         public void AgregarLista (Computadora computadora)
 
         {
-            if (ListaVacia())
+            Nodo nuevoNodo;
+            nuevoNodo= new Nodo(computadora);
+            nuevoNodo.siguiente = _primero;
+            _primero = nuevoNodo;
+        }
+
+        public void InsertarMedioLista(Computadora computadora)
+        {
+            int longitud = LongitudLista();
+            int medio =0;
+            medio = longitud/2;
+            Nodo actual = _primero;
+            Nodo anterior = null;
+            //MessageBox.Show(_primero.computadora.SSD);
+            int contador = 1;
+            while (actual != null)
             {
-                _primero=new Nodo(computadora);
+                //if (Convert.ToUInt32(actual)==medio)
+                if (contador==medio)
+
+                {
+                    actual.siguiente = new Nodo(computadora);
+                    new Nodo(computadora).siguiente = actual;
+                        break;
+                }
+               anterior = actual;
+                actual = actual.siguiente;
+                contador++;
             }
         }
+
     }
 }
