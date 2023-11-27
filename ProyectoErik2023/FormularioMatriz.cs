@@ -101,33 +101,59 @@ namespace ProyectoErik2023
 
         public void Burbuja()
         {
-            for (int i = 0; i < computadora.Length-1 ; i++)
+            if (indice == computadora.Length)
             {
-                for (int j = 0; j < computadora.Length-1 ; j++)
+                for (int i = 0; i < computadora.Length - 1; i++)
                 {
-                    if (string.Compare(computadora[j].tarjetaVideo, computadora[j + 1].tarjetaVideo)>0)
+                    for (int j = 0; j < computadora.Length - 1; j++)
                     {
-                       Computadora aux = computadora[j];
-                        computadora[j] = computadora[j+1];
-                        computadora[j+1] = aux;
+                        if (string.Compare(computadora[j].tarjetaVideo, computadora[j + 1].tarjetaVideo) < 0)
+                        {
+                            Computadora aux = computadora[j];
+                            computadora[j] = computadora[j + 1];
+                            computadora[j + 1] = aux;
+                        }
                     }
                 }
             }
+            else
+            {
+                MessageBox.Show("Tienes que llenar la matriz para ordenar");
+            }
+           
         }
         public void BurbujaDescendente()
         {
-            for (int i = 0; i < computadora.Length - 1; i++)
+            if (indice==computadora.Length)
             {
-                for (int j = 0; j < computadora.Length - 1; j++)
+
+                for (int i = 0; i < computadora.Length - 1; i++)
                 {
-                    if (string.Compare(computadora[j].tarjetaVideo, computadora[j + 1].tarjetaVideo) < 0)
+                    for (int j = 0; j < computadora.Length - 1; j++)
                     {
-                      Computadora aux = computadora[j];
-                        computadora[j] = computadora[j + 1];
-                        computadora[j + 1] = aux;
+
+                        if (string.Compare(computadora[j].tarjetaVideo, computadora[j + 1].tarjetaVideo) == -1)
+                        {
+                            Computadora aux = computadora[j];
+                            computadora[j] = computadora[j + 1];
+                            computadora[j + 1] = aux;
+                        }
                     }
+                    
+
+
                 }
             }
+            else
+            {
+                MessageBox.Show("Tienes que llenar la matriz para ordenar");
+            }
+
+
+
+
+
+
         }
 
         public void Buscar()
@@ -138,23 +164,35 @@ namespace ProyectoErik2023
             int media = 0;
             int inicio = 0;
             int final = computadora.Length;
-            while (inicio < final && centinela == false)
+            if (palabra == string.Empty)
             {
-                media = (inicio + final) / 2;
-                if (string.Compare(palabra, computadora[media].tarjetaVideo) == 0)
+                MessageBox.Show("Tienes que llenar el campo");
+
+            }
+            else
+            {
+                while (inicio < final && centinela == false)
                 {
-                    centinela = true;
-                   MessageBox.Show($"El elemento {palabra} se encuentra en la posicion {media} ");
+
+                    media = (inicio + final) / 2;
+                    if (string.Compare(palabra, computadora[media].tarjetaVideo) == 0)
+                    {
+                        centinela = true;
+                        MessageBox.Show($"El elemento {palabra} se encuentra en la posicion {media} ");
+                    }
+                    if (string.Compare(palabra, computadora[media].tarjetaVideo) < 0)
+                        final = media - 1;
+                    else
+                        inicio = media + 1;
+
+                    if (centinela == false)
+                    {
+                        MessageBox.Show($"El elemento {palabra} no existe ");
+                    }
                 }
-                if (string.Compare(palabra, computadora[media].tarjetaVideo) < 0)
-                    final = media - 1;
-                else
-                    inicio = media + 1;
             }
-            if (centinela == false)
-            {
-               MessageBox.Show($"El elemento {palabra} no existe ");
-            }
+           
+               
         }
         public void AgregarPcFinal(Computadora[] matriz)
         {
