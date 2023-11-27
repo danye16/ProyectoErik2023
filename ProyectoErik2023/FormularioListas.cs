@@ -65,7 +65,8 @@ namespace ProyectoErik2023
                 SSD = txtSSDList.Text,
                 rgb = txtRGBList.Text
 
-            };       
+            };
+            //lista.InsertarMedioLista(computadora);
             lista.InsertarMedioLista(computadora);
         }
 
@@ -99,7 +100,16 @@ namespace ProyectoErik2023
 
         private void limpia_lista_Click(object sender, EventArgs e)
         {
+
+            string aa = "";
+            memoriaRamList.Text = aa;
+            txtTarjetaVideoList.Text = string.Empty;
+            txtSSDList.Text = string.Empty;
+            txtRGBList.Text = string.Empty;
+
             lista.VaciarLista();
+
+            MessageBox.Show("Se a limpiado todo jefe");
         }
 
         private void btnEliminarFrenteLista_Click(object sender, EventArgs e)
