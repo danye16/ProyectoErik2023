@@ -100,11 +100,11 @@ namespace ProyectoErik2023.Datos.Listas
             if (ListaVacia())
             {
                 _primero=_ultimo=new Nodo(computadora);
-                MessageBox.Show("Computadora agregada con existo");
+                MessageBox.Show("Computadora se añadio con exito");
             }
             else
                 _primero=new Nodo(computadora, _primero);
-                MessageBox.Show("Computadora agregada con existo");
+                MessageBox.Show("Computadora se añadio con exito");
 
         }
         public void InsertarFinalLista (Computadora computadora)
@@ -112,7 +112,7 @@ namespace ProyectoErik2023.Datos.Listas
             if (ListaVacia())
             {
                 _primero=_ultimo= new Nodo(computadora);
-                MessageBox.Show("Computadora agregada con existo");
+                MessageBox.Show("Computadora se añadio con exito");
 
             }
             else
@@ -163,7 +163,7 @@ namespace ProyectoErik2023.Datos.Listas
                     }
                     anterior = actual;
                     Nodo nuevo = new Nodo(computadora, actual.siguiente);
-                    MessageBox.Show("la pelicula se agrego a la lista");
+                MessageBox.Show("La computadora se inserto en el medio correctamente");
                     anterior.siguiente= nuevo;
                 
             }
