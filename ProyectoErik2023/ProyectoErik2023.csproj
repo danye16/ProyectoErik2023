@@ -128,5 +128,8 @@
   <ItemGroup>
     <None Include="Resources\menuprincipal.gif" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\listaimagen.gif" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

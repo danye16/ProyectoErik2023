@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormularioListas));
             this.agregar_elemento = new System.Windows.Forms.Button();
             this.btn_ascendente_lista = new System.Windows.Forms.Button();
             this.btn_imprimir_lista = new System.Windows.Forms.Button();
@@ -49,6 +48,8 @@
             this.btn_InsertarFinal = new System.Windows.Forms.Button();
             this.label6 = new System.Windows.Forms.Label();
             this.btnEliminarFrenteLista = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // agregar_elemento
@@ -56,7 +57,7 @@
             this.agregar_elemento.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.agregar_elemento.Font = new System.Drawing.Font("SimSun", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.agregar_elemento.Location = new System.Drawing.Point(16, 15);
-            this.agregar_elemento.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.agregar_elemento.Margin = new System.Windows.Forms.Padding(4);
             this.agregar_elemento.Name = "agregar_elemento";
             this.agregar_elemento.Size = new System.Drawing.Size(217, 85);
             this.agregar_elemento.TabIndex = 0;
@@ -69,7 +70,7 @@
             this.btn_ascendente_lista.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.btn_ascendente_lista.Font = new System.Drawing.Font("SimSun", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_ascendente_lista.Location = new System.Drawing.Point(869, 238);
-            this.btn_ascendente_lista.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn_ascendente_lista.Margin = new System.Windows.Forms.Padding(4);
             this.btn_ascendente_lista.Name = "btn_ascendente_lista";
             this.btn_ascendente_lista.Size = new System.Drawing.Size(217, 85);
             this.btn_ascendente_lista.TabIndex = 1;
@@ -82,7 +83,7 @@
             this.btn_imprimir_lista.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.btn_imprimir_lista.Font = new System.Drawing.Font("SimSun", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_imprimir_lista.Location = new System.Drawing.Point(16, 238);
-            this.btn_imprimir_lista.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn_imprimir_lista.Margin = new System.Windows.Forms.Padding(4);
             this.btn_imprimir_lista.Name = "btn_imprimir_lista";
             this.btn_imprimir_lista.Size = new System.Drawing.Size(217, 85);
             this.btn_imprimir_lista.TabIndex = 2;
@@ -95,7 +96,7 @@
             this.limpia_lista.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.limpia_lista.Font = new System.Drawing.Font("SimSun", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.limpia_lista.Location = new System.Drawing.Point(16, 343);
-            this.limpia_lista.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.limpia_lista.Margin = new System.Windows.Forms.Padding(4);
             this.limpia_lista.Name = "limpia_lista";
             this.limpia_lista.Size = new System.Drawing.Size(217, 85);
             this.limpia_lista.TabIndex = 3;
@@ -108,7 +109,7 @@
             this.btn_buscar_lista.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.btn_buscar_lista.Font = new System.Drawing.Font("SimSun", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_buscar_lista.Location = new System.Drawing.Point(16, 454);
-            this.btn_buscar_lista.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn_buscar_lista.Margin = new System.Windows.Forms.Padding(4);
             this.btn_buscar_lista.Name = "btn_buscar_lista";
             this.btn_buscar_lista.Size = new System.Drawing.Size(217, 85);
             this.btn_buscar_lista.TabIndex = 4;
@@ -121,7 +122,7 @@
             this.btn_descendente_lista.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.btn_descendente_lista.Font = new System.Drawing.Font("SimSun", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_descendente_lista.Location = new System.Drawing.Point(869, 454);
-            this.btn_descendente_lista.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn_descendente_lista.Margin = new System.Windows.Forms.Padding(4);
             this.btn_descendente_lista.Name = "btn_descendente_lista";
             this.btn_descendente_lista.Size = new System.Drawing.Size(217, 85);
             this.btn_descendente_lista.TabIndex = 5;
@@ -179,7 +180,7 @@
             // txtRGBList
             // 
             this.txtRGBList.Location = new System.Drawing.Point(893, 75);
-            this.txtRGBList.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtRGBList.Margin = new System.Windows.Forms.Padding(4);
             this.txtRGBList.Name = "txtRGBList";
             this.txtRGBList.Size = new System.Drawing.Size(180, 22);
             this.txtRGBList.TabIndex = 25;
@@ -187,7 +188,7 @@
             // txtSSDList
             // 
             this.txtSSDList.Location = new System.Drawing.Point(668, 75);
-            this.txtSSDList.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtSSDList.Margin = new System.Windows.Forms.Padding(4);
             this.txtSSDList.Name = "txtSSDList";
             this.txtSSDList.Size = new System.Drawing.Size(180, 22);
             this.txtSSDList.TabIndex = 24;
@@ -195,7 +196,7 @@
             // txtTarjetaVideoList
             // 
             this.txtTarjetaVideoList.Location = new System.Drawing.Point(464, 75);
-            this.txtTarjetaVideoList.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtTarjetaVideoList.Margin = new System.Windows.Forms.Padding(4);
             this.txtTarjetaVideoList.Name = "txtTarjetaVideoList";
             this.txtTarjetaVideoList.Size = new System.Drawing.Size(180, 22);
             this.txtTarjetaVideoList.TabIndex = 23;
@@ -204,7 +205,7 @@
             // 
             this.memoriaRamList.AccessibleName = "";
             this.memoriaRamList.Location = new System.Drawing.Point(257, 75);
-            this.memoriaRamList.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.memoriaRamList.Margin = new System.Windows.Forms.Padding(4);
             this.memoriaRamList.Name = "memoriaRamList";
             this.memoriaRamList.Size = new System.Drawing.Size(180, 22);
             this.memoriaRamList.TabIndex = 22;
@@ -221,7 +222,7 @@
             // txtBuscarList
             // 
             this.txtBuscarList.Location = new System.Drawing.Point(272, 496);
-            this.txtBuscarList.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtBuscarList.Margin = new System.Windows.Forms.Padding(4);
             this.txtBuscarList.Name = "txtBuscarList";
             this.txtBuscarList.Size = new System.Drawing.Size(180, 22);
             this.txtBuscarList.TabIndex = 30;
@@ -231,7 +232,7 @@
             this.InsertarMedioList.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.InsertarMedioList.Font = new System.Drawing.Font("SimSun", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.InsertarMedioList.Location = new System.Drawing.Point(869, 127);
-            this.InsertarMedioList.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.InsertarMedioList.Margin = new System.Windows.Forms.Padding(4);
             this.InsertarMedioList.Name = "InsertarMedioList";
             this.InsertarMedioList.Size = new System.Drawing.Size(217, 85);
             this.InsertarMedioList.TabIndex = 31;
@@ -244,7 +245,7 @@
             this.btn_InsertarFinal.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.btn_InsertarFinal.Font = new System.Drawing.Font("SimSun", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_InsertarFinal.Location = new System.Drawing.Point(16, 127);
-            this.btn_InsertarFinal.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn_InsertarFinal.Margin = new System.Windows.Forms.Padding(4);
             this.btn_InsertarFinal.Name = "btn_InsertarFinal";
             this.btn_InsertarFinal.Size = new System.Drawing.Size(217, 85);
             this.btn_InsertarFinal.TabIndex = 32;
@@ -270,7 +271,7 @@
             this.btnEliminarFrenteLista.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.btnEliminarFrenteLista.Font = new System.Drawing.Font("SimSun", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEliminarFrenteLista.Location = new System.Drawing.Point(869, 343);
-            this.btnEliminarFrenteLista.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnEliminarFrenteLista.Margin = new System.Windows.Forms.Padding(4);
             this.btnEliminarFrenteLista.Name = "btnEliminarFrenteLista";
             this.btnEliminarFrenteLista.Size = new System.Drawing.Size(217, 85);
             this.btnEliminarFrenteLista.TabIndex = 34;
@@ -278,11 +279,20 @@
             this.btnEliminarFrenteLista.UseVisualStyleBackColor = false;
             this.btnEliminarFrenteLista.Click += new System.EventHandler(this.btnEliminarFrenteLista_Click);
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::ProyectoErik2023.Properties.Resources.listaimagen;
+            this.pictureBox1.Location = new System.Drawing.Point(-3, 0);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(1165, 580);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 35;
+            this.pictureBox1.TabStop = false;
+            // 
             // FormularioListas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(1151, 554);
             this.Controls.Add(this.btnEliminarFrenteLista);
             this.Controls.Add(this.label6);
@@ -304,9 +314,11 @@
             this.Controls.Add(this.btn_imprimir_lista);
             this.Controls.Add(this.btn_ascendente_lista);
             this.Controls.Add(this.agregar_elemento);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Controls.Add(this.pictureBox1);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "FormularioListas";
             this.Text = "FormularioListas";
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -334,5 +346,6 @@
         private System.Windows.Forms.Button btn_InsertarFinal;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Button btnEliminarFrenteLista;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }
