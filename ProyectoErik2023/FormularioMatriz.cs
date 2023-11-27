@@ -238,5 +238,10 @@ namespace ProyectoErik2023
         {
             Limpiar();
         }
+
+        private void FormularioMatriz_Load(object sender, EventArgs e)
+        {
+            
+        }
     }
 }
