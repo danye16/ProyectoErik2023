@@ -45,16 +45,16 @@ namespace ProyectoErik2023.Datos.Listas
         public void ImprimirLista()
         {
             if (ListaVacia())
-                MessageBox.Show("La Lista esta vacia señor humano");
+                MessageBox.Show("La lista de computadoras esta vacia");
             Nodo actual = _primero;
             //MessageBox.Show(_primero.computadora.SSD);
 
             while (actual != null)
             {
-                MessageBox.Show($"Su tarjeton grafico es {actual.computadora.tarjetaVideo}\n"
-                    +$"La memoria Ram es de {actual.computadora.memoriaRam}\n"
-                    +$"La SSD que eligio es {actual.computadora.SSD}\n"
-                    +$"Sus luces gaming son {actual.computadora.rgb}");
+                MessageBox.Show($"Su tarjeton grafico es: {actual.computadora.tarjetaVideo}\n"
+                    +$"La memoria Ram es de: {actual.computadora.memoriaRam}\n"
+                    +$"La SSD que eligio es: {actual.computadora.SSD}\n"
+                    +$"Sus luces gaming son: {actual.computadora.rgb}");
                 actual = actual.siguiente;
             }
 
@@ -64,7 +64,7 @@ namespace ProyectoErik2023.Datos.Listas
             //string palabra = formularioListas.txtTarjetaVideoList.Text;
             bool encontrado = false;
             if (ListaVacia())
-                MessageBox.Show("El modelo con esa tarjeta de video no esta disponible");
+                MessageBox.Show("Su computadora no existe");
             else
             {
                 Nodo actual = _primero;
@@ -74,7 +74,7 @@ namespace ProyectoErik2023.Datos.Listas
                     /*(actual.computadora.tarjetaVideo == formularioListas.txtTarjetaVideoList.Text)*/
 
                     {
-                        MessageBox.Show($"si se encuentra la tarjeta {palabra} disponible");
+                        MessageBox.Show($"Si se encuentra la tarjeta {palabra} disponible");
                         encontrado = true;
 
                         break;
@@ -99,11 +99,11 @@ namespace ProyectoErik2023.Datos.Listas
             if (ListaVacia())
             {
                 _primero=_ultimo=new Nodo(computadora);
-                MessageBox.Show("Computadora agregada con existo");
+                MessageBox.Show("Computadora agregada con exito");
             }
             else
                 _primero=new Nodo(computadora, _primero);
-                MessageBox.Show("Computadora agregada con existo");
+                MessageBox.Show("Computadora agregada con exito");
 
         }
         public void InsertarFinalLista (Computadora computadora)
@@ -111,13 +111,13 @@ namespace ProyectoErik2023.Datos.Listas
             if (ListaVacia())
             {
                 _primero=_ultimo= new Nodo(computadora);
-                MessageBox.Show("Computadora agregada con existo");
+                MessageBox.Show("Computadora agregada con exito");
 
             }
             else
             {
                 _ultimo= _ultimo.siguiente= new Nodo(computadora);
-                MessageBox.Show("Computadora agregada con existo");
+                MessageBox.Show("Computadora agregada con exito");
             }    
         }
 
@@ -149,7 +149,7 @@ namespace ProyectoErik2023.Datos.Listas
         {
             if (ListaVacia())
             {
-                MessageBox.Show("No hay productos disponibles");
+                MessageBox.Show("No hay computadoras disponibles");
             }
             else
             {
@@ -172,14 +172,14 @@ namespace ProyectoErik2023.Datos.Listas
                     siguiente = siguiente.siguiente;
                 }
             } while (centinela);
-                MessageBox.Show("Se ordenaron los productos de forma Ascendente");
+                MessageBox.Show("Se ordenaron las computadoras de forma Ascendente");
             }
         }
         public void OrdenarDescendenteLista()
         {
             if (ListaVacia())
             {
-                MessageBox.Show("No hay productos disponibles");
+                MessageBox.Show("No hay computadoras disponibles");
             }
             else { 
             bool centinela;
@@ -201,7 +201,7 @@ namespace ProyectoErik2023.Datos.Listas
                     siguiente = siguiente.siguiente;
                 }
             } while (centinela);
-                MessageBox.Show("Se ordenaron los productos de forma Descendente");
+                MessageBox.Show("Se ordenaron los computadoras de forma Descendente");
 
             }
         }
@@ -210,7 +210,7 @@ namespace ProyectoErik2023.Datos.Listas
         public void VaciarLista()
         {
             _primero = _ultimo= null;
-            MessageBox.Show("Se vacio la lista con todo los productos");
+            MessageBox.Show("Se vacio la lista con todas las computadoras");
         }
         public void EliminarPrimeraPos()
         {

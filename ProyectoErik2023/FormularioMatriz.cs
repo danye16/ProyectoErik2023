@@ -36,7 +36,7 @@ namespace ProyectoErik2023
             }
             else
             {
-                MessageBox.Show("Array lleno joven");
+                MessageBox.Show("Esta lleno el array");
 
             }
         }
@@ -167,7 +167,7 @@ namespace ProyectoErik2023
                 compu.rgb = txtRGB.Text;
                 matriz[final] = compu;
                 indice++;
-                MessageBox.Show("Se guardaron los datos exitosamente");
+                MessageBox.Show("Se guardo la computadora con exito");
 
            
         }
@@ -186,7 +186,7 @@ namespace ProyectoErik2023
             }
 
             
-                MessageBox.Show("Se a limpiado todo jefe");
+                MessageBox.Show("Se a limpiado todas las computadoras disponibles");
         }
         private void panel1_Paint(object sender, PaintEventArgs e)
         {
