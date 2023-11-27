@@ -65,18 +65,18 @@ namespace ProyectoErik2023.Datos.Listas
             bool encontrado = false;
             if (ListaVacia())
                 MessageBox.Show("El modelo con esa tarjeta de video no esta disponible");
-
             else
             {
                 Nodo actual = _primero;
                 while (actual != null)
                 {
-                    if (string.Compare(palabra, actual.computadora.tarjetaVideo) == 1)
+                    if (string.Compare(palabra, actual.computadora.tarjetaVideo) == 0)
                     /*(actual.computadora.tarjetaVideo == formularioListas.txtTarjetaVideoList.Text)*/
 
                     {
+                        MessageBox.Show($"si se encuentra la tarjeta {palabra} disponible");
                         encontrado = true;
-                        MessageBox.Show("si se encuentra el elemento encontrado");
+
                         break;
                     }
                     else
@@ -89,17 +89,36 @@ namespace ProyectoErik2023.Datos.Listas
             }
             if (!encontrado)
             {
-                MessageBox.Show("El modelo con esa tarjeta de video no esta disponible");
+                MessageBox.Show($"El modelo con la tarjeta de video {palabra} no esta disponible");
             }
         }
 
         public void AgregarLista (Computadora computadora)
 
         {
-            Nodo nuevoNodo;
-            nuevoNodo= new Nodo(computadora);
-            nuevoNodo.siguiente = _primero;
-            _primero = nuevoNodo;
+            if (ListaVacia())
+            {
+                _primero=_ultimo=new Nodo(computadora);
+                MessageBox.Show("Computadora agregada con existo");
+            }
+            else
+                _primero=new Nodo(computadora, _primero);
+                MessageBox.Show("Computadora agregada con existo");
+
+        }
+        public void InsertarFinalLista (Computadora computadora)
+        {
+            if (ListaVacia())
+            {
+                _primero=_ultimo= new Nodo(computadora);
+                MessageBox.Show("Computadora agregada con existo");
+
+            }
+            else
+            {
+                _ultimo= _ultimo.siguiente= new Nodo(computadora);
+                MessageBox.Show("Computadora agregada con existo");
+            }    
         }
 
         public void InsertarMedioLista(Computadora computadora)
@@ -126,6 +145,81 @@ namespace ProyectoErik2023.Datos.Listas
                 contador++;
             }
         }
+        public void OrdenarAscendenteLista()
+        {
+            if (ListaVacia())
+            {
+                MessageBox.Show("No hay productos disponibles");
+            }
+            else
+            {
+                bool centinela;
+            do
+            {
+                centinela = false;
+                Nodo actual = _primero;
+                Nodo siguiente = _primero.siguiente;
+                while (siguiente != null)
+                {
+                    if (string.Compare(actual.computadora.tarjetaVideo, siguiente.computadora.tarjetaVideo) < 0)
+                    {//objeto auxitiliar para guardar temporalmente los datos
+                        Computadora aux = actual.computadora;
+                        actual.computadora = siguiente.computadora;
+                        siguiente.computadora = aux;
+                        centinela=true;
+                    }
+                    actual= siguiente;
+                    siguiente = siguiente.siguiente;
+                }
+            } while (centinela);
+                MessageBox.Show("Se ordenaron los productos de forma Ascendente");
+            }
+        }
+        public void OrdenarDescendenteLista()
+        {
+            if (ListaVacia())
+            {
+                MessageBox.Show("No hay productos disponibles");
+            }
+            else { 
+            bool centinela;
+            do
+            {
+                centinela = false;
+                Nodo actual = _primero;
+                Nodo siguiente = _primero.siguiente;
+                while (siguiente != null)
+                {
+                    if (string.Compare(actual.computadora.tarjetaVideo, siguiente.computadora.tarjetaVideo) > 0)
+                    {//objeto auxitiliar para guardar temporalmente los datos
+                        Computadora aux = actual.computadora;
+                        actual.computadora = siguiente.computadora;
+                        siguiente.computadora = aux;
+                        centinela = true;
+                    }
+                    actual = siguiente;
+                    siguiente = siguiente.siguiente;
+                }
+            } while (centinela);
+                MessageBox.Show("Se ordenaron los productos de forma Descendente");
 
+            }
+        }
+       
+
+        public void VaciarLista()
+        {
+            _primero = _ultimo= null;
+            MessageBox.Show("Se vacio la lista con todo los productos");
+        }
+        public void EliminarPrimeraPos()
+        {
+            if (_primero == _ultimo)
+            {
+                _primero = _ultimo = null;
+            }
+            else
+                _primero = _primero.siguiente;
+        }
     }
 }

@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormularioListas));
             this.agregar_elemento = new System.Windows.Forms.Button();
             this.btn_ascendente_lista = new System.Windows.Forms.Button();
             this.btn_imprimir_lista = new System.Windows.Forms.Button();
@@ -45,13 +46,16 @@
             this.label1 = new System.Windows.Forms.Label();
             this.txtBuscarList = new System.Windows.Forms.TextBox();
             this.InsertarMedioList = new System.Windows.Forms.Button();
+            this.btn_InsertarFinal = new System.Windows.Forms.Button();
+            this.label6 = new System.Windows.Forms.Label();
+            this.btnEliminarFrenteLista = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // agregar_elemento
             // 
             this.agregar_elemento.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.agregar_elemento.Font = new System.Drawing.Font("SimSun", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.agregar_elemento.Location = new System.Drawing.Point(43, 12);
+            this.agregar_elemento.Location = new System.Drawing.Point(12, 12);
             this.agregar_elemento.Name = "agregar_elemento";
             this.agregar_elemento.Size = new System.Drawing.Size(163, 69);
             this.agregar_elemento.TabIndex = 0;
@@ -63,7 +67,7 @@
             // 
             this.btn_ascendente_lista.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.btn_ascendente_lista.Font = new System.Drawing.Font("SimSun", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_ascendente_lista.Location = new System.Drawing.Point(399, 289);
+            this.btn_ascendente_lista.Location = new System.Drawing.Point(652, 193);
             this.btn_ascendente_lista.Name = "btn_ascendente_lista";
             this.btn_ascendente_lista.Size = new System.Drawing.Size(163, 69);
             this.btn_ascendente_lista.TabIndex = 1;
@@ -75,7 +79,7 @@
             // 
             this.btn_imprimir_lista.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.btn_imprimir_lista.Font = new System.Drawing.Font("SimSun", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_imprimir_lista.Location = new System.Drawing.Point(605, 30);
+            this.btn_imprimir_lista.Location = new System.Drawing.Point(12, 193);
             this.btn_imprimir_lista.Name = "btn_imprimir_lista";
             this.btn_imprimir_lista.Size = new System.Drawing.Size(163, 69);
             this.btn_imprimir_lista.TabIndex = 2;
@@ -87,18 +91,19 @@
             // 
             this.limpia_lista.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.limpia_lista.Font = new System.Drawing.Font("SimSun", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.limpia_lista.Location = new System.Drawing.Point(574, 159);
+            this.limpia_lista.Location = new System.Drawing.Point(12, 279);
             this.limpia_lista.Name = "limpia_lista";
             this.limpia_lista.Size = new System.Drawing.Size(163, 69);
             this.limpia_lista.TabIndex = 3;
             this.limpia_lista.Text = "Limpiar Lista";
             this.limpia_lista.UseVisualStyleBackColor = false;
+            this.limpia_lista.Click += new System.EventHandler(this.limpia_lista_Click);
             // 
             // btn_buscar_lista
             // 
             this.btn_buscar_lista.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.btn_buscar_lista.Font = new System.Drawing.Font("SimSun", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_buscar_lista.Location = new System.Drawing.Point(307, 134);
+            this.btn_buscar_lista.Location = new System.Drawing.Point(12, 369);
             this.btn_buscar_lista.Name = "btn_buscar_lista";
             this.btn_buscar_lista.Size = new System.Drawing.Size(163, 69);
             this.btn_buscar_lista.TabIndex = 4;
@@ -110,17 +115,20 @@
             // 
             this.btn_descendente_lista.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.btn_descendente_lista.Font = new System.Drawing.Font("SimSun", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_descendente_lista.Location = new System.Drawing.Point(605, 289);
+            this.btn_descendente_lista.Location = new System.Drawing.Point(652, 369);
             this.btn_descendente_lista.Name = "btn_descendente_lista";
             this.btn_descendente_lista.Size = new System.Drawing.Size(163, 69);
             this.btn_descendente_lista.TabIndex = 5;
             this.btn_descendente_lista.Text = "Ordenar Descendente";
             this.btn_descendente_lista.UseVisualStyleBackColor = false;
+            this.btn_descendente_lista.Click += new System.EventHandler(this.btn_descendente_lista_Click);
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(78, 293);
+            this.label5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.label5.Location = new System.Drawing.Point(677, 23);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(99, 13);
             this.label5.TabIndex = 29;
@@ -129,7 +137,8 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(78, 221);
+            this.label4.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.label4.Location = new System.Drawing.Point(541, 23);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(29, 13);
             this.label4.TabIndex = 28;
@@ -138,7 +147,9 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(75, 162);
+            this.label3.BackColor = System.Drawing.Color.DarkRed;
+            this.label3.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.label3.Location = new System.Drawing.Point(377, 23);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(84, 13);
             this.label3.TabIndex = 27;
@@ -147,7 +158,8 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(72, 102);
+            this.label2.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.label2.Location = new System.Drawing.Point(225, 23);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(72, 13);
             this.label2.TabIndex = 26;
@@ -155,21 +167,21 @@
             // 
             // txtRGBList
             // 
-            this.txtRGBList.Location = new System.Drawing.Point(57, 318);
+            this.txtRGBList.Location = new System.Drawing.Point(670, 61);
             this.txtRGBList.Name = "txtRGBList";
             this.txtRGBList.Size = new System.Drawing.Size(136, 20);
             this.txtRGBList.TabIndex = 25;
             // 
             // txtSSDList
             // 
-            this.txtSSDList.Location = new System.Drawing.Point(57, 242);
+            this.txtSSDList.Location = new System.Drawing.Point(501, 61);
             this.txtSSDList.Name = "txtSSDList";
             this.txtSSDList.Size = new System.Drawing.Size(136, 20);
             this.txtSSDList.TabIndex = 24;
             // 
             // txtTarjetaVideoList
             // 
-            this.txtTarjetaVideoList.Location = new System.Drawing.Point(57, 193);
+            this.txtTarjetaVideoList.Location = new System.Drawing.Point(348, 61);
             this.txtTarjetaVideoList.Name = "txtTarjetaVideoList";
             this.txtTarjetaVideoList.Size = new System.Drawing.Size(136, 20);
             this.txtTarjetaVideoList.TabIndex = 23;
@@ -177,7 +189,7 @@
             // memoriaRamList
             // 
             this.memoriaRamList.AccessibleName = "";
-            this.memoriaRamList.Location = new System.Drawing.Point(57, 135);
+            this.memoriaRamList.Location = new System.Drawing.Point(193, 61);
             this.memoriaRamList.Name = "memoriaRamList";
             this.memoriaRamList.Size = new System.Drawing.Size(136, 20);
             this.memoriaRamList.TabIndex = 22;
@@ -192,7 +204,7 @@
             // 
             // txtBuscarList
             // 
-            this.txtBuscarList.Location = new System.Drawing.Point(321, 232);
+            this.txtBuscarList.Location = new System.Drawing.Point(204, 403);
             this.txtBuscarList.Name = "txtBuscarList";
             this.txtBuscarList.Size = new System.Drawing.Size(136, 20);
             this.txtBuscarList.TabIndex = 30;
@@ -201,7 +213,7 @@
             // 
             this.InsertarMedioList.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.InsertarMedioList.Font = new System.Drawing.Font("SimSun", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.InsertarMedioList.Location = new System.Drawing.Point(43, 354);
+            this.InsertarMedioList.Location = new System.Drawing.Point(652, 103);
             this.InsertarMedioList.Name = "InsertarMedioList";
             this.InsertarMedioList.Size = new System.Drawing.Size(163, 69);
             this.InsertarMedioList.TabIndex = 31;
@@ -209,11 +221,51 @@
             this.InsertarMedioList.UseVisualStyleBackColor = false;
             this.InsertarMedioList.Click += new System.EventHandler(this.InsertarMedioList_Click);
             // 
+            // btn_InsertarFinal
+            // 
+            this.btn_InsertarFinal.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.btn_InsertarFinal.Font = new System.Drawing.Font("SimSun", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_InsertarFinal.Location = new System.Drawing.Point(12, 103);
+            this.btn_InsertarFinal.Name = "btn_InsertarFinal";
+            this.btn_InsertarFinal.Size = new System.Drawing.Size(163, 69);
+            this.btn_InsertarFinal.TabIndex = 32;
+            this.btn_InsertarFinal.Text = "Insertar al final";
+            this.btn_InsertarFinal.UseVisualStyleBackColor = false;
+            this.btn_InsertarFinal.Click += new System.EventHandler(this.btn_InsertarFinal_Click);
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.BackColor = System.Drawing.Color.DarkRed;
+            this.label6.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.label6.Location = new System.Drawing.Point(181, 369);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(191, 13);
+            this.label6.TabIndex = 33;
+            this.label6.Text = "Introduce el modelo de tarjeta de video";
+            this.label6.Click += new System.EventHandler(this.label6_Click);
+            // 
+            // btnEliminarFrenteLista
+            // 
+            this.btnEliminarFrenteLista.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.btnEliminarFrenteLista.Font = new System.Drawing.Font("SimSun", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEliminarFrenteLista.Location = new System.Drawing.Point(652, 279);
+            this.btnEliminarFrenteLista.Name = "btnEliminarFrenteLista";
+            this.btnEliminarFrenteLista.Size = new System.Drawing.Size(163, 69);
+            this.btnEliminarFrenteLista.TabIndex = 34;
+            this.btnEliminarFrenteLista.Text = "Eliminar Frente";
+            this.btnEliminarFrenteLista.UseVisualStyleBackColor = false;
+            this.btnEliminarFrenteLista.Click += new System.EventHandler(this.btnEliminarFrenteLista_Click);
+            // 
             // FormularioListas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.ClientSize = new System.Drawing.Size(863, 450);
+            this.Controls.Add(this.btnEliminarFrenteLista);
+            this.Controls.Add(this.label6);
+            this.Controls.Add(this.btn_InsertarFinal);
             this.Controls.Add(this.InsertarMedioList);
             this.Controls.Add(this.txtBuscarList);
             this.Controls.Add(this.label5);
@@ -257,5 +309,8 @@
         private System.Windows.Forms.Label label1;
         public System.Windows.Forms.TextBox txtBuscarList;
         private System.Windows.Forms.Button InsertarMedioList;
+        private System.Windows.Forms.Button btn_InsertarFinal;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Button btnEliminarFrenteLista;
     }
 }

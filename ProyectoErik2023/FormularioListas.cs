@@ -24,7 +24,7 @@ namespace ProyectoErik2023
 
         private void btn_ascendente_lista_Click(object sender, EventArgs e)
         {
-
+           lista.OrdenarAscendenteLista();
         }
 
         private void btn_imprimir_lista_Click(object sender, EventArgs e)
@@ -52,7 +52,7 @@ namespace ProyectoErik2023
 
         private void btn_buscar_lista_Click(object sender, EventArgs e)
         {
-            string palabra = txtTarjetaVideoList.Text;
+            string palabra = txtBuscarList.Text;
             lista.BuscarElemento(palabra);
         }
 
@@ -65,8 +65,46 @@ namespace ProyectoErik2023
                 SSD = txtSSDList.Text,
                 rgb = txtRGBList.Text
 
-            };
+            };       
             lista.InsertarMedioLista(computadora);
+        }
+
+        private void btn_descendente_lista_Click(object sender, EventArgs e)
+        {
+            lista.OrdenarDescendenteLista();
+        }
+
+        private void label6_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btn_InsertarFinal_Click(object sender, EventArgs e)
+        {
+            Computadora computadora = new Computadora
+            {
+                memoriaRam = memoriaRamList.Text,
+                tarjetaVideo = txtTarjetaVideoList.Text,
+                SSD = txtSSDList.Text,
+                rgb = txtRGBList.Text
+
+            };
+            lista.InsertarFinalLista(computadora);
+        }
+
+        private void limpia_lista_Click(object sender, EventArgs e)
+        {
+            lista.VaciarLista();
+        }
+
+        private void btnEliminarFrenteLista_Click(object sender, EventArgs e)
+        {
+            lista.EliminarPrimeraPos();
         }
         //Computadora computadora= new Computadora(memoriaRamList.Text,txtTarjetaVideoList.Text,txtSSDList.Text,txtRGBList.Text);
         //lista.AgregarLista(computadora);

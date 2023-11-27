@@ -101,16 +101,15 @@ namespace ProyectoErik2023
 
         public void Burbuja()
         {
-            string aux;
-            for (int i = 0; i < computadora.Length - 1; i++)
+            for (int i = 0; i < computadora.Length-1 ; i++)
             {
-                for (int j = 0; j < computadora.Length - 1; j++)
+                for (int j = 0; j < computadora.Length-1 ; j++)
                 {
                     if (string.Compare(computadora[j].tarjetaVideo, computadora[j + 1].tarjetaVideo)>0)
                     {
-                        aux = computadora[j].tarjetaVideo;
-                        computadora[j].tarjetaVideo = computadora[j+1].tarjetaVideo;
-                        computadora[j+1].tarjetaVideo = aux;
+                       Computadora aux = computadora[j];
+                        computadora[j] = computadora[j+1];
+                        computadora[j+1] = aux;
                     }
                 }
             }
@@ -139,7 +138,7 @@ namespace ProyectoErik2023
             int media = 0;
             int inicio = 0;
             int final = computadora.Length;
-            while (inicio <= final && centinela == false)
+            while (inicio < final && centinela == false)
             {
                 media = (inicio + final) / 2;
                 if (string.Compare(palabra, computadora[media].tarjetaVideo) == 0)
