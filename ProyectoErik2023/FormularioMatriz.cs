@@ -236,7 +236,7 @@ namespace ProyectoErik2023
                 MessageBox.Show("Se guardaron los datos exitosamente");
 
             }
-
+            MessageBox.Show("Eliminame");
             string aa = "";
             memoriaRam.Text = aa;
             txtTarjetaVideo.Text = string.Empty;
