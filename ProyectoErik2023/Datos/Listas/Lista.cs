@@ -95,8 +95,8 @@ namespace ProyectoErik2023.Datos.Listas
         }
 
         public void AgregarLista (Computadora computadora)
-
         {
+          
             if (ListaVacia())
             {
                 _primero=_ultimo=new Nodo(computadora);
@@ -107,6 +107,7 @@ namespace ProyectoErik2023.Datos.Listas
                 MessageBox.Show("Computadora se añadio con exito");
 
         }
+
         public void InsertarFinalLista (Computadora computadora)
         {
             if (ListaVacia())
@@ -146,7 +147,7 @@ namespace ProyectoErik2023.Datos.Listas
             //    contador++;
           if (ListaVacia())
                 {
-                    Console.WriteLine("La lista esta vacia");
+                    MessageBox.Show("La lista esta vacia");
                     _primero = _ultimo = new Nodo(computadora);
                 }
                 else

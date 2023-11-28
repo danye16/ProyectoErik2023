@@ -34,20 +34,29 @@ namespace ProyectoErik2023
         }
 
         private void agregar_elemento_Click(object sender, EventArgs e)
-
         {
-            Computadora computadora = new Computadora
+            if (txtTarjetaVideoList.Text == string.Empty || memoriaRamList.Text == string.Empty || txtSSDList.Text == string.Empty || txtRGBList.Text == string.Empty)
             {
-                memoriaRam = memoriaRamList.Text,
-                tarjetaVideo = txtTarjetaVideoList.Text,
-                SSD = txtSSDList.Text,
-                rgb = txtRGBList.Text
+                MessageBox.Show("Todos los campos son obligatorios");
+            }
+            else
+            {
+                Computadora computadora = new Computadora
+                {
+                    memoriaRam = memoriaRamList.Text,
+                    tarjetaVideo = txtTarjetaVideoList.Text,
+                    SSD = txtSSDList.Text,
+                    rgb = txtRGBList.Text
 
-            };
+                };
+                lista.AgregarLista(computadora);
+            }
+            string aa = "";
+            memoriaRamList.Text = aa;
+            txtTarjetaVideoList.Text = string.Empty;
+            txtSSDList.Text = string.Empty;
+            txtRGBList.Text = string.Empty;
 
-
-            lista.AgregarLista(computadora);
-        
         }
 
         private void btn_buscar_lista_Click(object sender, EventArgs e)
@@ -58,16 +67,29 @@ namespace ProyectoErik2023
 
         private void InsertarMedioList_Click(object sender, EventArgs e)
         {
-            Computadora computadora = new Computadora
+            if (txtTarjetaVideoList.Text == string.Empty || memoriaRamList.Text == string.Empty || txtSSDList.Text == string.Empty || txtRGBList.Text == string.Empty)
             {
-                memoriaRam = memoriaRamList.Text,
-                tarjetaVideo = txtTarjetaVideoList.Text,
-                SSD = txtSSDList.Text,
-                rgb = txtRGBList.Text
+                MessageBox.Show("Todos los campos son obligatorios");
+            }
+            else
+            {
+                Computadora computadora = new Computadora
+                {
+                    memoriaRam = memoriaRamList.Text,
+                    tarjetaVideo = txtTarjetaVideoList.Text,
+                    SSD = txtSSDList.Text,
+                    rgb = txtRGBList.Text
 
-            };
-            //lista.InsertarMedioLista(computadora);
-            lista.InsertarMedioLista(computadora);
+                };
+                //lista.InsertarMedioLista(computadora);
+                lista.InsertarMedioLista(computadora);
+            }
+         
+            string aa = "";
+            memoriaRamList.Text = aa;
+            txtTarjetaVideoList.Text = string.Empty;
+            txtSSDList.Text = string.Empty;
+            txtRGBList.Text = string.Empty;
         }
 
         private void btn_descendente_lista_Click(object sender, EventArgs e)
@@ -87,15 +109,28 @@ namespace ProyectoErik2023
 
         private void btn_InsertarFinal_Click(object sender, EventArgs e)
         {
-            Computadora computadora = new Computadora
+            if (txtTarjetaVideoList.Text == string.Empty || memoriaRamList.Text == string.Empty || txtSSDList.Text == string.Empty || txtRGBList.Text == string.Empty)
             {
-                memoriaRam = memoriaRamList.Text,
-                tarjetaVideo = txtTarjetaVideoList.Text,
-                SSD = txtSSDList.Text,
-                rgb = txtRGBList.Text
+                MessageBox.Show("Todos los campos son obligatorios");
+            }
+            else
+            {
+                Computadora computadora = new Computadora
+                {
+                    memoriaRam = memoriaRamList.Text,
+                    tarjetaVideo = txtTarjetaVideoList.Text,
+                    SSD = txtSSDList.Text,
+                    rgb = txtRGBList.Text
 
-            };
-            lista.InsertarFinalLista(computadora);
+                };
+                lista.InsertarFinalLista(computadora);
+            }
+           
+            string aa = "";
+            memoriaRamList.Text = aa;
+            txtTarjetaVideoList.Text = string.Empty;
+            txtSSDList.Text = string.Empty;
+            txtRGBList.Text = string.Empty;
         }
 
         private void limpia_lista_Click(object sender, EventArgs e)

@@ -22,27 +22,49 @@ namespace ProyectoErik2023
         public Computadora[] computadora;
         public void AgregarPc(Computadora[] matriz)
         {
-            
-            if (indice < matriz.Length)
+
+            if (txtTarjetaVideo.Text == string.Empty || memoriaRam.Text == string.Empty || txtSSD.Text == string.Empty || txtRGB.Text == string.Empty)
             {
-                Computadora compu = new Computadora();
-                compu.memoriaRam = memoriaRam.Text;
-                compu.SSD = txtSSD.Text;
-                compu.tarjetaVideo = txtTarjetaVideo.Text;
-                compu.rgb = txtRGB.Text;
-                matriz[indice] = compu;
-                indice++;
-                MessageBox.Show("Se guardaron los datos exitosamente");
+                MessageBox.Show("Todos los campos son obligatorios");
             }
             else
             {
-                MessageBox.Show("Array lleno joven");
+                if (indice < matriz.Length)
+                {
+                    Computadora compu = new Computadora();
+                    compu.memoriaRam = memoriaRam.Text;
+                    compu.SSD = txtSSD.Text;
+                    compu.tarjetaVideo = txtTarjetaVideo.Text;
+                    compu.rgb = txtRGB.Text;
+                    matriz[indice] = compu;
+                    indice++;
+                    MessageBox.Show("Se guardaron los datos exitosamente");
 
+                }
+                else
+                {
+                    MessageBox.Show("Array lleno joven");
+
+                }
             }
+
+
+           
+
+            string aa = "";
+            memoriaRam.Text = aa;
+            txtTarjetaVideo.Text = string.Empty;
+            txtSSD.Text = string.Empty;
+            txtRGB.Text = string.Empty;
+
+
+
+
         }
             public void agregar_elementoM_Click(object sender, EventArgs e)
         {
             AgregarPc(computadora);
+
           
           //Computadora  computadoras = new Computadora
           //  {
@@ -196,8 +218,14 @@ namespace ProyectoErik2023
         }
         public void AgregarPcFinal(Computadora[] matriz)
         {
-           int final = computadora.Length - 1;
-            
+            if (txtTarjetaVideo.Text == string.Empty || memoriaRam.Text == string.Empty || txtSSD.Text == string.Empty || txtRGB.Text == string.Empty)
+            {
+                MessageBox.Show("Todos los campos son obligatorios");
+            }
+            else
+            {
+                int final = computadora.Length - 1;
+
                 Computadora compu = new Computadora();
                 compu.memoriaRam = memoriaRam.Text;
                 compu.SSD = txtSSD.Text;
@@ -207,7 +235,15 @@ namespace ProyectoErik2023
                 indice++;
                 MessageBox.Show("Se guardaron los datos exitosamente");
 
-           
+            }
+
+            string aa = "";
+            memoriaRam.Text = aa;
+            txtTarjetaVideo.Text = string.Empty;
+            txtSSD.Text = string.Empty;
+            txtRGB.Text = string.Empty;
+
+
         }
         public void Limpiar()
         {
