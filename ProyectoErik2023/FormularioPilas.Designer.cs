@@ -115,6 +115,7 @@
             this.btnAgregar.TabIndex = 12;
             this.btnAgregar.Text = "Agregar Elemento";
             this.btnAgregar.UseVisualStyleBackColor = false;
+            this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
             // 
             // dataGridView1
             // 
@@ -128,6 +129,7 @@
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(565, 150);
             this.dataGridView1.TabIndex = 18;
+            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // memoriaRam
             // 
@@ -187,6 +189,7 @@
             this.txtSSD.Name = "txtSSD";
             this.txtSSD.Size = new System.Drawing.Size(100, 20);
             this.txtSSD.TabIndex = 24;
+            this.txtSSD.TextChanged += new System.EventHandler(this.txtSSD_TextChanged);
             // 
             // label3
             // 
