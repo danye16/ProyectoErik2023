@@ -50,6 +50,7 @@
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Datos\Nose\Nodo.cs" />
+    <Compile Include="Datos\Pila\PilaAlcuadrado.cs" />
     <Compile Include="Lis\Computadora.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
