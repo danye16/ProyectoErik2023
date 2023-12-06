@@ -43,6 +43,8 @@
             this.btnLista.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.btnLista.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.btnLista.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnLista.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F);
+            this.btnLista.ForeColor = System.Drawing.Color.DarkMagenta;
             this.btnLista.Location = new System.Drawing.Point(39, 219);
             this.btnLista.Margin = new System.Windows.Forms.Padding(4);
             this.btnLista.Name = "btnLista";
@@ -59,7 +61,8 @@
             this.btnPilas.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Chartreuse;
             this.btnPilas.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Chartreuse;
             this.btnPilas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnPilas.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPilas.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F);
+            this.btnPilas.ForeColor = System.Drawing.Color.DarkMagenta;
             this.btnPilas.Location = new System.Drawing.Point(924, 219);
             this.btnPilas.Margin = new System.Windows.Forms.Padding(4);
             this.btnPilas.Name = "btnPilas";
@@ -76,6 +79,8 @@
             this.btnMatriz.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.btnMatriz.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.btnMatriz.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnMatriz.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F);
+            this.btnMatriz.ForeColor = System.Drawing.Color.DarkMagenta;
             this.btnMatriz.Location = new System.Drawing.Point(471, 15);
             this.btnMatriz.Margin = new System.Windows.Forms.Padding(4);
             this.btnMatriz.Name = "btnMatriz";
@@ -92,6 +97,8 @@
             this.btnColas.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.btnColas.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.btnColas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnColas.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F);
+            this.btnColas.ForeColor = System.Drawing.Color.DarkMagenta;
             this.btnColas.Location = new System.Drawing.Point(471, 491);
             this.btnColas.Margin = new System.Windows.Forms.Padding(4);
             this.btnColas.Name = "btnColas";

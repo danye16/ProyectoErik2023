@@ -113,11 +113,14 @@ namespace ProyectoErik2023
         private void txtEliminarCima_Click(object sender, EventArgs e)
         {
             PilaAlcuadrado1.ExtraerElemento();
+            ActualizarDataGridView();
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
             PilaAlcuadrado1.Limpiar();
+            ActualizarDataGridView();
+
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -128,6 +131,7 @@ namespace ProyectoErik2023
         private void btnRefrescar_Click(object sender, EventArgs e)
         {
             ActualizarDataGridView();
+
         }
     }
 }

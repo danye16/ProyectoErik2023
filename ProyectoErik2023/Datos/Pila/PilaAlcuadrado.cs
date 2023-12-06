@@ -138,7 +138,7 @@ namespace ProyectoErik2023.Datos.Pila
                 _posicionPila2++;
                 computadoraPila2[_posicionPila2] = temporal;
             }
-
+12
             // Restaurar la pila original
             while (_posicionPila2 >= 0)
             {

@@ -270,6 +270,7 @@ namespace ProyectoErik2023
 
             
                 MessageBox.Show("Se a limpiado todo jefe");
+            ActualizarDataGridView();
         }
 
         public void ActualizarDataGridView()
@@ -317,13 +318,16 @@ namespace ProyectoErik2023
         private void btn_ascendente_listaM_Click(object sender, EventArgs e)
         {
             Burbuja();
-            ImprimirPc(computadora);
+            //ImprimirPc(computadora);
+            ActualizarDataGridView();
+
 
         }
 
         private void btn_descendente_listaM_Click(object sender, EventArgs e)
         {
             BurbujaDescendente();
+            ActualizarDataGridView();
         }
 
         private void btn_buscar_listaM_Click(object sender, EventArgs e)
