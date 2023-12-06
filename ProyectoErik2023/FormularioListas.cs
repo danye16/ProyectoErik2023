@@ -158,6 +158,6 @@ namespace ProyectoErik2023
         }
         //Computadora computadora= new Computadora(memoriaRamList.Text,txtTarjetaVideoList.Text,txtSSDList.Text,txtRGBList.Text);
         //lista.AgregarLista(computadora);
-
+        //AAAAAAAA
     }
 }
