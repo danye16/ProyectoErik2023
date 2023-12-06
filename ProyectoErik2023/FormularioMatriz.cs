@@ -39,6 +39,8 @@ namespace ProyectoErik2023
                     matriz[indice] = compu;
                     indice++;
                     MessageBox.Show("Se guardaron los datos exitosamente");
+                    ActualizarDataGridView();
+
 
                 }
                 else
@@ -136,6 +138,8 @@ namespace ProyectoErik2023
                             computadora[j + 1] = aux;
                         }
                     }
+                    ActualizarDataGridView();
+
                 }
             }
             else
@@ -165,7 +169,10 @@ namespace ProyectoErik2023
 
 
                 }
+                ActualizarDataGridView();
+
             }
+
             else
             {
                 MessageBox.Show("Tienes que llenar la matriz para ordenar");
@@ -234,6 +241,8 @@ namespace ProyectoErik2023
                 matriz[final] = compu;
                 indice++;
                 MessageBox.Show("Se guardaron los datos exitosamente");
+                ActualizarDataGridView();
+
 
             }
 
@@ -261,6 +270,25 @@ namespace ProyectoErik2023
 
             
                 MessageBox.Show("Se a limpiado todo jefe");
+        }
+
+        public void ActualizarDataGridView()
+        {
+            dataGridView1.Rows.Clear();
+
+            for (int i = 0; i < computadora.Length; i++)
+            {
+                if (computadora[i] != null)
+                {
+                    dataGridView1.Rows.Add(
+                        $"Pc {i}",
+                        computadora[i].tarjetaVideo,
+                        computadora[i].memoriaRam,
+                        computadora[i].SSD,
+                        computadora[i].rgb
+                    );
+                }
+            }
         }
         private void panel1_Paint(object sender, PaintEventArgs e)
         {
@@ -316,6 +344,17 @@ namespace ProyectoErik2023
         private void FormularioMatriz_Load(object sender, EventArgs e)
         {
             
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void btnRefrescar_Click(object sender, EventArgs e)
+        {
+            ActualizarDataGridView();
+
         }
     }
 }
