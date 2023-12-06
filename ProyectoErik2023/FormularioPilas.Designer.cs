@@ -44,6 +44,13 @@
             this.label4 = new System.Windows.Forms.Label();
             this.txtBuscar = new System.Windows.Forms.TextBox();
             this.btnLimpiarTodo = new System.Windows.Forms.Button();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.memoriaRam = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tarjetaVideo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.SSD = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.RGB = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btnRefrescar = new System.Windows.Forms.Button();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // btn_descendente_pila
@@ -61,7 +68,7 @@
             // 
             this.btnBuscar.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.btnBuscar.Font = new System.Drawing.Font("SimSun", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBuscar.Location = new System.Drawing.Point(197, 299);
+            this.btnBuscar.Location = new System.Drawing.Point(148, 14);
             this.btnBuscar.Name = "btnBuscar";
             this.btnBuscar.Size = new System.Drawing.Size(163, 69);
             this.btnBuscar.TabIndex = 16;
@@ -73,7 +80,7 @@
             // 
             this.txtEliminarCima.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.txtEliminarCima.Font = new System.Drawing.Font("SimSun", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtEliminarCima.Location = new System.Drawing.Point(317, 194);
+            this.txtEliminarCima.Location = new System.Drawing.Point(606, 25);
             this.txtEliminarCima.Name = "txtEliminarCima";
             this.txtEliminarCima.Size = new System.Drawing.Size(163, 69);
             this.txtEliminarCima.TabIndex = 15;
@@ -184,7 +191,7 @@
             // 
             // txtBuscar
             // 
-            this.txtBuscar.Location = new System.Drawing.Point(226, 387);
+            this.txtBuscar.Location = new System.Drawing.Point(334, 25);
             this.txtBuscar.Name = "txtBuscar";
             this.txtBuscar.Size = new System.Drawing.Size(100, 20);
             this.txtBuscar.TabIndex = 26;
@@ -193,7 +200,7 @@
             // 
             this.btnLimpiarTodo.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.btnLimpiarTodo.Font = new System.Drawing.Font("SimSun", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLimpiarTodo.Location = new System.Drawing.Point(389, 299);
+            this.btnLimpiarTodo.Location = new System.Drawing.Point(334, 162);
             this.btnLimpiarTodo.Name = "btnLimpiarTodo";
             this.btnLimpiarTodo.Size = new System.Drawing.Size(163, 69);
             this.btnLimpiarTodo.TabIndex = 27;
@@ -201,11 +208,66 @@
             this.btnLimpiarTodo.UseVisualStyleBackColor = false;
             this.btnLimpiarTodo.Click += new System.EventHandler(this.button1_Click);
             // 
+            // dataGridView1
+            // 
+            this.dataGridView1.AllowUserToAddRows = false;
+            this.dataGridView1.AllowUserToDeleteRows = false;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.memoriaRam,
+            this.tarjetaVideo,
+            this.SSD,
+            this.RGB});
+            this.dataGridView1.Location = new System.Drawing.Point(46, 288);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.ReadOnly = true;
+            this.dataGridView1.Size = new System.Drawing.Size(476, 150);
+            this.dataGridView1.TabIndex = 28;
+            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
+            // 
+            // memoriaRam
+            // 
+            this.memoriaRam.HeaderText = "Memoria Ram";
+            this.memoriaRam.Name = "memoriaRam";
+            this.memoriaRam.ReadOnly = true;
+            // 
+            // tarjetaVideo
+            // 
+            this.tarjetaVideo.HeaderText = "Tarjeta de Video";
+            this.tarjetaVideo.Name = "tarjetaVideo";
+            this.tarjetaVideo.ReadOnly = true;
+            // 
+            // SSD
+            // 
+            this.SSD.HeaderText = "SSD";
+            this.SSD.Name = "SSD";
+            this.SSD.ReadOnly = true;
+            // 
+            // RGB
+            // 
+            this.RGB.HeaderText = "Luces gaming RGB";
+            this.RGB.Name = "RGB";
+            this.RGB.ReadOnly = true;
+            // 
+            // btnRefrescar
+            // 
+            this.btnRefrescar.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.btnRefrescar.Font = new System.Drawing.Font("SimSun", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRefrescar.Location = new System.Drawing.Point(148, 162);
+            this.btnRefrescar.Name = "btnRefrescar";
+            this.btnRefrescar.Size = new System.Drawing.Size(163, 69);
+            this.btnRefrescar.TabIndex = 29;
+            this.btnRefrescar.Text = "Refrescar Vista";
+            this.btnRefrescar.UseVisualStyleBackColor = false;
+            this.btnRefrescar.Click += new System.EventHandler(this.btnRefrescar_Click);
+            // 
             // FormularioPilas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btnRefrescar);
+            this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.btnLimpiarTodo);
             this.Controls.Add(this.txtBuscar);
             this.Controls.Add(this.txtRGB);
@@ -224,6 +286,7 @@
             this.Controls.Add(this.btnAgregar);
             this.Name = "FormularioPilas";
             this.Text = "FormularioPilas";
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -247,5 +310,11 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox txtBuscar;
         private System.Windows.Forms.Button btnLimpiarTodo;
+        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn memoriaRam;
+        private System.Windows.Forms.DataGridViewTextBoxColumn tarjetaVideo;
+        private System.Windows.Forms.DataGridViewTextBoxColumn SSD;
+        private System.Windows.Forms.DataGridViewTextBoxColumn RGB;
+        private System.Windows.Forms.Button btnRefrescar;
     }
 }

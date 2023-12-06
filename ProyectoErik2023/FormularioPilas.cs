@@ -22,6 +22,7 @@ namespace ProyectoErik2023
 
         private void agregar_elementoP_Click(object sender, EventArgs e)
         {
+
             if (txtTarjetaVideo.Text == string.Empty || txtMemoriaRam.Text == string.Empty || txtSSD.Text == string.Empty || txtRGB.Text == string.Empty)
             {
                 MessageBox.Show("Todos los campos son obligatorios");
@@ -34,18 +35,58 @@ namespace ProyectoErik2023
                     tarjetaVideo = txtTarjetaVideo.Text,
                     SSD = txtSSD.Text,
                     rgb = txtRGB.Text
-
                 };
                 PilaAlcuadrado1.InsertarElemento(computadora);
+
+                // Obtener los elementos y actualizar el DataGridView
+                ActualizarDataGridView();
             }
+
             string aa = "";
             txtMemoriaRam.Text = aa;
             txtTarjetaVideo.Text = string.Empty;
             txtSSD.Text = string.Empty;
             txtRGB.Text = string.Empty;
 
-            
-            
+
+            //    if (txtTarjetaVideo.Text == string.Empty || txtMemoriaRam.Text == string.Empty || txtSSD.Text == string.Empty || txtRGB.Text == string.Empty)
+            //    {
+            //        MessageBox.Show("Todos los campos son obligatorios");
+            //    }
+            //    else
+            //    {
+            //        Computadora computadora = new Computadora
+            //        {
+            //            memoriaRam = txtMemoriaRam.Text,
+            //            tarjetaVideo = txtTarjetaVideo.Text,
+            //            SSD = txtSSD.Text,
+            //            rgb = txtRGB.Text
+
+            //        };
+            //        PilaAlcuadrado1.InsertarElemento(computadora);
+
+            //    }
+            //    string aa = "";
+            //    txtMemoriaRam.Text = aa;
+            //    txtTarjetaVideo.Text = string.Empty;
+            //    txtSSD.Text = string.Empty;
+            //    txtRGB.Text = string.Empty;
+
+
+
+        }
+
+        private void ActualizarDataGridView()
+        {
+            dataGridView1.Rows.Clear();
+
+            Computadora[] elementos = PilaAlcuadrado1.computadoraPila;
+
+            for (int i = PilaAlcuadrado1.CantidadElemento() - 1; i >= 0; i--)
+            {
+                Computadora computadora = elementos[i];
+                dataGridView1.Rows.Add(computadora.memoriaRam, computadora.tarjetaVideo, computadora.SSD, computadora.rgb);
+            }
         }
 
         private void txtTarjetaVideo_TextChanged(object sender, EventArgs e)
@@ -77,6 +118,16 @@ namespace ProyectoErik2023
         private void button1_Click(object sender, EventArgs e)
         {
             PilaAlcuadrado1.Limpiar();
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void btnRefrescar_Click(object sender, EventArgs e)
+        {
+            ActualizarDataGridView();
         }
     }
 }

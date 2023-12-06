@@ -10,7 +10,7 @@ namespace ProyectoErik2023.Datos.Pila
     public   class PilaAlcuadrado
     {
         //POSICION ES IGUAL A CIMA
-        private Computadora[] computadoraPila;
+        public Computadora[] computadoraPila;
         private int _posicionPila;
         int _longitudPilaMaximo = 200;
         private Computadora[] computadoraPila2;
