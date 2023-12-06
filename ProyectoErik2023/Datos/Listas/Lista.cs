@@ -261,5 +261,11 @@ namespace ProyectoErik2023.Datos.Listas
             else
                 _primero = _primero.siguiente;
         }
+
+        //SE USA PARA EL GRID VIEW
+        public Nodo ObtenerPrimerNodo()
+        {
+            return _primero;
+        }
     }
 }

@@ -15,12 +15,18 @@ namespace ProyectoErik2023
     public partial class FormularioListas : Form
     {
         Lista lista=new Lista();
-        
-       
+
+
+         public DataGridView dataGridViewLista;
+
+
         public FormularioListas()
         {
             InitializeComponent();
+            
+            
         }
+
 
         private void btn_ascendente_lista_Click(object sender, EventArgs e)
         {
@@ -50,6 +56,7 @@ namespace ProyectoErik2023
 
                 };
                 lista.AgregarLista(computadora);
+                ActualizarDataGridView(lista);
             }
             string aa = "";
             memoriaRamList.Text = aa;
@@ -83,6 +90,7 @@ namespace ProyectoErik2023
                 };
                 //lista.InsertarMedioLista(computadora);
                 lista.InsertarMedioLista(computadora);
+                ActualizarDataGridView(lista);
             }
          
             string aa = "";
@@ -124,6 +132,8 @@ namespace ProyectoErik2023
 
                 };
                 lista.InsertarFinalLista(computadora);
+                ActualizarDataGridView(lista);
+
             }
            
             string aa = "";
@@ -147,6 +157,21 @@ namespace ProyectoErik2023
             MessageBox.Show("Se a limpiado todo jefe");
         }
 
+        public void ActualizarDataGridView(Lista lista)
+        {
+            dataGridViewLista.Rows.Clear(); // Borra todas las filas existentes en el DataGridView
+
+            Nodo nodoActual = lista.ObtenerPrimerNodo();
+
+            while (nodoActual != null)
+            {
+                dataGridViewLista.Rows.Add(nodoActual.computadora.memoriaRam, nodoActual.computadora.tarjetaVideo, nodoActual.computadora.SSD, nodoActual.computadora.rgb);
+                nodoActual = nodoActual.siguiente;
+            }
+        }
+
+
+
         private void btnEliminarFrenteLista_Click(object sender, EventArgs e)
         {
             lista.EliminarPrimeraPos();
@@ -156,6 +181,18 @@ namespace ProyectoErik2023
         {
 
         }
+
+       
+            private void pictureBox1_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
         //Computadora computadora= new Computadora(memoriaRamList.Text,txtTarjetaVideoList.Text,txtSSDList.Text,txtRGBList.Text);
         //lista.AgregarLista(computadora);
 

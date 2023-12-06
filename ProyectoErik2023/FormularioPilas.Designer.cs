@@ -110,6 +110,7 @@
             this.btn_ascendente_pila.TabIndex = 13;
             this.btn_ascendente_pila.Text = "Ordenar Ascendente";
             this.btn_ascendente_pila.UseVisualStyleBackColor = false;
+            this.btn_ascendente_pila.Click += new System.EventHandler(this.btn_ascendente_pila_Click);
             // 
             // btnAgregar
             // 
@@ -286,6 +287,7 @@
             this.Controls.Add(this.btnAgregar);
             this.Name = "FormularioPilas";
             this.Text = "FormularioPilas";
+            this.Load += new System.EventHandler(this.FormularioPilas_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

@@ -129,5 +129,15 @@ namespace ProyectoErik2023
         {
             ActualizarDataGridView();
         }
+
+        private void btn_ascendente_pila_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void FormularioPilas_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
