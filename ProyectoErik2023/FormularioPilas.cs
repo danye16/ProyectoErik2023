@@ -1,4 +1,6 @@
-﻿using System;
+﻿using ProyectoErik2023.Datos.Listas;
+using ProyectoErik2023.Datos.Pila;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,9 +14,69 @@ namespace ProyectoErik2023
 {
     public partial class FormularioPilas : Form
     {
+        PilaAlcuadrado PilaAlcuadrado1 = new PilaAlcuadrado();
         public FormularioPilas()
         {
             InitializeComponent();
+        }
+
+        private void agregar_elementoP_Click(object sender, EventArgs e)
+        {
+            if (txtTarjetaVideo.Text == string.Empty || txtMemoriaRam.Text == string.Empty || txtSSD.Text == string.Empty || txtRGB.Text == string.Empty)
+            {
+                MessageBox.Show("Todos los campos son obligatorios");
+            }
+            else
+            {
+                Computadora computadora = new Computadora
+                {
+                    memoriaRam = txtMemoriaRam.Text,
+                    tarjetaVideo = txtTarjetaVideo.Text,
+                    SSD = txtSSD.Text,
+                    rgb = txtRGB.Text
+
+                };
+                PilaAlcuadrado1.InsertarElemento(computadora);
+            }
+            string aa = "";
+            txtMemoriaRam.Text = aa;
+            txtTarjetaVideo.Text = string.Empty;
+            txtSSD.Text = string.Empty;
+            txtRGB.Text = string.Empty;
+
+            
+            
+        }
+
+        private void txtTarjetaVideo_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtMemoriaRam_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btn_imprimir_pila_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void btnBuscar_Click(object sender, EventArgs e)
+        {
+            string palabra = txtBuscar.Text;
+            PilaAlcuadrado1.Buscar(palabra);
+        }
+
+        private void txtEliminarCima_Click(object sender, EventArgs e)
+        {
+            PilaAlcuadrado1.ExtraerElemento();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            PilaAlcuadrado1.Limpiar();
         }
     }
 }
