@@ -21,6 +21,7 @@ namespace ProyectoErik2023.Datos.Pila
             computadoraPila = new Computadora[_longitudPilaMaximo];
 
         }
+        ///aaaaaaaaaa
 
         public bool PilaVacia()
         {
