@@ -184,15 +184,29 @@ namespace ProyectoErik2023
 
 
         }
+        public int ContarElementos()
+        {
+            int contador = 0;
+
+            foreach (Computadora compu in computadora)
+            {
+                if (compu != null)
+                {
+                    contador++;
+                }
+            }
+
+            return contador;
+        }
 
         public void Buscar()
         {
-
+            
             string palabra = textBuscar.Text;
             bool centinela = false;
             int media = 0;
             int inicio = 0;
-            int final = computadora.Length;
+            int final = ContarElementos();
             if (palabra == string.Empty)
             {
                 MessageBox.Show("Tienes que llenar el campo");
@@ -332,6 +346,8 @@ namespace ProyectoErik2023
 
         private void btn_buscar_listaM_Click(object sender, EventArgs e)
         {
+            BurbujaDescendente();
+
             Buscar();
         }
 
@@ -360,5 +376,6 @@ namespace ProyectoErik2023
             ActualizarDataGridView();
 
         }
+
     }
 }

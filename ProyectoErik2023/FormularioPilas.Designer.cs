@@ -57,20 +57,23 @@
             // 
             this.btn_descendente_pila.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.btn_descendente_pila.Font = new System.Drawing.Font("SimSun", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_descendente_pila.Location = new System.Drawing.Point(606, 313);
+            this.btn_descendente_pila.Location = new System.Drawing.Point(808, 385);
+            this.btn_descendente_pila.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btn_descendente_pila.Name = "btn_descendente_pila";
-            this.btn_descendente_pila.Size = new System.Drawing.Size(163, 69);
+            this.btn_descendente_pila.Size = new System.Drawing.Size(217, 85);
             this.btn_descendente_pila.TabIndex = 17;
             this.btn_descendente_pila.Text = "Ordenar Descendente";
             this.btn_descendente_pila.UseVisualStyleBackColor = false;
+            this.btn_descendente_pila.Click += new System.EventHandler(this.btn_descendente_pila_Click);
             // 
             // btnBuscar
             // 
             this.btnBuscar.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.btnBuscar.Font = new System.Drawing.Font("SimSun", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBuscar.Location = new System.Drawing.Point(148, 14);
+            this.btnBuscar.Location = new System.Drawing.Point(197, 17);
+            this.btnBuscar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnBuscar.Name = "btnBuscar";
-            this.btnBuscar.Size = new System.Drawing.Size(163, 69);
+            this.btnBuscar.Size = new System.Drawing.Size(217, 85);
             this.btnBuscar.TabIndex = 16;
             this.btnBuscar.Text = "Buscar Elemento";
             this.btnBuscar.UseVisualStyleBackColor = false;
@@ -80,9 +83,10 @@
             // 
             this.txtEliminarCima.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.txtEliminarCima.Font = new System.Drawing.Font("SimSun", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtEliminarCima.Location = new System.Drawing.Point(606, 25);
+            this.txtEliminarCima.Location = new System.Drawing.Point(808, 31);
+            this.txtEliminarCima.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtEliminarCima.Name = "txtEliminarCima";
-            this.txtEliminarCima.Size = new System.Drawing.Size(163, 69);
+            this.txtEliminarCima.Size = new System.Drawing.Size(217, 85);
             this.txtEliminarCima.TabIndex = 15;
             this.txtEliminarCima.Text = "Eliminar cima";
             this.txtEliminarCima.UseVisualStyleBackColor = false;
@@ -92,9 +96,10 @@
             // 
             this.btn_imprimir_pila.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.btn_imprimir_pila.Font = new System.Drawing.Font("SimSun", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_imprimir_pila.Location = new System.Drawing.Point(606, 100);
+            this.btn_imprimir_pila.Location = new System.Drawing.Point(808, 123);
+            this.btn_imprimir_pila.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btn_imprimir_pila.Name = "btn_imprimir_pila";
-            this.btn_imprimir_pila.Size = new System.Drawing.Size(163, 69);
+            this.btn_imprimir_pila.Size = new System.Drawing.Size(217, 85);
             this.btn_imprimir_pila.TabIndex = 14;
             this.btn_imprimir_pila.Text = "Imprimir Pila";
             this.btn_imprimir_pila.UseVisualStyleBackColor = false;
@@ -104,20 +109,23 @@
             // 
             this.btn_ascendente_pila.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.btn_ascendente_pila.Font = new System.Drawing.Font("SimSun", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_ascendente_pila.Location = new System.Drawing.Point(606, 175);
+            this.btn_ascendente_pila.Location = new System.Drawing.Point(808, 215);
+            this.btn_ascendente_pila.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btn_ascendente_pila.Name = "btn_ascendente_pila";
-            this.btn_ascendente_pila.Size = new System.Drawing.Size(163, 69);
+            this.btn_ascendente_pila.Size = new System.Drawing.Size(217, 85);
             this.btn_ascendente_pila.TabIndex = 13;
             this.btn_ascendente_pila.Text = "Ordenar Ascendente";
             this.btn_ascendente_pila.UseVisualStyleBackColor = false;
+            this.btn_ascendente_pila.Click += new System.EventHandler(this.btn_ascendente_pila_Click);
             // 
             // btnAgregar
             // 
             this.btnAgregar.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.btnAgregar.Font = new System.Drawing.Font("SimSun", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAgregar.Location = new System.Drawing.Point(317, 66);
+            this.btnAgregar.Location = new System.Drawing.Point(423, 81);
+            this.btnAgregar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnAgregar.Name = "btnAgregar";
-            this.btnAgregar.Size = new System.Drawing.Size(163, 69);
+            this.btnAgregar.Size = new System.Drawing.Size(217, 85);
             this.btnAgregar.TabIndex = 12;
             this.btnAgregar.Text = "Agregar Elemento";
             this.btnAgregar.UseVisualStyleBackColor = false;
@@ -126,83 +134,93 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(13, 13);
+            this.label1.Location = new System.Drawing.Point(17, 16);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(72, 13);
+            this.label1.Size = new System.Drawing.Size(92, 16);
             this.label1.TabIndex = 18;
             this.label1.Text = "Memoria Ram";
             // 
             // txtMemoriaRam
             // 
-            this.txtMemoriaRam.Location = new System.Drawing.Point(12, 39);
+            this.txtMemoriaRam.Location = new System.Drawing.Point(16, 48);
+            this.txtMemoriaRam.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtMemoriaRam.Name = "txtMemoriaRam";
-            this.txtMemoriaRam.Size = new System.Drawing.Size(100, 20);
+            this.txtMemoriaRam.Size = new System.Drawing.Size(132, 22);
             this.txtMemoriaRam.TabIndex = 19;
             this.txtMemoriaRam.TextChanged += new System.EventHandler(this.txtMemoriaRam_TextChanged);
             // 
             // txtTarjetaVideo
             // 
-            this.txtTarjetaVideo.Location = new System.Drawing.Point(12, 102);
+            this.txtTarjetaVideo.Location = new System.Drawing.Point(16, 126);
+            this.txtTarjetaVideo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtTarjetaVideo.Name = "txtTarjetaVideo";
-            this.txtTarjetaVideo.Size = new System.Drawing.Size(100, 20);
+            this.txtTarjetaVideo.Size = new System.Drawing.Size(132, 22);
             this.txtTarjetaVideo.TabIndex = 21;
             this.txtTarjetaVideo.TextChanged += new System.EventHandler(this.txtTarjetaVideo_TextChanged);
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(13, 76);
+            this.label2.Location = new System.Drawing.Point(17, 94);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(70, 13);
+            this.label2.Size = new System.Drawing.Size(89, 16);
             this.label2.TabIndex = 20;
             this.label2.Text = "Tarjeta Video";
             // 
             // txtSSD
             // 
-            this.txtSSD.Location = new System.Drawing.Point(11, 173);
+            this.txtSSD.Location = new System.Drawing.Point(15, 213);
+            this.txtSSD.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtSSD.Name = "txtSSD";
-            this.txtSSD.Size = new System.Drawing.Size(100, 20);
+            this.txtSSD.Size = new System.Drawing.Size(132, 22);
             this.txtSSD.TabIndex = 23;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(12, 147);
+            this.label3.Location = new System.Drawing.Point(16, 181);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(29, 13);
+            this.label3.Size = new System.Drawing.Size(35, 16);
             this.label3.TabIndex = 22;
             this.label3.Text = "SSD";
             // 
             // txtRGB
             // 
-            this.txtRGB.Location = new System.Drawing.Point(12, 257);
+            this.txtRGB.Location = new System.Drawing.Point(16, 316);
+            this.txtRGB.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtRGB.Name = "txtRGB";
-            this.txtRGB.Size = new System.Drawing.Size(100, 20);
+            this.txtRGB.Size = new System.Drawing.Size(132, 22);
             this.txtRGB.TabIndex = 25;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(13, 231);
+            this.label4.Location = new System.Drawing.Point(17, 284);
+            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(76, 13);
+            this.label4.Size = new System.Drawing.Size(94, 16);
             this.label4.TabIndex = 24;
             this.label4.Text = "Luces gaming ";
             // 
             // txtBuscar
             // 
-            this.txtBuscar.Location = new System.Drawing.Point(334, 25);
+            this.txtBuscar.Location = new System.Drawing.Point(445, 31);
+            this.txtBuscar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtBuscar.Name = "txtBuscar";
-            this.txtBuscar.Size = new System.Drawing.Size(100, 20);
+            this.txtBuscar.Size = new System.Drawing.Size(132, 22);
             this.txtBuscar.TabIndex = 26;
             // 
             // btnLimpiarTodo
             // 
             this.btnLimpiarTodo.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.btnLimpiarTodo.Font = new System.Drawing.Font("SimSun", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLimpiarTodo.Location = new System.Drawing.Point(334, 162);
+            this.btnLimpiarTodo.Location = new System.Drawing.Point(445, 199);
+            this.btnLimpiarTodo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnLimpiarTodo.Name = "btnLimpiarTodo";
-            this.btnLimpiarTodo.Size = new System.Drawing.Size(163, 69);
+            this.btnLimpiarTodo.Size = new System.Drawing.Size(217, 85);
             this.btnLimpiarTodo.TabIndex = 27;
             this.btnLimpiarTodo.Text = "Limpiar todo";
             this.btnLimpiarTodo.UseVisualStyleBackColor = false;
@@ -218,44 +236,55 @@
             this.tarjetaVideo,
             this.SSD,
             this.RGB});
-            this.dataGridView1.Location = new System.Drawing.Point(46, 288);
+            this.dataGridView1.Location = new System.Drawing.Point(61, 354);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
-            this.dataGridView1.Size = new System.Drawing.Size(476, 150);
+            this.dataGridView1.RowHeadersWidth = 51;
+            this.dataGridView1.Size = new System.Drawing.Size(635, 185);
             this.dataGridView1.TabIndex = 28;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // memoriaRam
             // 
             this.memoriaRam.HeaderText = "Memoria Ram";
+            this.memoriaRam.MinimumWidth = 6;
             this.memoriaRam.Name = "memoriaRam";
             this.memoriaRam.ReadOnly = true;
+            this.memoriaRam.Width = 125;
             // 
             // tarjetaVideo
             // 
             this.tarjetaVideo.HeaderText = "Tarjeta de Video";
+            this.tarjetaVideo.MinimumWidth = 6;
             this.tarjetaVideo.Name = "tarjetaVideo";
             this.tarjetaVideo.ReadOnly = true;
+            this.tarjetaVideo.Width = 125;
             // 
             // SSD
             // 
             this.SSD.HeaderText = "SSD";
+            this.SSD.MinimumWidth = 6;
             this.SSD.Name = "SSD";
             this.SSD.ReadOnly = true;
+            this.SSD.Width = 125;
             // 
             // RGB
             // 
             this.RGB.HeaderText = "Luces gaming RGB";
+            this.RGB.MinimumWidth = 6;
             this.RGB.Name = "RGB";
             this.RGB.ReadOnly = true;
+            this.RGB.Width = 125;
             // 
             // btnRefrescar
             // 
             this.btnRefrescar.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.btnRefrescar.Font = new System.Drawing.Font("SimSun", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnRefrescar.Location = new System.Drawing.Point(148, 162);
+            this.btnRefrescar.Location = new System.Drawing.Point(197, 199);
+            this.btnRefrescar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnRefrescar.Name = "btnRefrescar";
-            this.btnRefrescar.Size = new System.Drawing.Size(163, 69);
+            this.btnRefrescar.Size = new System.Drawing.Size(217, 85);
             this.btnRefrescar.TabIndex = 29;
             this.btnRefrescar.Text = "Refrescar Vista";
             this.btnRefrescar.UseVisualStyleBackColor = false;
@@ -263,9 +292,9 @@
             // 
             // FormularioPilas
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(1067, 554);
             this.Controls.Add(this.btnRefrescar);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.btnLimpiarTodo);
@@ -284,6 +313,7 @@
             this.Controls.Add(this.btn_imprimir_pila);
             this.Controls.Add(this.btn_ascendente_pila);
             this.Controls.Add(this.btnAgregar);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "FormularioPilas";
             this.Text = "FormularioPilas";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();

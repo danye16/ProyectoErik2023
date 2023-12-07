@@ -107,48 +107,99 @@ namespace ProyectoErik2023.Datos.Pila
             return true;
         }
 
-
-
-        
         public void Buscar(string computadoraBuscada)
         {
             bool encontrado = false;
-
-            // Crear una pila auxiliar
             _posicionPila2 = -1;
             Computadora[] computadoraPila2 = new Computadora[_longitudPilaMaximo];
 
-            // int posicionOriginal = _posicionPila;
-
-            // Mientras la pila original no esté vacía
-            while (!PilaVacia())
+            for (int i = 0; i <= _posicionPila; i++)
             {
-                // Extraer el elemento de la cima de la pila original
-                Computadora temporal = ExtraerElemento();
+                _posicionPila2++;
+                computadoraPila2[_posicionPila2] = computadoraPila[i];
+            }
 
-                // Si el elemento extraído es igual al buscado
-                if (string.Compare(computadoraBuscada, temporal.tarjetaVideo) == 0)
+            for (int i = 0; i <= _posicionPila2; i++)
+            {
+                if (string.Compare(computadoraBuscada, computadoraPila2[i].tarjetaVideo) == 0)
                 {
                     encontrado = true;
-                    // No se inserta el elemento nuevamente en la pila original
-                    MessageBox.Show("Elemento encontrado en la posición: " + (_posicionPila + 1));
+                    MessageBox.Show($"Elemento encontrado ({computadoraBuscada}) en la posición: {i + 1}");
                 }
-
-                // Insertar el elemento extraído en la pila auxiliar
-                _posicionPila2++;
-                computadoraPila2[_posicionPila2] = temporal;
-            }
-12
-            // Restaurar la pila original
-            while (_posicionPila2 >= 0)
-            {
-                Computadora temporal = computadoraPila2[_posicionPila2--];
-                InsertarElemento(temporal);
             }
 
             if (!encontrado)
             {
                 MessageBox.Show("Elemento no encontrado en la pila.");
+            }
+        }
+
+
+        //public void Buscar(string computadoraBuscada)
+        //{
+        //    bool encontrado = false;
+
+        //    _posicionPila2 = -1;
+        //    Computadora[] computadoraPila2 = new Computadora[_longitudPilaMaximo];
+
+
+        //    while (!PilaVacia())
+        //    {
+        //        Computadora temporal = ExtraerElemento();
+
+        //        if (string.Compare(computadoraBuscada, temporal.tarjetaVideo) == 0)
+        //        {
+        //            encontrado = true;
+        //            MessageBox.Show($"Elemento encontrado({computadoraBuscada}) esta  en la posición: " + (_posicionPila + 1));
+        //        }
+
+        //        _posicionPila2++;
+        //        computadoraPila2[_posicionPila2] = temporal;
+        //    }
+
+        //    while (_posicionPila2 >= 0)
+        //    {
+        //        Computadora temporal = computadoraPila2[_posicionPila2--];
+        //        InsertarElemento(temporal);
+        //    }
+
+        //    if (!encontrado)
+        //    {
+        //        MessageBox.Show("Elemento no encontrado en la pila.");
+        //    }
+        //}
+
+        public void OrdenarAscendente()
+        {
+            int n = CantidadElemento();
+            for (int i = 0; i < n - 1; i++)
+            {
+                for (int j = 0; j < n - i - 1; j++)
+                {
+                    if (computadoraPila[j].tarjetaVideo.CompareTo(computadoraPila[j + 1].tarjetaVideo) > 0)
+                    {
+                        Computadora temp = computadoraPila[j];
+                        computadoraPila[j] = computadoraPila[j + 1];
+                        computadoraPila[j + 1] = temp;
+                    }
+                }
+            }
+        }
+
+        public void OrdenarDescendente()
+        {
+            int n = CantidadElemento();
+            for (int i = 0; i < n - 1; i++)
+            {
+                for (int j = 0; j < n - i - 1; j++)
+                {
+                    if (computadoraPila[j].tarjetaVideo.CompareTo(computadoraPila[j + 1].tarjetaVideo) < 0)
+                    {
+                        Computadora temp = computadoraPila[j];
+                        computadoraPila[j] = computadoraPila[j + 1];
+                        computadoraPila[j + 1] = temp;
+                    }
+                }
             }
         }
 
