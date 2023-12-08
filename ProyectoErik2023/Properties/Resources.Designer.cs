@@ -63,9 +63,89 @@ namespace ProyectoErik2023.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _20cc4e08ae5a8f5d7448a4087aaacdb7 {
+            get {
+                object obj = ResourceManager.GetObject("20cc4e08ae5a8f5d7448a4087aaacdb7", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _5ff1d8cf3bf975663f1be52421234fc4 {
+            get {
+                object obj = ResourceManager.GetObject("5ff1d8cf3bf975663f1be52421234fc4", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap close_button_clip_art_f {
+            get {
+                object obj = ResourceManager.GetObject("close-button-clip-art_f", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap color {
+            get {
+                object obj = ResourceManager.GetObject("color", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap intento {
             get {
                 object obj = ResourceManager.GetObject("intento", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap john_wick_3_parabellum_3078 {
+            get {
+                object obj = ResourceManager.GetObject("john-wick-3-parabellum-3078", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap joypad_con_manchas_de_color_2gy748h {
+            get {
+                object obj = ResourceManager.GetObject("joypad-con-manchas-de-color-2gy748h", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap joystick_gamepad_cute_square_vector_143608_222 {
+            get {
+                object obj = ResourceManager.GetObject("joystick-gamepad-cute-square-vector_143608-222", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap League_of_Legends_saison_2023_Est_ce_que_ca_vaut_1024x576 {
+            get {
+                object obj = ResourceManager.GetObject("League-of-Legends-saison-2023-Est-ce-que-ca-vaut-1024x576", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -83,9 +163,60 @@ namespace ProyectoErik2023.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap lol {
+            get {
+                object obj = ResourceManager.GetObject("lol", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Los_Mejores_29_Fondos_de_John_Wick_para_tus_dispositivos_moviles_1 {
+            get {
+                object obj = ResourceManager.GetObject("Los-Mejores-29-Fondos-de-John-Wick-para-tus-dispositivos-moviles-1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap menuprincipal {
             get {
                 object obj = ResourceManager.GetObject("menuprincipal", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Morgana_0 {
+            get {
+                object obj = ResourceManager.GetObject("Morgana_0", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap png_clipart_square_area_symbol_apps_dialog_close_desktop_wallpaper_sign_thumbnail {
+            get {
+                object obj = ResourceManager.GetObject("png-clipart-square-area-symbol-apps-dialog-close-desktop-wallpaper-sign-thumbnail" +
+                        "", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap vector_icono_para_game_pad_con_botones_planos_2m6dm44 {
+            get {
+                object obj = ResourceManager.GetObject("vector-icono-para-game-pad-con-botones-planos-2m6dm44", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

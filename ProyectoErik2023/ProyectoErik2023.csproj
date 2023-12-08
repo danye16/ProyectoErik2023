@@ -133,6 +133,44 @@
   <ItemGroup>
     <None Include="Resources\listaimagen.gif" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <None Include="Resources\lol.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\League-of-Legends-saison-2023-Est-ce-que-ca-vaut-1024x576.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Morgana_0.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\joystick-gamepad-cute-square-vector_143608-222.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\joypad-con-manchas-de-color-2gy748h.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\vector-icono-para-game-pad-con-botones-planos-2m6dm44.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\color.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\5ff1d8cf3bf975663f1be52421234fc4.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Los-Mejores-29-Fondos-de-John-Wick-para-tus-dispositivos-moviles-1.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\john-wick-3-parabellum-3078.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\20cc4e08ae5a8f5d7448a4087aaacdb7.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\png-clipart-square-area-symbol-apps-dialog-close-desktop-wallpaper-sign-thumbnail.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\close-button-clip-art_f.jpg" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

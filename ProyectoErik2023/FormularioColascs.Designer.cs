@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormularioColascs));
             this.btnBuscar = new System.Windows.Forms.Button();
             this.btnLimpiarCola = new System.Windows.Forms.Button();
             this.btn_imprimir_cola = new System.Windows.Forms.Button();
@@ -36,7 +37,6 @@
             this.txtMemoriaRamCola = new System.Windows.Forms.TextBox();
             this.txtTarjetaCola = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.txtSSDCola = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.txtRGBCola = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
@@ -49,14 +49,18 @@
             this.txtBuscarTarjetaCola = new System.Windows.Forms.TextBox();
             this.btnBuscarTarjeta = new System.Windows.Forms.Button();
             this.btnEnviarCambiosColas = new System.Windows.Forms.Button();
+            this.boxSsdC = new System.Windows.Forms.ComboBox();
+            this.btncerrarP = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // btnBuscar
             // 
             this.btnBuscar.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.btnBuscar.Font = new System.Drawing.Font("SimSun", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBuscar.Location = new System.Drawing.Point(190, 121);
+            this.btnBuscar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnBuscar.BackgroundImage")));
+            this.btnBuscar.Font = new System.Drawing.Font("SimSun", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBuscar.ForeColor = System.Drawing.Color.Aqua;
+            this.btnBuscar.Location = new System.Drawing.Point(170, 121);
             this.btnBuscar.Name = "btnBuscar";
             this.btnBuscar.Size = new System.Drawing.Size(163, 69);
             this.btnBuscar.TabIndex = 22;
@@ -67,8 +71,10 @@
             // btnLimpiarCola
             // 
             this.btnLimpiarCola.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.btnLimpiarCola.Font = new System.Drawing.Font("SimSun", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLimpiarCola.Location = new System.Drawing.Point(610, 78);
+            this.btnLimpiarCola.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnLimpiarCola.BackgroundImage")));
+            this.btnLimpiarCola.Font = new System.Drawing.Font("SimSun", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLimpiarCola.ForeColor = System.Drawing.Color.Aqua;
+            this.btnLimpiarCola.Location = new System.Drawing.Point(686, 115);
             this.btnLimpiarCola.Name = "btnLimpiarCola";
             this.btnLimpiarCola.Size = new System.Drawing.Size(163, 69);
             this.btnLimpiarCola.TabIndex = 21;
@@ -79,8 +85,10 @@
             // btn_imprimir_cola
             // 
             this.btn_imprimir_cola.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.btn_imprimir_cola.Font = new System.Drawing.Font("SimSun", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_imprimir_cola.Location = new System.Drawing.Point(610, 12);
+            this.btn_imprimir_cola.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_imprimir_cola.BackgroundImage")));
+            this.btn_imprimir_cola.Font = new System.Drawing.Font("SimSun", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_imprimir_cola.ForeColor = System.Drawing.Color.Aqua;
+            this.btn_imprimir_cola.Location = new System.Drawing.Point(686, 26);
             this.btn_imprimir_cola.Name = "btn_imprimir_cola";
             this.btn_imprimir_cola.Size = new System.Drawing.Size(163, 69);
             this.btn_imprimir_cola.TabIndex = 20;
@@ -90,8 +98,10 @@
             // btnAgregar
             // 
             this.btnAgregar.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.btnAgregar.Font = new System.Drawing.Font("SimSun", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAgregar.Location = new System.Drawing.Point(190, 26);
+            this.btnAgregar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnAgregar.BackgroundImage")));
+            this.btnAgregar.Font = new System.Drawing.Font("SimSun", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAgregar.ForeColor = System.Drawing.Color.Aqua;
+            this.btnAgregar.Location = new System.Drawing.Point(170, 15);
             this.btnAgregar.Name = "btnAgregar";
             this.btnAgregar.Size = new System.Drawing.Size(163, 69);
             this.btnAgregar.TabIndex = 18;
@@ -102,11 +112,13 @@
             // label1
             // 
             this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(13, 13);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(67, 13);
+            this.label1.Size = new System.Drawing.Size(101, 20);
             this.label1.TabIndex = 24;
             this.label1.Text = "Memoria ram";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // txtMemoriaRamCola
             // 
@@ -125,25 +137,21 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(12, 82);
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(4, 75);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(85, 13);
+            this.label2.Size = new System.Drawing.Size(125, 20);
             this.label2.TabIndex = 26;
             this.label2.Text = "Tarjeta de Video";
-            // 
-            // txtSSDCola
-            // 
-            this.txtSSDCola.Location = new System.Drawing.Point(2, 176);
-            this.txtSSDCola.Name = "txtSSDCola";
-            this.txtSSDCola.Size = new System.Drawing.Size(100, 20);
-            this.txtSSDCola.TabIndex = 29;
+            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // label3
             // 
             this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(12, 149);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(29, 13);
+            this.label3.Size = new System.Drawing.Size(43, 20);
             this.label3.TabIndex = 28;
             this.label3.Text = "SSD";
             // 
@@ -157,11 +165,13 @@
             // label4
             // 
             this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.Location = new System.Drawing.Point(4, 224);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(99, 13);
+            this.label4.Size = new System.Drawing.Size(148, 20);
             this.label4.TabIndex = 30;
             this.label4.Text = "Luces gaming RGB";
+            this.label4.Click += new System.EventHandler(this.label4_Click);
             // 
             // dataGridView1
             // 
@@ -173,7 +183,7 @@
             this.TarjetaVideoColas,
             this.SSDColas,
             this.RGBColas});
-            this.dataGridView1.Location = new System.Drawing.Point(7, 291);
+            this.dataGridView1.Location = new System.Drawing.Point(518, 392);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.Size = new System.Drawing.Size(447, 150);
@@ -206,14 +216,14 @@
             // 
             // txtBuscar
             // 
-            this.txtBuscar.Location = new System.Drawing.Point(207, 206);
+            this.txtBuscar.Location = new System.Drawing.Point(185, 216);
             this.txtBuscar.Name = "txtBuscar";
             this.txtBuscar.Size = new System.Drawing.Size(100, 20);
             this.txtBuscar.TabIndex = 33;
             // 
             // txtBuscarTarjetaCola
             // 
-            this.txtBuscarTarjetaCola.Location = new System.Drawing.Point(632, 267);
+            this.txtBuscarTarjetaCola.Location = new System.Drawing.Point(767, 270);
             this.txtBuscarTarjetaCola.Name = "txtBuscarTarjetaCola";
             this.txtBuscarTarjetaCola.Size = new System.Drawing.Size(100, 20);
             this.txtBuscarTarjetaCola.TabIndex = 34;
@@ -231,7 +241,7 @@
             // 
             // btnEnviarCambiosColas
             // 
-            this.btnEnviarCambiosColas.Location = new System.Drawing.Point(610, 389);
+            this.btnEnviarCambiosColas.Location = new System.Drawing.Point(736, 305);
             this.btnEnviarCambiosColas.Name = "btnEnviarCambiosColas";
             this.btnEnviarCambiosColas.Size = new System.Drawing.Size(141, 33);
             this.btnEnviarCambiosColas.TabIndex = 36;
@@ -239,11 +249,37 @@
             this.btnEnviarCambiosColas.UseVisualStyleBackColor = true;
             this.btnEnviarCambiosColas.Click += new System.EventHandler(this.btnEnviarCambiosColas_Click);
             // 
+            // boxSsdC
+            // 
+            this.boxSsdC.FormattingEnabled = true;
+            this.boxSsdC.Items.AddRange(new object[] {
+            "Toshiba 1Tb",
+            "Kingston 512Mb",
+            "Samsung 2Tb"});
+            this.boxSsdC.Location = new System.Drawing.Point(3, 185);
+            this.boxSsdC.Name = "boxSsdC";
+            this.boxSsdC.Size = new System.Drawing.Size(136, 21);
+            this.boxSsdC.TabIndex = 38;
+            // 
+            // btncerrarP
+            // 
+            this.btncerrarP.BackgroundImage = global::ProyectoErik2023.Properties.Resources.close_button_clip_art_f;
+            this.btncerrarP.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btncerrarP.Location = new System.Drawing.Point(909, 13);
+            this.btncerrarP.Name = "btncerrarP";
+            this.btncerrarP.Size = new System.Drawing.Size(56, 50);
+            this.btncerrarP.TabIndex = 40;
+            this.btncerrarP.UseVisualStyleBackColor = true;
+            this.btncerrarP.Click += new System.EventHandler(this.btncerrarP_Click);
+            // 
             // FormularioColascs
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.BackgroundImage = global::ProyectoErik2023.Properties.Resources.john_wick_3_parabellum_3078;
+            this.ClientSize = new System.Drawing.Size(977, 554);
+            this.Controls.Add(this.btncerrarP);
+            this.Controls.Add(this.boxSsdC);
             this.Controls.Add(this.btnEnviarCambiosColas);
             this.Controls.Add(this.btnBuscarTarjeta);
             this.Controls.Add(this.txtBuscarTarjetaCola);
@@ -251,7 +287,6 @@
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.txtRGBCola);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.txtSSDCola);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.txtTarjetaCola);
             this.Controls.Add(this.label2);
@@ -279,7 +314,6 @@
         private System.Windows.Forms.TextBox txtMemoriaRamCola;
         private System.Windows.Forms.TextBox txtTarjetaCola;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox txtSSDCola;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox txtRGBCola;
         private System.Windows.Forms.Label label4;
@@ -292,5 +326,7 @@
         private System.Windows.Forms.TextBox txtBuscarTarjetaCola;
         private System.Windows.Forms.Button btnBuscarTarjeta;
         private System.Windows.Forms.Button btnEnviarCambiosColas;
+        private System.Windows.Forms.ComboBox boxSsdC;
+        private System.Windows.Forms.Button btncerrarP;
     }
 }

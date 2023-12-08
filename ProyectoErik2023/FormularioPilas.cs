@@ -23,7 +23,7 @@ namespace ProyectoErik2023
         private void agregar_elementoP_Click(object sender, EventArgs e)
         {
 
-            if (txtTarjetaVideo.Text == string.Empty || txtMemoriaRam.Text == string.Empty || txtSSD.Text == string.Empty || txtRGB.Text == string.Empty)
+            if (txtTarjetaVideo.Text == string.Empty || txtMemoriaRam.Text == string.Empty || boxSsdP.Text == string.Empty || txtRGB.Text == string.Empty)
             {
                 MessageBox.Show("Todos los campos son obligatorios");
             }
@@ -33,7 +33,7 @@ namespace ProyectoErik2023
                 {
                     memoriaRam = txtMemoriaRam.Text,
                     tarjetaVideo = txtTarjetaVideo.Text,
-                    SSD = txtSSD.Text,
+                    SSD = boxSsdP.Text,
                     rgb = txtRGB.Text
                 };
                 PilaAlcuadrado1.InsertarElemento(computadora);
@@ -45,7 +45,7 @@ namespace ProyectoErik2023
             string aa = "";
             txtMemoriaRam.Text = aa;
             txtTarjetaVideo.Text = string.Empty;
-            txtSSD.Text = string.Empty;
+            boxSsdP.Text = string.Empty;
             txtRGB.Text = string.Empty;
 
 
@@ -136,7 +136,7 @@ namespace ProyectoErik2023
         {
             txtMemoriaRam.Text = computadora.memoriaRam;
             txtTarjetaVideo.Text = computadora.tarjetaVideo;
-            txtSSD.Text = computadora.SSD;
+            boxSsdP.Text = computadora.SSD;
             txtRGB.Text = computadora.rgb;
         }
 
@@ -148,7 +148,7 @@ namespace ProyectoErik2023
             {
                 memoriaRam = txtMemoriaRam.Text,
                 tarjetaVideo = txtTarjetaVideo.Text,
-                SSD = txtSSD.Text,
+                SSD = boxSsdP.Text,
                 rgb = txtRGB.Text
             };
 
@@ -165,7 +165,7 @@ namespace ProyectoErik2023
             string aa = "";
             txtMemoriaRam.Text = aa;
             txtTarjetaVideo.Text = string.Empty;
-            txtSSD.Text = string.Empty;
+            boxSsdP.Text = string.Empty;
             txtRGB.Text = string.Empty;
         }
 
@@ -177,6 +177,11 @@ namespace ProyectoErik2023
         private void txtBuscarTarjetaEditar_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void btncerrar_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

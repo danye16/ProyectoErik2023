@@ -24,7 +24,7 @@ namespace ProyectoErik2023
         public void AgregarPc(Computadora[] matriz)
         {
 
-            if (txtTarjetaVideo.Text == string.Empty || memoriaRam.Text == string.Empty || txtSSD.Text == string.Empty || txtRGB.Text == string.Empty)
+            if (txtTarjetaVideo.Text == string.Empty || memoriaRam.Text == string.Empty || boxSsdM.Text == string.Empty || txtRGB.Text == string.Empty)
             {
                 MessageBox.Show("Todos los campos son obligatorios");
             }
@@ -34,7 +34,7 @@ namespace ProyectoErik2023
                 {
                     Computadora compu = new Computadora();
                     compu.memoriaRam = memoriaRam.Text;
-                    compu.SSD = txtSSD.Text;
+                    compu.SSD = boxSsdM.Text;
                     compu.tarjetaVideo = txtTarjetaVideo.Text;
                     compu.rgb = txtRGB.Text;
                     matriz[indice] = compu;
@@ -57,7 +57,7 @@ namespace ProyectoErik2023
             string aa = "";
             memoriaRam.Text = aa;
             txtTarjetaVideo.Text = string.Empty;
-            txtSSD.Text = string.Empty;
+            boxSsdM.Text = string.Empty;
             txtRGB.Text = string.Empty;
 
 
@@ -69,28 +69,7 @@ namespace ProyectoErik2023
             AgregarPc(computadora);
 
           
-          //Computadora  computadoras = new Computadora
-          //  {
-          //      memoriaRam = memoriaRam.Text,
-          //  SSD = txtSSD.Text,
-          //  tarjetaVideo = txtTarjetaVideo.Text,
-          //  rgb = txtRGB.Text
-          //  };
 
-
-            //for (int i= 0; i< computadoras.Length;i++ )
-            //    {
-            //    //string entradaComputadora = memoriaRam.Text;
-            //    //string entradaComputadora = memoriaRam.Text;
-            //    //string entradaComputadora = memoriaRam.Text;
-            //    //string entradaComputadora = memoriaRam.Text;
-
-            //    //computadoras[i] = new Computadora { memoriaRam = entradaComputadora };
-            //    //computadoras[i] = new Computadora { tarjetaVideo = entradaComputadora };
-            //    //computadoras[i] = new Computadora { SSD = entradaComputadora };
-            //    //computadoras[i] = new Computadora { rgb = entradaComputadora };
-
-            //}
 
         }
 
@@ -124,76 +103,101 @@ namespace ProyectoErik2023
             }
         }
 
+        //METODO PARA ORDENAR DE MANERA ASCENDENTE
         public void Burbuja()
         {
-            if (indice == computadora.Length)
+            int cantreal = CantidadElementos();
+
+            if (cantreal > 0)
             {
-                for (int i = 0; i < computadora.Length - 1; i++)
+                int i = 0;
+
+                while (i < cantreal - 1)
                 {
-                    for (int j = 0; j < computadora.Length - 1; j++)
+                    int j = 0;
+
+                    while (j < cantreal - 1)
                     {
-                        if (string.Compare(computadora[j].tarjetaVideo, computadora[j + 1].tarjetaVideo) < 0)
+                        if (string.Compare(computadora[j].tarjetaVideo, computadora[j + 1].tarjetaVideo) == 1)
                         {
                             Computadora aux = computadora[j];
                             computadora[j] = computadora[j + 1];
                             computadora[j + 1] = aux;
                         }
-                    }
-                    ActualizarDataGridView();
 
+                        j++;
+                    }
+
+                    ActualizarDataGridView();
+                    i++;
                 }
             }
             else
             {
                 MessageBox.Show("Tienes que llenar la matriz para ordenar");
             }
-           
         }
         public void BurbujaDescendente()
         {
-            if (indice==computadora.Length)
+            int cantreal = CantidadElementos();
+
+            if (cantreal > 0)
             {
+                int i = 0;
 
-                for (int i = 0; i < computadora.Length - 1; i++)
+                while (i < cantreal - 1)
                 {
-                    for (int j = 0; j < computadora.Length - 1; j++)
-                    {
+                    int j = 0;
 
+                    while (j < cantreal - 1)
+                    {
                         if (string.Compare(computadora[j].tarjetaVideo, computadora[j + 1].tarjetaVideo) == -1)
                         {
                             Computadora aux = computadora[j];
                             computadora[j] = computadora[j + 1];
                             computadora[j + 1] = aux;
                         }
+
+                        j++;
                     }
-                    
 
-
+                    ActualizarDataGridView();
+                    i++;
                 }
-                ActualizarDataGridView();
-
             }
-
             else
             {
                 MessageBox.Show("Tienes que llenar la matriz para ordenar");
             }
+        }
 
-           
+        public int CantidadElementos()
+        {
+            if (computadora == null)
+            {
+                return 0;
+            }
 
+            int cantReal = 0;
 
+            for (int i = 0; i < computadora.Length; i++)
+            {
+                if (computadora[i] != null)
+                {
+                    cantReal++;
+                }
+            }
 
-
+            return cantReal;
         }
 
         public void Buscar()
         {
-
+            int cantreal = CantidadElementos();
             string palabra = textBuscar.Text;
             bool centinela = false;
-            int media = 0;
             int inicio = 0;
-            int final = computadora.Length;
+            int final = cantreal - 1;
             if (palabra == string.Empty)
             {
                 MessageBox.Show("Tienes que llenar el campo");
@@ -201,85 +205,125 @@ namespace ProyectoErik2023
             }
             else
             {
-                while (inicio < final && centinela == false)
+                while (inicio <= final && centinela == false)
                 {
 
-                    media = (inicio + final) / 2;
+                    int media = (inicio + final) / 2;
+
                     if (string.Compare(palabra, computadora[media].tarjetaVideo) == 0)
                     {
                         centinela = true;
-                        MessageBox.Show($"El elemento {palabra} se encuentra en la posicion {media} ");
+                        MessageBox.Show($"El producto {palabra} se encuentra en la posicion {media} ");
                     }
-                    if (string.Compare(palabra, computadora[media].tarjetaVideo) < 0)
+                    else if (string.Compare(palabra, computadora[media].tarjetaVideo) < 0)
+
+                    {
                         final = media - 1;
+                    }
                     else
+                    {
                         inicio = media + 1;
 
-                    if (centinela == false)
-                    {
-                        MessageBox.Show($"El elemento {palabra} no existe ");
                     }
+
+                }
+                if (centinela == false)
+                {
+                    MessageBox.Show($"El producto {palabra} no existe ");
                 }
             }
-           
-               
+
+
         }
-        public void AgregarPcFinal(Computadora[] matriz)
+        public void AgregarPcPrincipio(Computadora[] matriz)
         {
-            if (txtTarjetaVideo.Text == string.Empty || memoriaRam.Text == string.Empty || txtSSD.Text == string.Empty || txtRGB.Text == string.Empty)
+            if (txtTarjetaVideo.Text == string.Empty || memoriaRam.Text == string.Empty || boxSsdM.Text == string.Empty || txtRGB.Text == string.Empty)
             {
                 MessageBox.Show("Todos los campos son obligatorios");
             }
             else
             {
-                int final = computadora.Length - 1;
+                if (indice < matriz.Length)
+                {
+                    int cantreal = CantidadElementos();
 
-                Computadora compu = new Computadora();
-                compu.memoriaRam = memoriaRam.Text;
-                compu.SSD = txtSSD.Text;
-                compu.tarjetaVideo = txtTarjetaVideo.Text;
-                compu.rgb = txtRGB.Text;
-                matriz[final] = compu;
-                indice++;
-                MessageBox.Show("Se guardaron los datos exitosamente");
-                ActualizarDataGridView();
+                    Computadora compu = new Computadora();
+                    compu.memoriaRam = memoriaRam.Text;
+                    compu.SSD = boxSsdM.Text;
+                    compu.tarjetaVideo = txtTarjetaVideo.Text;
+                    compu.rgb = txtRGB.Text;
+                    // Agregar al principio del array
+                    for (int i = cantreal; i > 0; i--)
+                    {
+                        matriz[i] = matriz[i - 1];
+                    }
+                    matriz[0] = compu;
+                    indice++;
+                    MessageBox.Show("Se guardaron los datos exitosamente");
+                    ActualizarDataGridView();
 
+                }
+                else
+                {
+                    MessageBox.Show("Array lleno joven");
 
+                }
             }
 
             string aa = "";
             memoriaRam.Text = aa;
             txtTarjetaVideo.Text = string.Empty;
-            txtSSD.Text = string.Empty;
+            boxSsdM.Text = string.Empty;
             txtRGB.Text = string.Empty;
-
-
         }
 
-        public void InsertarEnMedio(int posicion, Computadora nuevaComputadora, Computadora[] computadoras)
+        public void AgregarPcMedio(Computadora[] matriz)
         {
-            // Si la posición es menor que 0 o mayor que el número de elementos,
-            // se muestra un mensaje de error.
-            if (posicion < 0 || posicion > computadoras.Length)
+            if (txtTarjetaVideo.Text == string.Empty || memoriaRam.Text == string.Empty || boxSsdM.Text == string.Empty || txtRGB.Text == string.Empty)
             {
-                MessageBox.Show("Posición inválida.");
-                return;
+                MessageBox.Show("Todos los campos son obligatorios");
+            }
+            else
+            {
+                if (indice < matriz.Length)
+                {
+
+                    int cantreal = CantidadElementos();
+                    int media = (0 + cantreal) / 2;
+                    Computadora compu = new Computadora();
+                    compu.memoriaRam = memoriaRam.Text;
+                    compu.SSD = boxSsdM.Text;
+                    compu.tarjetaVideo = txtTarjetaVideo.Text;
+                    compu.rgb = txtRGB.Text;
+
+                    for (int i = cantreal; i > media; i--)
+                    {
+                        matriz[i] = matriz[i - 1];
+                    }
+                    matriz[media] = compu;
+                    indice++;
+                    MessageBox.Show("Se guardaron los datos exitosamente");
+                    ActualizarDataGridView();
+
+                }
+                else
+                {
+                    MessageBox.Show("Array lleno joven");
+
+                }
             }
 
-            // Se desplazan los elementos de la matriz a la derecha una posición.
-            for (int i = computadoras.Length - 1; i >= posicion; i--)
-            {
-                computadoras[i + 1] = computadoras[i];
-            }
-
-            // Se inserta el nuevo elemento en la posición indicada.
-            computadoras[posicion] = nuevaComputadora;
+            string aa = "";
+            memoriaRam.Text = aa;
+            txtTarjetaVideo.Text = string.Empty;
+            boxSsdM.Text = string.Empty;
+            txtRGB.Text = string.Empty;
         }
         public void Limpiar()
         {
             Computadora compu = new Computadora();
            memoriaRam.Clear();
-            txtSSD.Clear(); 
+           // txtSSD.Clear(); 
              txtTarjetaVideo.Clear();
              txtRGB.Clear();
             indice = 0;
@@ -319,7 +363,7 @@ namespace ProyectoErik2023
             {
                 txtTarjetaVideo.Text = computadora[posicion].tarjetaVideo;
                 memoriaRam.Text = computadora[posicion].memoriaRam;
-                txtSSD.Text = computadora[posicion].SSD;
+                boxSsdM.Text = computadora[posicion].SSD;
                 txtRGB.Text = computadora[posicion].rgb;
             }
             else
@@ -337,7 +381,7 @@ namespace ProyectoErik2023
                     
                     computadora[posicion].tarjetaVideo = txtTarjetaVideo.Text;
                     computadora[posicion].memoriaRam = memoriaRam.Text;
-                    computadora[posicion].SSD = txtSSD.Text;
+                    computadora[posicion].SSD = boxSsdM.Text;
                     computadora[posicion].rgb = txtRGB.Text;
 
                     MessageBox.Show("Se guardaron los cambios");
@@ -450,12 +494,13 @@ namespace ProyectoErik2023
 
         private void btn_buscar_listaM_Click(object sender, EventArgs e)
         {
+            Burbuja();
             Buscar();
         }
 
         private void btnInsertarfinal_Click(object sender, EventArgs e)
         {
-            AgregarPcFinal(computadora);
+            AgregarPcPrincipio(computadora);
         }
 
         private void limpia_listaM_Click(object sender, EventArgs e)
@@ -547,6 +592,11 @@ namespace ProyectoErik2023
            
 
 
+        }
+
+        private void btncerrarM_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

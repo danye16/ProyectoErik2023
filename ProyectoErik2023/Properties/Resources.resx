@@ -118,13 +118,52 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="intento" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\intento.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Morgana_0" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Morgana_0.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="League-of-Legends-saison-2023-Est-ce-que-ca-vaut-1024x576" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\League-of-Legends-saison-2023-Est-ce-que-ca-vaut-1024x576.jpeg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="5ff1d8cf3bf975663f1be52421234fc4" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\5ff1d8cf3bf975663f1be52421234fc4.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="color" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\color.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="menuprincipal" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\menuprincipal.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="20cc4e08ae5a8f5d7448a4087aaacdb7" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\20cc4e08ae5a8f5d7448a4087aaacdb7.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="joystick-gamepad-cute-square-vector_143608-222" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\joystick-gamepad-cute-square-vector_143608-222.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="listaimagen" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\listaimagen.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="vector-icono-para-game-pad-con-botones-planos-2m6dm44" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\vector-icono-para-game-pad-con-botones-planos-2m6dm44.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="lol" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\lol.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="joypad-con-manchas-de-color-2gy748h" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\joypad-con-manchas-de-color-2gy748h.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="png-clipart-square-area-symbol-apps-dialog-close-desktop-wallpaper-sign-thumbnail" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\png-clipart-square-area-symbol-apps-dialog-close-desktop-wallpaper-sign-thumbnail.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="john-wick-3-parabellum-3078" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\john-wick-3-parabellum-3078.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Los-Mejores-29-Fondos-de-John-Wick-para-tus-dispositivos-moviles-1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Los-Mejores-29-Fondos-de-John-Wick-para-tus-dispositivos-moviles-1.jpeg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="intento" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\intento.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="close-button-clip-art_f" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\close-button-clip-art_f.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

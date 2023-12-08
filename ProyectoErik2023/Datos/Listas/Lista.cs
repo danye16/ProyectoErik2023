@@ -12,7 +12,7 @@ namespace ProyectoErik2023.Datos.Listas
     {
         FormularioListas formularioListas;
 
-        private Nodo _primero;
+        public Nodo _primero;
         private Nodo _ultimo;
         public Lista()
         {
@@ -125,26 +125,7 @@ namespace ProyectoErik2023.Datos.Listas
 
         public void InsertarMedioLista(Computadora computadora)
         {
-            //int longitud = LongitudLista();
-            //int medio =0;
-            //medio = longitud/2;
-            //Nodo actual = _primero;
-            //Nodo anterior = null;
-            ////MessageBox.Show(_primero.computadora.SSD);
-            //int contador = 1;
-            //while (actual != null)
-            //{
-            //    //if (Convert.ToUInt32(actual)==medio)
-            //    if (contador==medio)
-
-            //    {
-            //        actual.siguiente = new Nodo(computadora);
-            //        new Nodo(computadora).siguiente = actual;
-            //            break;
-            //    }
-            //   anterior = actual;
-            //    actual = actual.siguiente;
-            //    contador++;
+            
           if (ListaVacia())
                 {
                     MessageBox.Show("La lista esta vacia");
@@ -235,20 +216,7 @@ namespace ProyectoErik2023.Datos.Listas
 
         public void VaciarLista()
         {
-        //    Computadora compu = new Computadora();
-        //    compu..Clear();
-        //    txtSSD.Clear();
-        //    txtTarjetaVideo.Clear();
-        //    txtRGB.Clear();
-        //    indice = 0;
-
-        //    for (int i = 0; i < computadora.Length; i++)
-        //    {
-        //        computadora[i] = null;
-        //    }
-
-
-        //    MessageBox.Show("Se a limpiado todo jefe");
+       
             _primero = _ultimo= null;
             MessageBox.Show("Se vacio la lista con todo los productos");
         }

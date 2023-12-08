@@ -22,7 +22,7 @@ namespace ProyectoErik2023
         private ColasAlcuadrado miCola;
         private void btnAgregar_Click(object sender, EventArgs e)
         {
-            if (txtTarjetaCola.Text == string.Empty || txtMemoriaRamCola.Text == string.Empty || txtSSDCola.Text == string.Empty || txtRGBCola.Text == string.Empty)
+            if (txtTarjetaCola.Text == string.Empty || txtMemoriaRamCola.Text == string.Empty || boxSsdC.Text == string.Empty || txtRGBCola.Text == string.Empty)
             {
                 MessageBox.Show("Todos los campos son obligatorios");
             }
@@ -33,7 +33,7 @@ namespace ProyectoErik2023
                 {
                     memoriaRam = txtMemoriaRamCola.Text,
                     tarjetaVideo = txtTarjetaCola.Text,
-                    SSD = txtSSDCola.Text,
+                    SSD = boxSsdC.Text,
                     rgb = txtRGBCola.Text
                 };
 
@@ -46,7 +46,7 @@ namespace ProyectoErik2023
                
                 txtMemoriaRamCola.Text = string.Empty;
                 txtTarjetaCola.Text = string.Empty;
-                txtSSDCola.Text = string.Empty;
+                boxSsdC.Text = string.Empty;
                 txtRGBCola.Text = string.Empty;
             }
         }
@@ -97,7 +97,7 @@ namespace ProyectoErik2023
         {
             txtMemoriaRamCola.Text = computadora.memoriaRam;
             txtTarjetaCola.Text = computadora.tarjetaVideo;
-            txtSSDCola.Text = computadora.SSD;
+            boxSsdC.Text = computadora.SSD;
             txtRGBCola.Text = computadora.rgb;
         }
         private void btnBuscarTarjeta_Click(object sender, EventArgs e)
@@ -124,7 +124,7 @@ namespace ProyectoErik2023
             {
                 memoriaRam = txtMemoriaRamCola.Text,
                 tarjetaVideo = txtTarjetaCola.Text,
-                SSD = txtSSDCola.Text,
+                SSD = boxSsdC.Text,
                 rgb = txtRGBCola.Text
             };
 
@@ -143,6 +143,26 @@ namespace ProyectoErik2023
         private void FormularioColascs_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btncerrarP_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }
