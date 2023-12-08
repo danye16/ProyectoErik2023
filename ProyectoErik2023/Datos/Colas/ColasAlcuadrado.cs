@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ProyectoErik2023.Datos.Pila;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -8,5 +9,7 @@ namespace ProyectoErik2023.Datos.Colas
 {
     public class ColasAlcuadrado
     {
-    }
+
+    }       
 }
+

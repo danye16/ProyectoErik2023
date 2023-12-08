@@ -133,17 +133,42 @@ namespace ProyectoErik2023
             ActualizarDataGridView();
 
         }
+        private void MostrarDatosEnFormulario(Computadora computadora)
+        {
+            txtMemoriaRam.Text = computadora.memoriaRam;
+            txtTarjetaVideo.Text = computadora.tarjetaVideo;
+            txtSSD.Text = computadora.SSD;
+            txtRGB.Text = computadora.rgb;
+        }
 
         private void btn_ascendente_pila_Click(object sender, EventArgs e)
         {
-            PilaAlcuadrado1.OrdenarAscendente();
-            ActualizarDataGridView();
+            string tarjetaBuscada = txtBuscar.Text;
+            Computadora computadoraEncontrada;
+
+            if (PilaAlcuadrado1.BuscarPorTarjeta(tarjetaBuscada, out computadoraEncontrada))
+            {
+                MostrarDatosEnFormulario(computadoraEncontrada);
+            }
+            else
+            {
+                MessageBox.Show("Elemento no encontrado en la pila.");
+            }
         }
 
         private void btn_descendente_pila_Click(object sender, EventArgs e)
         {
-            PilaAlcuadrado1.OrdenarDescendente();
-            ActualizarDataGridView();
+            Computadora computadoraModificada = ObtenerDatosDelFormulario();
+
+            if (PilaAlcuadrado1.ActualizarComputadora(computadoraModificada))
+            {
+                MessageBox.Show("Cambios aplicados correctamente.");
+                ActualizarDataGridView();
+            }
+            else
+            {
+                MessageBox.Show("Error al actualizar la computadora en la pila.");
+            }
         }
     }
 }

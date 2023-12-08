@@ -1,4 +1,6 @@
-﻿using System;
+﻿using ProyectoErik2023.Datos.Colas;
+using ProyectoErik2023.Datos.Pila;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -19,10 +21,20 @@ namespace ProyectoErik2023
 
         private void btnAgregar_Click(object sender, EventArgs e)
         {
-
+           
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void btnLimpiarCola_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnBuscar_Click(object sender, EventArgs e)
         {
 
         }

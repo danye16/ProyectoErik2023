@@ -50,6 +50,7 @@
             this.SSD = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.RGB = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnRefrescar = new System.Windows.Forms.Button();
+            this.txtBuscarTarjetaEditar = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -61,7 +62,7 @@
             this.btn_descendente_pila.Name = "btn_descendente_pila";
             this.btn_descendente_pila.Size = new System.Drawing.Size(163, 69);
             this.btn_descendente_pila.TabIndex = 17;
-            this.btn_descendente_pila.Text = "Ordenar Descendente";
+            this.btn_descendente_pila.Text = "Enviar cambios";
             this.btn_descendente_pila.UseVisualStyleBackColor = false;
             this.btn_descendente_pila.Click += new System.EventHandler(this.btn_descendente_pila_Click);
             // 
@@ -109,7 +110,7 @@
             this.btn_ascendente_pila.Name = "btn_ascendente_pila";
             this.btn_ascendente_pila.Size = new System.Drawing.Size(163, 69);
             this.btn_ascendente_pila.TabIndex = 13;
-            this.btn_ascendente_pila.Text = "Ordenar Ascendente";
+            this.btn_ascendente_pila.Text = "Buscar tarjeta (editar)";
             this.btn_ascendente_pila.UseVisualStyleBackColor = false;
             this.btn_ascendente_pila.Click += new System.EventHandler(this.btn_ascendente_pila_Click);
             // 
@@ -263,11 +264,19 @@
             this.btnRefrescar.UseVisualStyleBackColor = false;
             this.btnRefrescar.Click += new System.EventHandler(this.btnRefrescar_Click);
             // 
+            // txtBuscarTarjetaEditar
+            // 
+            this.txtBuscarTarjetaEditar.Location = new System.Drawing.Point(645, 251);
+            this.txtBuscarTarjetaEditar.Name = "txtBuscarTarjetaEditar";
+            this.txtBuscarTarjetaEditar.Size = new System.Drawing.Size(100, 20);
+            this.txtBuscarTarjetaEditar.TabIndex = 30;
+            // 
             // FormularioPilas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.txtBuscarTarjetaEditar);
             this.Controls.Add(this.btnRefrescar);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.btnLimpiarTodo);
@@ -318,5 +327,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn SSD;
         private System.Windows.Forms.DataGridViewTextBoxColumn RGB;
         private System.Windows.Forms.Button btnRefrescar;
+        private System.Windows.Forms.TextBox txtBuscarTarjetaEditar;
     }
 }
