@@ -14,6 +14,7 @@ namespace ProyectoErik2023
     public partial class FormularioMatriz : Form
     {
         public int indice = 0;
+        public int cantidadElementos = 0;
         public FormularioMatriz()
         {
             InitializeComponent();
@@ -279,7 +280,7 @@ namespace ProyectoErik2023
 
             for (int i = 0; i < computadora.Length; i++)
             {
-                if (computadora[i] != null)
+                if (computadora[i] != null && computadora[i].activo)
                 {
                     dataGridView1.Rows.Add(
                         $"Pc {i}",
@@ -291,13 +292,30 @@ namespace ProyectoErik2023
                 }
             }
         }
+        //public void ActualizarDataGridView()
+        //{
+        //    dataGridView1.Rows.Clear();
+
+        //    for (int i = 0; i < computadora.Length; i++)
+        //    {
+        //        if (computadora[i] != null)
+        //        {
+        //            dataGridView1.Rows.Add(
+        //                $"Pc {i}",
+        //                computadora[i].tarjetaVideo,
+        //                computadora[i].memoriaRam,
+        //                computadora[i].SSD,
+        //                computadora[i].rgb
+        //            );
+        //        }
+        //    }
+        //}
 
 
         private void CargarDatos(int posicion)
         {
             if (posicion >= 0 && posicion < computadora.Length && computadora[posicion] != null)
             {
-                // Cargar los datos de la posición seleccionada en los TextBox correspondientes
                 txtTarjetaVideo.Text = computadora[posicion].tarjetaVideo;
                 memoriaRam.Text = computadora[posicion].memoriaRam;
                 txtSSD.Text = computadora[posicion].SSD;
@@ -305,7 +323,7 @@ namespace ProyectoErik2023
             }
             else
             {
-                MessageBox.Show("La posición seleccionada no contiene datos.");
+                MessageBox.Show("Esa posicion no tiene datos!");
             }
         }
 
@@ -335,6 +353,69 @@ namespace ProyectoErik2023
             }
         }
 
+        private void EliminarElemento(int posicion)
+        {
+            if (posicion >= 0 && posicion < computadora.Length)
+            {
+                if (computadora[posicion] != null)
+                {
+                    for (int i = posicion; i < computadora.Length - 1; i++)
+                    {
+                        computadora[i] = computadora[i + 1];
+                    }
+
+                    computadora[computadora.Length - 1] = null;
+                    indice--;
+
+                    MessageBox.Show("Elemento eliminado correctamente.");
+                    ActualizarDataGridView();
+                }
+                else
+                {
+                    MessageBox.Show("La posición seleccionada no contiene datos.");
+                }
+            }
+            else
+            {
+                MessageBox.Show("Posición inválida.");
+            }
+        }
+
+        public void ReordenarElementos()
+        {
+            int indiceReordenado = 0;
+
+            // Reordenar el arreglo moviendo los elementos válidos al principio
+            for (int i = 0; i < computadora.Length; i++)
+            {
+                if (computadora[i] != null && computadora[i].activo)
+                {
+                    if (i != indiceReordenado)
+                    {
+                        // Mover el elemento válido al inicio del arreglo
+                        computadora[indiceReordenado] = computadora[i];
+                        computadora[i] = null; // Limpiar la posición original
+                    }
+                    indiceReordenado++;
+                }
+            }
+        }
+
+
+
+        //private void EliminarElemento(int posicion)
+        //{
+        //    if (posicion >= 0 && posicion < computadora.Length && computadora[posicion] != null)
+        //    {
+        //        computadora[posicion] = null;
+        //        MessageBox.Show("Elemento eliminado correctamente.");
+        //        ActualizarDataGridView(); // Actualiza la vista después de eliminar el elemento
+        //    }
+        //    else
+        //    {
+        //        MessageBox.Show("La posición seleccionada no contiene datos o es inválida.");
+        //    }
+        //}
 
 
         private void panel1_Paint(object sender, PaintEventArgs e)
@@ -415,6 +496,7 @@ namespace ProyectoErik2023
                 if (int.TryParse(txtPosicion.Text, out posicion))
                 {
                     CargarDatos(posicion);
+                    MessageBox.Show("Posicion elegida correctamente!");
                 }
                 else
                 {
@@ -445,6 +527,27 @@ namespace ProyectoErik2023
             else
             {
                 MessageBox.Show("Ingresa una posición antes de aplicar cambios.");
+            }
+        }
+
+        private void btnEliminarMatriz_Click(object sender, EventArgs e)
+        {
+            if (!string.IsNullOrEmpty(txtPosicion.Text))
+            {
+                int posicion;
+                if (int.TryParse(txtPosicion.Text, out posicion))
+                {
+                    CargarDatos(posicion); 
+                    EliminarElemento(posicion); 
+                }
+                else
+                {
+                    MessageBox.Show("Elige una posicion correcta por favor");
+                }
+            }
+            else
+            {
+                MessageBox.Show("Tienes que elegir una posicion antes!");
             }
         }
     }
