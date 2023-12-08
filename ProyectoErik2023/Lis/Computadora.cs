@@ -12,8 +12,9 @@ namespace ProyectoErik2023
         public string SSD { get; set; }
         public string tarjetaVideo { get; set; }
         public string rgb { get; set; }
+        public bool activo = true;
 
-    //  public  Computadora[] computadoras {  get; set; }
+        //  public  Computadora[] computadoras {  get; set; }
 
         public Computadora()
         {

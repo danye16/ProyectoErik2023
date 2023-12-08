@@ -12,7 +12,7 @@ namespace ProyectoErik2023.Datos.Pila
         //POSICION ES IGUAL A CIMA
         public Computadora[] computadoraPila;
         private int _posicionPila;
-        int _longitudPilaMaximo = 200;
+        int _longitudPilaMaximo = 3;
         private Computadora[] computadoraPila2;
         private int _posicionPila2;
         public PilaAlcuadrado()
@@ -21,7 +21,7 @@ namespace ProyectoErik2023.Datos.Pila
             computadoraPila = new Computadora[_longitudPilaMaximo];
 
         }
-        ///aaaaaaaaaa
+        
 
         public bool PilaVacia()
         {
@@ -113,6 +113,7 @@ namespace ProyectoErik2023.Datos.Pila
         
         public void Buscar(string computadoraBuscada)
         {
+           
             bool encontrado = false;
 
             // Crear una pila auxiliar
@@ -121,26 +122,26 @@ namespace ProyectoErik2023.Datos.Pila
 
             // int posicionOriginal = _posicionPila;
 
-            // Mientras la pila original no esté vacía
+            
             while (!PilaVacia())
             {
-                // Extraer el elemento de la cima de la pila original
+                
                 Computadora temporal = ExtraerElemento();
 
-                // Si el elemento extraído es igual al buscado
+               
                 if (string.Compare(computadoraBuscada, temporal.tarjetaVideo) == 0)
                 {
                     encontrado = true;
-                    // No se inserta el elemento nuevamente en la pila original
+                 
                     MessageBox.Show("Elemento encontrado en la posición: " + (_posicionPila + 1));
                 }
 
-                // Insertar el elemento extraído en la pila auxiliar
+                
                 _posicionPila2++;
                 computadoraPila2[_posicionPila2] = temporal;
             }
-12
-            // Restaurar la pila original
+
+            
             while (_posicionPila2 >= 0)
             {
                 Computadora temporal = computadoraPila2[_posicionPila2--];
@@ -152,6 +153,59 @@ namespace ProyectoErik2023.Datos.Pila
                 MessageBox.Show("Elemento no encontrado en la pila.");
             }
         }
+        public bool BuscarPorTarjeta(string tarjetaBuscada, out Computadora computadoraEncontrada)
+        {
+            bool encontrado = false;
+            computadoraEncontrada = null;
+
+        
+            for (int i = 0; i <= _posicionPila; i++)
+            {
+                if (computadoraPila[i].tarjetaVideo == tarjetaBuscada)
+                {
+                    encontrado = true;
+                    computadoraEncontrada = computadoraPila[i];
+                    break;
+                }
+            }
+
+            return encontrado;
+        }
+        public bool ActualizarComputadora(Computadora computadoraModificada)
+        {
+            bool actualizado = false;
+
+          
+            int posicionAuxiliar = -1;
+            Computadora[] pilaAuxiliar = new Computadora[_longitudPilaMaximo];
+
+            
+            while (!PilaVacia())
+            {
+                Computadora temporal = ExtraerElemento();
+
+                if (temporal.tarjetaVideo == computadoraModificada.tarjetaVideo)
+                {
+                    temporal = computadoraModificada;
+                    actualizado = true;
+                }
+
+               
+                posicionAuxiliar++;
+                pilaAuxiliar[posicionAuxiliar] = temporal;
+            }
+
+           
+            while (posicionAuxiliar >= 0)
+            {
+                Computadora temporal = pilaAuxiliar[posicionAuxiliar--];
+                InsertarElemento(temporal);
+            }
+
+            return actualizado;
+        }
+
+
 
 
 

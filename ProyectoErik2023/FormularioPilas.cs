@@ -115,7 +115,6 @@ namespace ProyectoErik2023
             PilaAlcuadrado1.ExtraerElemento();
             ActualizarDataGridView();
         }
-
         private void button1_Click(object sender, EventArgs e)
         {
             PilaAlcuadrado1.Limpiar();
@@ -131,6 +130,52 @@ namespace ProyectoErik2023
         private void btnRefrescar_Click(object sender, EventArgs e)
         {
             ActualizarDataGridView();
+
+        }
+        private void MostrarDatosEnFormulario(Computadora computadora)
+        {
+            txtMemoriaRam.Text = computadora.memoriaRam;
+            txtTarjetaVideo.Text = computadora.tarjetaVideo;
+            txtSSD.Text = computadora.SSD;
+            txtRGB.Text = computadora.rgb;
+        }
+
+       
+
+        private void btnEnviarCambiosCola_Click(object sender, EventArgs e)
+        {
+            Computadora computadoraModificada = new Computadora
+            {
+                memoriaRam = txtMemoriaRam.Text,
+                tarjetaVideo = txtTarjetaVideo.Text,
+                SSD = txtSSD.Text,
+                rgb = txtRGB.Text
+            };
+
+            if (PilaAlcuadrado1.ActualizarComputadora(computadoraModificada))
+            {
+                MessageBox.Show("Cambios aplicados correctamente.");
+                ActualizarDataGridView(); 
+            }
+            else
+            {
+                MessageBox.Show("Error al actualizar la computadora en la pila.");
+            }
+            ActualizarDataGridView();
+            string aa = "";
+            txtMemoriaRam.Text = aa;
+            txtTarjetaVideo.Text = string.Empty;
+            txtSSD.Text = string.Empty;
+            txtRGB.Text = string.Empty;
+        }
+
+        private void btnBuscarTarjeta_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtBuscarTarjetaEditar_TextChanged(object sender, EventArgs e)
+        {
 
         }
     }

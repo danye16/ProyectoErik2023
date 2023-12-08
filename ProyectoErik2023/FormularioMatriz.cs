@@ -14,6 +14,7 @@ namespace ProyectoErik2023
     public partial class FormularioMatriz : Form
     {
         public int indice = 0;
+        public int cantidadElementos = 0;
         public FormularioMatriz()
         {
             InitializeComponent();
@@ -178,7 +179,7 @@ namespace ProyectoErik2023
                 MessageBox.Show("Tienes que llenar la matriz para ordenar");
             }
 
-
+           
 
 
 
@@ -254,6 +255,26 @@ namespace ProyectoErik2023
 
 
         }
+
+        public void InsertarEnMedio(int posicion, Computadora nuevaComputadora, Computadora[] computadoras)
+        {
+            // Si la posición es menor que 0 o mayor que el número de elementos,
+            // se muestra un mensaje de error.
+            if (posicion < 0 || posicion > computadoras.Length)
+            {
+                MessageBox.Show("Posición inválida.");
+                return;
+            }
+
+            // Se desplazan los elementos de la matriz a la derecha una posición.
+            for (int i = computadoras.Length - 1; i >= posicion; i--)
+            {
+                computadoras[i + 1] = computadoras[i];
+            }
+
+            // Se inserta el nuevo elemento en la posición indicada.
+            computadoras[posicion] = nuevaComputadora;
+        }
         public void Limpiar()
         {
             Computadora compu = new Computadora();
@@ -279,7 +300,7 @@ namespace ProyectoErik2023
 
             for (int i = 0; i < computadora.Length; i++)
             {
-                if (computadora[i] != null)
+                if (computadora[i] != null && computadora[i].activo)
                 {
                     dataGridView1.Rows.Add(
                         $"Pc {i}",
@@ -291,6 +312,103 @@ namespace ProyectoErik2023
                 }
             }
         }
+        
+        private void CargarDatos(int posicion)
+        {
+            if (posicion >= 0 && posicion < computadora.Length && computadora[posicion] != null)
+            {
+                txtTarjetaVideo.Text = computadora[posicion].tarjetaVideo;
+                memoriaRam.Text = computadora[posicion].memoriaRam;
+                txtSSD.Text = computadora[posicion].SSD;
+                txtRGB.Text = computadora[posicion].rgb;
+            }
+            else
+            {
+                MessageBox.Show("Esa posicion no tiene datos!");
+            }
+        }
+
+        private void AplicarCambiosEditar(int posicion)
+        {
+            if (posicion >= 0 && posicion < computadora.Length)
+            {
+                if (computadora[posicion] != null)
+                {
+                    
+                    computadora[posicion].tarjetaVideo = txtTarjetaVideo.Text;
+                    computadora[posicion].memoriaRam = memoriaRam.Text;
+                    computadora[posicion].SSD = txtSSD.Text;
+                    computadora[posicion].rgb = txtRGB.Text;
+
+                    MessageBox.Show("Se guardaron los cambios");
+                    ActualizarDataGridView(); 
+                }
+                else
+                {
+                    MessageBox.Show("Esa posicion esta vacia");
+                }
+            }
+            else
+            {
+                MessageBox.Show("Posicion invalida.");
+            }
+        }
+
+        private void EliminarElemento(int posicion)
+        {
+            if (posicion >= 0 && posicion < computadora.Length)
+            {
+                if (computadora[posicion] != null)
+                {
+                    for (int i = posicion; i < computadora.Length - 1; i++)
+                    {
+                        computadora[i] = computadora[i + 1];
+                    }
+
+                    computadora[computadora.Length - 1] = null;
+                    indice--;
+
+                    MessageBox.Show("Elemento eliminado correctamente.");
+                    ActualizarDataGridView();
+                }
+             
+                else
+                {
+                    MessageBox.Show("La posición seleccionada no contiene datos.");
+                }
+            }
+            else
+            {
+                MessageBox.Show("Posición inválida.");
+            }
+        }
+
+        public void ReordenarElementos()
+        {
+            int indiceReordenado = 0;
+
+            
+            for (int i = 0; i < computadora.Length; i++)
+            {
+                if (computadora[i] != null && computadora[i].activo)
+                {
+                    if (i != indiceReordenado)
+                    {
+                       
+                        computadora[indiceReordenado] = computadora[i];
+                        computadora[i] = null; 
+                    }
+                    indiceReordenado++;
+                }
+            }
+        }
+
+
+       
+
+
+
+
         private void panel1_Paint(object sender, PaintEventArgs e)
         {
 
@@ -358,6 +476,76 @@ namespace ProyectoErik2023
         private void btnRefrescar_Click(object sender, EventArgs e)
         {
             ActualizarDataGridView();
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            if (!string.IsNullOrEmpty(txtPosicion.Text))
+            {
+                int posicion;
+                if (int.TryParse(txtPosicion.Text, out posicion))
+                {
+                    CargarDatos(posicion);
+                    MessageBox.Show("Posicion elegida correctamente!");
+                }
+                else
+                {
+                    MessageBox.Show("Por favor, ingresa un número válido para la posición.");
+                }
+            }
+            else
+            {
+                MessageBox.Show("Ingresa una posición antes de editar.");
+            }
+           
+        }
+
+        private void btnEditarCambios_Click(object sender, EventArgs e)
+        {
+            if (!string.IsNullOrEmpty(txtPosicion.Text))
+            {
+                int posicion;
+                if (int.TryParse(txtPosicion.Text, out posicion))
+                {
+                    AplicarCambiosEditar(posicion);
+                }
+                else
+                {
+                    MessageBox.Show("Por favor, ingresa un número válido para la posición.");
+                }
+            }
+            else
+            {
+                MessageBox.Show("Ingresa una posición antes de aplicar cambios.");
+            }
+        }
+
+        private void btnEliminarMatriz_Click(object sender, EventArgs e)
+        {
+            if (!string.IsNullOrEmpty(txtPosicion.Text))
+            {
+                int posicion;
+                if (int.TryParse(txtPosicion.Text, out posicion))
+                {
+                    CargarDatos(posicion); 
+                    EliminarElemento(posicion); 
+                }
+                else
+                {
+                    MessageBox.Show("Elige una posicion correcta por favor");
+                }
+            }
+            else
+            {
+                MessageBox.Show("Tienes que elegir una posicion antes!");
+            }
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+           
+
 
         }
     }
