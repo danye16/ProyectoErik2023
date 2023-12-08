@@ -12,7 +12,7 @@ namespace ProyectoErik2023.Datos.Pila
         //POSICION ES IGUAL A CIMA
         public Computadora[] computadoraPila;
         private int _posicionPila;
-        int _longitudPilaMaximo = 200;
+        int _longitudPilaMaximo = 3;
         private Computadora[] computadoraPila2;
         private int _posicionPila2;
         public PilaAlcuadrado()
@@ -175,20 +175,36 @@ namespace ProyectoErik2023.Datos.Pila
         {
             bool actualizado = false;
 
-            for (int i = 0; i <= _posicionPila; i++)
+          
+            int posicionAuxiliar = -1;
+            Computadora[] pilaAuxiliar = new Computadora[_longitudPilaMaximo];
+
+            
+            while (!PilaVacia())
             {
-                if (computadoraPila[i].tarjetaVideo == computadoraModificada.tarjetaVideo)
+                Computadora temporal = ExtraerElemento();
+
+                if (temporal.tarjetaVideo == computadoraModificada.tarjetaVideo)
                 {
-                    computadoraPila[i] = computadoraModificada;
+                    temporal = computadoraModificada;
                     actualizado = true;
-                    break;
                 }
+
+               
+                posicionAuxiliar++;
+                pilaAuxiliar[posicionAuxiliar] = temporal;
+            }
+
+           
+            while (posicionAuxiliar >= 0)
+            {
+                Computadora temporal = pilaAuxiliar[posicionAuxiliar--];
+                InsertarElemento(temporal);
             }
 
             return actualizado;
         }
 
-        
 
 
 

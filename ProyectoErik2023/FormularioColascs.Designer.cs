@@ -28,11 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.btn_descendente_cola = new System.Windows.Forms.Button();
             this.btnBuscar = new System.Windows.Forms.Button();
             this.btnLimpiarCola = new System.Windows.Forms.Button();
             this.btn_imprimir_cola = new System.Windows.Forms.Button();
-            this.btn_ascendente_cola = new System.Windows.Forms.Button();
             this.btnAgregar = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.txtMemoriaRamCola = new System.Windows.Forms.TextBox();
@@ -48,19 +46,11 @@
             this.SSDColas = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.RGBColas = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.txtBuscar = new System.Windows.Forms.TextBox();
+            this.txtBuscarTarjetaCola = new System.Windows.Forms.TextBox();
+            this.btnBuscarTarjeta = new System.Windows.Forms.Button();
+            this.btnEnviarCambiosColas = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
-            // 
-            // btn_descendente_cola
-            // 
-            this.btn_descendente_cola.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.btn_descendente_cola.Font = new System.Drawing.Font("SimSun", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_descendente_cola.Location = new System.Drawing.Point(606, 313);
-            this.btn_descendente_cola.Name = "btn_descendente_cola";
-            this.btn_descendente_cola.Size = new System.Drawing.Size(163, 69);
-            this.btn_descendente_cola.TabIndex = 23;
-            this.btn_descendente_cola.Text = "Ordenar Descendente";
-            this.btn_descendente_cola.UseVisualStyleBackColor = false;
             // 
             // btnBuscar
             // 
@@ -78,11 +68,11 @@
             // 
             this.btnLimpiarCola.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.btnLimpiarCola.Font = new System.Drawing.Font("SimSun", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLimpiarCola.Location = new System.Drawing.Point(457, 129);
+            this.btnLimpiarCola.Location = new System.Drawing.Point(610, 78);
             this.btnLimpiarCola.Name = "btnLimpiarCola";
             this.btnLimpiarCola.Size = new System.Drawing.Size(163, 69);
             this.btnLimpiarCola.TabIndex = 21;
-            this.btnLimpiarCola.Text = "Limpiar Cola";
+            this.btnLimpiarCola.Text = "Eliminar";
             this.btnLimpiarCola.UseVisualStyleBackColor = false;
             this.btnLimpiarCola.Click += new System.EventHandler(this.btnLimpiarCola_Click);
             // 
@@ -90,23 +80,12 @@
             // 
             this.btn_imprimir_cola.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.btn_imprimir_cola.Font = new System.Drawing.Font("SimSun", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_imprimir_cola.Location = new System.Drawing.Point(606, 54);
+            this.btn_imprimir_cola.Location = new System.Drawing.Point(610, 12);
             this.btn_imprimir_cola.Name = "btn_imprimir_cola";
             this.btn_imprimir_cola.Size = new System.Drawing.Size(163, 69);
             this.btn_imprimir_cola.TabIndex = 20;
             this.btn_imprimir_cola.Text = "Imprimir Cola";
             this.btn_imprimir_cola.UseVisualStyleBackColor = false;
-            // 
-            // btn_ascendente_cola
-            // 
-            this.btn_ascendente_cola.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.btn_ascendente_cola.Font = new System.Drawing.Font("SimSun", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_ascendente_cola.Location = new System.Drawing.Point(606, 388);
-            this.btn_ascendente_cola.Name = "btn_ascendente_cola";
-            this.btn_ascendente_cola.Size = new System.Drawing.Size(163, 69);
-            this.btn_ascendente_cola.TabIndex = 19;
-            this.btn_ascendente_cola.Text = "Ordenar Ascendente";
-            this.btn_ascendente_cola.UseVisualStyleBackColor = false;
             // 
             // btnAgregar
             // 
@@ -232,11 +211,42 @@
             this.txtBuscar.Size = new System.Drawing.Size(100, 20);
             this.txtBuscar.TabIndex = 33;
             // 
+            // txtBuscarTarjetaCola
+            // 
+            this.txtBuscarTarjetaCola.Location = new System.Drawing.Point(632, 267);
+            this.txtBuscarTarjetaCola.Name = "txtBuscarTarjetaCola";
+            this.txtBuscarTarjetaCola.Size = new System.Drawing.Size(100, 20);
+            this.txtBuscarTarjetaCola.TabIndex = 34;
+            this.txtBuscarTarjetaCola.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            // 
+            // btnBuscarTarjeta
+            // 
+            this.btnBuscarTarjeta.Location = new System.Drawing.Point(632, 206);
+            this.btnBuscarTarjeta.Name = "btnBuscarTarjeta";
+            this.btnBuscarTarjeta.Size = new System.Drawing.Size(107, 38);
+            this.btnBuscarTarjeta.TabIndex = 35;
+            this.btnBuscarTarjeta.Text = "Buscar tarjeta (editar)";
+            this.btnBuscarTarjeta.UseVisualStyleBackColor = true;
+            this.btnBuscarTarjeta.Click += new System.EventHandler(this.btnBuscarTarjeta_Click);
+            // 
+            // btnEnviarCambiosColas
+            // 
+            this.btnEnviarCambiosColas.Location = new System.Drawing.Point(610, 389);
+            this.btnEnviarCambiosColas.Name = "btnEnviarCambiosColas";
+            this.btnEnviarCambiosColas.Size = new System.Drawing.Size(141, 33);
+            this.btnEnviarCambiosColas.TabIndex = 36;
+            this.btnEnviarCambiosColas.Text = "Enviar cambios";
+            this.btnEnviarCambiosColas.UseVisualStyleBackColor = true;
+            this.btnEnviarCambiosColas.Click += new System.EventHandler(this.btnEnviarCambiosColas_Click);
+            // 
             // FormularioColascs
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btnEnviarCambiosColas);
+            this.Controls.Add(this.btnBuscarTarjeta);
+            this.Controls.Add(this.txtBuscarTarjetaCola);
             this.Controls.Add(this.txtBuscar);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.txtRGBCola);
@@ -247,14 +257,13 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.txtMemoriaRamCola);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.btn_descendente_cola);
             this.Controls.Add(this.btnBuscar);
             this.Controls.Add(this.btnLimpiarCola);
             this.Controls.Add(this.btn_imprimir_cola);
-            this.Controls.Add(this.btn_ascendente_cola);
             this.Controls.Add(this.btnAgregar);
             this.Name = "FormularioColascs";
-            this.Text = "FormularioColascs";
+            this.Text = "Enviar cambios";
+            this.Load += new System.EventHandler(this.FormularioColascs_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -262,12 +271,9 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.Button btn_descendente_cola;
         private System.Windows.Forms.Button btnBuscar;
         private System.Windows.Forms.Button btnLimpiarCola;
         private System.Windows.Forms.Button btn_imprimir_cola;
-        private System.Windows.Forms.Button btn_ascendente_cola;
         private System.Windows.Forms.Button btnAgregar;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txtMemoriaRamCola;
@@ -283,5 +289,8 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn SSDColas;
         private System.Windows.Forms.DataGridViewTextBoxColumn RGBColas;
         private System.Windows.Forms.TextBox txtBuscar;
+        private System.Windows.Forms.TextBox txtBuscarTarjetaCola;
+        private System.Windows.Forms.Button btnBuscarTarjeta;
+        private System.Windows.Forms.Button btnEnviarCambiosColas;
     }
 }

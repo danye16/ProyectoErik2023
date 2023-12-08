@@ -246,6 +246,7 @@
             this.txtBuscarTarjetaEditar.Name = "txtBuscarTarjetaEditar";
             this.txtBuscarTarjetaEditar.Size = new System.Drawing.Size(100, 20);
             this.txtBuscarTarjetaEditar.TabIndex = 30;
+            this.txtBuscarTarjetaEditar.TextChanged += new System.EventHandler(this.txtBuscarTarjetaEditar_TextChanged);
             // 
             // btnBuscarTarjeta
             // 

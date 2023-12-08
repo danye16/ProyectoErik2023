@@ -115,7 +115,6 @@ namespace ProyectoErik2023
             PilaAlcuadrado1.ExtraerElemento();
             ActualizarDataGridView();
         }
-
         private void button1_Click(object sender, EventArgs e)
         {
             PilaAlcuadrado1.Limpiar();
@@ -172,17 +171,12 @@ namespace ProyectoErik2023
 
         private void btnBuscarTarjeta_Click(object sender, EventArgs e)
         {
-            string tarjetaBuscada = txtBuscarTarjetaEditar.Text;
-            Computadora computadoraEncontrada;
 
-            if (PilaAlcuadrado1.BuscarPorTarjeta(tarjetaBuscada, out computadoraEncontrada))
-            {
-                MostrarDatosEnFormulario(computadoraEncontrada);
-            }
-            else
-            {
-                MessageBox.Show("Elemento no encontrado en la pila.");
-            }
+        }
+
+        private void txtBuscarTarjetaEditar_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
