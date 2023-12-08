@@ -179,7 +179,7 @@ namespace ProyectoErik2023
                 MessageBox.Show("Tienes que llenar la matriz para ordenar");
             }
 
-
+           
 
 
 
@@ -311,7 +311,6 @@ namespace ProyectoErik2023
         //    }
         //}
 
-
         private void CargarDatos(int posicion)
         {
             if (posicion >= 0 && posicion < computadora.Length && computadora[posicion] != null)
@@ -370,6 +369,7 @@ namespace ProyectoErik2023
                     MessageBox.Show("Elemento eliminado correctamente.");
                     ActualizarDataGridView();
                 }
+             
                 else
                 {
                     MessageBox.Show("La posición seleccionada no contiene datos.");
@@ -385,16 +385,16 @@ namespace ProyectoErik2023
         {
             int indiceReordenado = 0;
 
-            // Reordenar el arreglo moviendo los elementos válidos al principio
+            
             for (int i = 0; i < computadora.Length; i++)
             {
                 if (computadora[i] != null && computadora[i].activo)
                 {
                     if (i != indiceReordenado)
                     {
-                        // Mover el elemento válido al inicio del arreglo
+                       
                         computadora[indiceReordenado] = computadora[i];
-                        computadora[i] = null; // Limpiar la posición original
+                        computadora[i] = null; 
                     }
                     indiceReordenado++;
                 }
