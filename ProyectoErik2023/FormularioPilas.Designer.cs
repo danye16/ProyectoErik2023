@@ -28,11 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.btn_descendente_pila = new System.Windows.Forms.Button();
             this.btnBuscar = new System.Windows.Forms.Button();
             this.txtEliminarCima = new System.Windows.Forms.Button();
             this.btn_imprimir_pila = new System.Windows.Forms.Button();
-            this.btn_ascendente_pila = new System.Windows.Forms.Button();
             this.btnAgregar = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.txtMemoriaRam = new System.Windows.Forms.TextBox();
@@ -51,20 +49,10 @@
             this.RGB = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnRefrescar = new System.Windows.Forms.Button();
             this.txtBuscarTarjetaEditar = new System.Windows.Forms.TextBox();
+            this.btnBuscarTarjeta = new System.Windows.Forms.Button();
+            this.btnEnviarCambiosCola = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
-            // 
-            // btn_descendente_pila
-            // 
-            this.btn_descendente_pila.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.btn_descendente_pila.Font = new System.Drawing.Font("SimSun", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_descendente_pila.Location = new System.Drawing.Point(606, 313);
-            this.btn_descendente_pila.Name = "btn_descendente_pila";
-            this.btn_descendente_pila.Size = new System.Drawing.Size(163, 69);
-            this.btn_descendente_pila.TabIndex = 17;
-            this.btn_descendente_pila.Text = "Enviar cambios";
-            this.btn_descendente_pila.UseVisualStyleBackColor = false;
-            this.btn_descendente_pila.Click += new System.EventHandler(this.btn_descendente_pila_Click);
             // 
             // btnBuscar
             // 
@@ -101,18 +89,6 @@
             this.btn_imprimir_pila.Text = "Imprimir Pila";
             this.btn_imprimir_pila.UseVisualStyleBackColor = false;
             this.btn_imprimir_pila.Click += new System.EventHandler(this.btn_imprimir_pila_Click);
-            // 
-            // btn_ascendente_pila
-            // 
-            this.btn_ascendente_pila.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.btn_ascendente_pila.Font = new System.Drawing.Font("SimSun", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_ascendente_pila.Location = new System.Drawing.Point(606, 175);
-            this.btn_ascendente_pila.Name = "btn_ascendente_pila";
-            this.btn_ascendente_pila.Size = new System.Drawing.Size(163, 69);
-            this.btn_ascendente_pila.TabIndex = 13;
-            this.btn_ascendente_pila.Text = "Buscar tarjeta (editar)";
-            this.btn_ascendente_pila.UseVisualStyleBackColor = false;
-            this.btn_ascendente_pila.Click += new System.EventHandler(this.btn_ascendente_pila_Click);
             // 
             // btnAgregar
             // 
@@ -271,11 +247,33 @@
             this.txtBuscarTarjetaEditar.Size = new System.Drawing.Size(100, 20);
             this.txtBuscarTarjetaEditar.TabIndex = 30;
             // 
+            // btnBuscarTarjeta
+            // 
+            this.btnBuscarTarjeta.Location = new System.Drawing.Point(606, 188);
+            this.btnBuscarTarjeta.Name = "btnBuscarTarjeta";
+            this.btnBuscarTarjeta.Size = new System.Drawing.Size(159, 43);
+            this.btnBuscarTarjeta.TabIndex = 31;
+            this.btnBuscarTarjeta.Text = "Buscar tarjeta video";
+            this.btnBuscarTarjeta.UseVisualStyleBackColor = true;
+            this.btnBuscarTarjeta.Click += new System.EventHandler(this.btnBuscarTarjeta_Click);
+            // 
+            // btnEnviarCambiosCola
+            // 
+            this.btnEnviarCambiosCola.Location = new System.Drawing.Point(623, 323);
+            this.btnEnviarCambiosCola.Name = "btnEnviarCambiosCola";
+            this.btnEnviarCambiosCola.Size = new System.Drawing.Size(112, 49);
+            this.btnEnviarCambiosCola.TabIndex = 32;
+            this.btnEnviarCambiosCola.Text = "Enviar cambios";
+            this.btnEnviarCambiosCola.UseVisualStyleBackColor = true;
+            this.btnEnviarCambiosCola.Click += new System.EventHandler(this.btnEnviarCambiosCola_Click);
+            // 
             // FormularioPilas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btnEnviarCambiosCola);
+            this.Controls.Add(this.btnBuscarTarjeta);
             this.Controls.Add(this.txtBuscarTarjetaEditar);
             this.Controls.Add(this.btnRefrescar);
             this.Controls.Add(this.dataGridView1);
@@ -289,11 +287,9 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.txtMemoriaRam);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.btn_descendente_pila);
             this.Controls.Add(this.btnBuscar);
             this.Controls.Add(this.txtEliminarCima);
             this.Controls.Add(this.btn_imprimir_pila);
-            this.Controls.Add(this.btn_ascendente_pila);
             this.Controls.Add(this.btnAgregar);
             this.Name = "FormularioPilas";
             this.Text = "FormularioPilas";
@@ -304,12 +300,9 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.Button btn_descendente_pila;
         private System.Windows.Forms.Button btnBuscar;
         private System.Windows.Forms.Button txtEliminarCima;
         private System.Windows.Forms.Button btn_imprimir_pila;
-        private System.Windows.Forms.Button btn_ascendente_pila;
         private System.Windows.Forms.Button btnAgregar;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txtMemoriaRam;
@@ -328,5 +321,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn RGB;
         private System.Windows.Forms.Button btnRefrescar;
         private System.Windows.Forms.TextBox txtBuscarTarjetaEditar;
+        private System.Windows.Forms.Button btnBuscarTarjeta;
+        private System.Windows.Forms.Button btnEnviarCambiosCola;
     }
 }

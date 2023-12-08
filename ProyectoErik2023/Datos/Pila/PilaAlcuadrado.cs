@@ -171,32 +171,24 @@ namespace ProyectoErik2023.Datos.Pila
 
             return encontrado;
         }
-
         public bool ActualizarComputadora(Computadora computadoraModificada)
         {
             bool actualizado = false;
 
-            
-            Computadora computadoraEncontrada;
-            bool encontrada = BuscarPorTarjeta(computadoraModificada.tarjetaVideo, out computadoraEncontrada);
-
-            if (encontrada)
+            for (int i = 0; i <= _posicionPila; i++)
             {
-               
-                for (int i = 0; i <= _posicionPila; i++)
+                if (computadoraPila[i].tarjetaVideo == computadoraModificada.tarjetaVideo)
                 {
-                    if (computadoraPila[i].tarjetaVideo == computadoraModificada.tarjetaVideo)
-                    {
-                        computadoraPila[i] = computadoraModificada;
-                        actualizado = true;
-                        break;
-                    }
+                    computadoraPila[i] = computadoraModificada;
+                    actualizado = true;
+                    break;
                 }
             }
 
             return actualizado;
         }
 
+        
 
 
 

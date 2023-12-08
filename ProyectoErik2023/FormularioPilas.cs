@@ -141,9 +141,38 @@ namespace ProyectoErik2023
             txtRGB.Text = computadora.rgb;
         }
 
-        private void btn_ascendente_pila_Click(object sender, EventArgs e)
+       
+
+        private void btnEnviarCambiosCola_Click(object sender, EventArgs e)
         {
-            string tarjetaBuscada = txtBuscar.Text;
+            Computadora computadoraModificada = new Computadora
+            {
+                memoriaRam = txtMemoriaRam.Text,
+                tarjetaVideo = txtTarjetaVideo.Text,
+                SSD = txtSSD.Text,
+                rgb = txtRGB.Text
+            };
+
+            if (PilaAlcuadrado1.ActualizarComputadora(computadoraModificada))
+            {
+                MessageBox.Show("Cambios aplicados correctamente.");
+                ActualizarDataGridView(); 
+            }
+            else
+            {
+                MessageBox.Show("Error al actualizar la computadora en la pila.");
+            }
+            ActualizarDataGridView();
+            string aa = "";
+            txtMemoriaRam.Text = aa;
+            txtTarjetaVideo.Text = string.Empty;
+            txtSSD.Text = string.Empty;
+            txtRGB.Text = string.Empty;
+        }
+
+        private void btnBuscarTarjeta_Click(object sender, EventArgs e)
+        {
+            string tarjetaBuscada = txtBuscarTarjetaEditar.Text;
             Computadora computadoraEncontrada;
 
             if (PilaAlcuadrado1.BuscarPorTarjeta(tarjetaBuscada, out computadoraEncontrada))
@@ -153,21 +182,6 @@ namespace ProyectoErik2023
             else
             {
                 MessageBox.Show("Elemento no encontrado en la pila.");
-            }
-        }
-
-        private void btn_descendente_pila_Click(object sender, EventArgs e)
-        {
-            Computadora computadoraModificada = ObtenerDatosDelFormulario();
-
-            if (PilaAlcuadrado1.ActualizarComputadora(computadoraModificada))
-            {
-                MessageBox.Show("Cambios aplicados correctamente.");
-                ActualizarDataGridView();
-            }
-            else
-            {
-                MessageBox.Show("Error al actualizar la computadora en la pila.");
             }
         }
     }
