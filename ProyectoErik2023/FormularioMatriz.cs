@@ -291,6 +291,52 @@ namespace ProyectoErik2023
                 }
             }
         }
+
+
+        private void CargarDatos(int posicion)
+        {
+            if (posicion >= 0 && posicion < computadora.Length && computadora[posicion] != null)
+            {
+                // Cargar los datos de la posición seleccionada en los TextBox correspondientes
+                txtTarjetaVideo.Text = computadora[posicion].tarjetaVideo;
+                memoriaRam.Text = computadora[posicion].memoriaRam;
+                txtSSD.Text = computadora[posicion].SSD;
+                txtRGB.Text = computadora[posicion].rgb;
+            }
+            else
+            {
+                MessageBox.Show("La posición seleccionada no contiene datos.");
+            }
+        }
+
+        private void AplicarCambiosEditar(int posicion)
+        {
+            if (posicion >= 0 && posicion < computadora.Length)
+            {
+                if (computadora[posicion] != null)
+                {
+                    
+                    computadora[posicion].tarjetaVideo = txtTarjetaVideo.Text;
+                    computadora[posicion].memoriaRam = memoriaRam.Text;
+                    computadora[posicion].SSD = txtSSD.Text;
+                    computadora[posicion].rgb = txtRGB.Text;
+
+                    MessageBox.Show("Se guardaron los cambios");
+                    ActualizarDataGridView(); 
+                }
+                else
+                {
+                    MessageBox.Show("Esa posicion esta vacia");
+                }
+            }
+            else
+            {
+                MessageBox.Show("Posicion invalida.");
+            }
+        }
+
+
+
         private void panel1_Paint(object sender, PaintEventArgs e)
         {
 
@@ -359,6 +405,47 @@ namespace ProyectoErik2023
         {
             ActualizarDataGridView();
 
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            if (!string.IsNullOrEmpty(txtPosicion.Text))
+            {
+                int posicion;
+                if (int.TryParse(txtPosicion.Text, out posicion))
+                {
+                    CargarDatos(posicion);
+                }
+                else
+                {
+                    MessageBox.Show("Por favor, ingresa un número válido para la posición.");
+                }
+            }
+            else
+            {
+                MessageBox.Show("Ingresa una posición antes de editar.");
+            }
+           
+        }
+
+        private void btnEditarCambios_Click(object sender, EventArgs e)
+        {
+            if (!string.IsNullOrEmpty(txtPosicion.Text))
+            {
+                int posicion;
+                if (int.TryParse(txtPosicion.Text, out posicion))
+                {
+                    AplicarCambiosEditar(posicion);
+                }
+                else
+                {
+                    MessageBox.Show("Por favor, ingresa un número válido para la posición.");
+                }
+            }
+            else
+            {
+                MessageBox.Show("Ingresa una posición antes de aplicar cambios.");
+            }
         }
     }
 }
