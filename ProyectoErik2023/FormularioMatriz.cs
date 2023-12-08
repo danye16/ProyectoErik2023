@@ -255,6 +255,26 @@ namespace ProyectoErik2023
 
 
         }
+
+        public void InsertarEnMedio(int posicion, Computadora nuevaComputadora, Computadora[] computadoras)
+        {
+            // Si la posición es menor que 0 o mayor que el número de elementos,
+            // se muestra un mensaje de error.
+            if (posicion < 0 || posicion > computadoras.Length)
+            {
+                MessageBox.Show("Posición inválida.");
+                return;
+            }
+
+            // Se desplazan los elementos de la matriz a la derecha una posición.
+            for (int i = computadoras.Length - 1; i >= posicion; i--)
+            {
+                computadoras[i + 1] = computadoras[i];
+            }
+
+            // Se inserta el nuevo elemento en la posición indicada.
+            computadoras[posicion] = nuevaComputadora;
+        }
         public void Limpiar()
         {
             Computadora compu = new Computadora();
@@ -292,25 +312,7 @@ namespace ProyectoErik2023
                 }
             }
         }
-        //public void ActualizarDataGridView()
-        //{
-        //    dataGridView1.Rows.Clear();
-
-        //    for (int i = 0; i < computadora.Length; i++)
-        //    {
-        //        if (computadora[i] != null)
-        //        {
-        //            dataGridView1.Rows.Add(
-        //                $"Pc {i}",
-        //                computadora[i].tarjetaVideo,
-        //                computadora[i].memoriaRam,
-        //                computadora[i].SSD,
-        //                computadora[i].rgb
-        //            );
-        //        }
-        //    }
-        //}
-
+        
         private void CargarDatos(int posicion)
         {
             if (posicion >= 0 && posicion < computadora.Length && computadora[posicion] != null)
@@ -402,20 +404,9 @@ namespace ProyectoErik2023
         }
 
 
+       
 
-        //private void EliminarElemento(int posicion)
-        //{
-        //    if (posicion >= 0 && posicion < computadora.Length && computadora[posicion] != null)
-        //    {
-        //        computadora[posicion] = null;
-        //        MessageBox.Show("Elemento eliminado correctamente.");
-        //        ActualizarDataGridView(); // Actualiza la vista después de eliminar el elemento
-        //    }
-        //    else
-        //    {
-        //        MessageBox.Show("La posición seleccionada no contiene datos o es inválida.");
-        //    }
-        //}
+
 
 
         private void panel1_Paint(object sender, PaintEventArgs e)
@@ -549,6 +540,13 @@ namespace ProyectoErik2023
             {
                 MessageBox.Show("Tienes que elegir una posicion antes!");
             }
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+           
+
+
         }
     }
 }
