@@ -133,5 +133,17 @@ namespace ProyectoErik2023
             ActualizarDataGridView();
 
         }
+
+        private void btn_ascendente_pila_Click(object sender, EventArgs e)
+        {
+            PilaAlcuadrado1.OrdenarAscendente();
+            ActualizarDataGridView();
+        }
+
+        private void btn_descendente_pila_Click(object sender, EventArgs e)
+        {
+            PilaAlcuadrado1.OrdenarDescendente();
+            ActualizarDataGridView();
+        }
     }
 }

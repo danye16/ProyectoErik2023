@@ -63,6 +63,7 @@
             this.btn_descendente_pila.TabIndex = 17;
             this.btn_descendente_pila.Text = "Ordenar Descendente";
             this.btn_descendente_pila.UseVisualStyleBackColor = false;
+            this.btn_descendente_pila.Click += new System.EventHandler(this.btn_descendente_pila_Click);
             // 
             // btnBuscar
             // 
@@ -110,6 +111,7 @@
             this.btn_ascendente_pila.TabIndex = 13;
             this.btn_ascendente_pila.Text = "Ordenar Ascendente";
             this.btn_ascendente_pila.UseVisualStyleBackColor = false;
+            this.btn_ascendente_pila.Click += new System.EventHandler(this.btn_ascendente_pila_Click);
             // 
             // btnAgregar
             // 
